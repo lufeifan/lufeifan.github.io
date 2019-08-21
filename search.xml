@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JAVA面向对象（1)]]></title>
+    <url>%2F2019%2F08%2F21%2Fjava2%2F</url>
+    <content type="text"><![CDATA[类 类的组成：变量，方法，构造方法 构造方法：与类同名，不返回数字类型 方法 实例方法 静态方法 方法重载：该方法有多个名字但参数的个数和类型不同，可以用来实现多态 变量： 实例变量 静态变量 类的对象：可以访问类中的方法 继承： 声明 子类 extends 父类 继承父类的变量和方法 可以修改父类的变量和方法，还可以添加自己的变量和方法，名字相同就会进行覆盖和修改 关键字：必须放在第一句this表示该类的对象 super：用于访问父类的变量和方法（一般用于同名），可用来调用父类的构造方法 父类对象和子类对象的转换（好像是上转型对象） 包： import用于导入其他类，放在文件的首位 同包类可以相互访问,反之不得 控制符 static final abstract 接口：]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[JAVA面向对象（1)]]></title>
+    <url>%2F2019%2F08%2F21%2Fjava1%2F</url>
+    <content type="text"><![CDATA[基本数据类型 整数型 进制的表示 浮点数型 注意单精度的书写要加f 逻辑型—boolean 字符型—char 数据类型的转换 标识符 可以由数字，字母，下划线_,美元符号$组成 不能以数字开头 通常类名开头要大写（java大小写敏感） 其余的小写字母开头 数组 数组的创建 数组的声明 int []a;(不能声明数组的长度) 为数组分配内存空间 a=new[5] 数组的定义 数组的引用类型int []a=new int[5]这里的a就是引用 数组默认初始化为0或者null 数组的遍历： 简单的循环语句 也可以用for(int age;age){}只读遍历 数组长度：数组名.length 可以获取 数组的复制：Array.Copy]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[视频嵌入]]></title>
     <url>%2F2019%2F08%2F20%2F%E8%A7%86%E9%A2%91%2F</url>
     <content type="text"><![CDATA[]]></content>
