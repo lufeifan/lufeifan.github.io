@@ -11,7 +11,7 @@
   <entry>
     <title><![CDATA[pr]]></title>
     <url>%2F2019%2F08%2F20%2FPr%2F</url>
-    <content type="text"><![CDATA[教程推荐 :https://www.bilibili.com/video/av5540953/?p=9 画面放大缩小： 双击预览视频区弹幕制作： 使用默认静态字幕 弹幕效果：使用关键帧 – 运动 设置关键帧的开始和结束位置（记得打点）视频速度：右键更改速度比例(鬼畜)视频的衔接：左侧工具栏找到 视频过度视频结尾：使用关键帧 – 运动 设置关键帧的开始和结束位置（记得打点）导出：h.264]]></content>
+    <content type="text"><![CDATA[教程推荐 :https://www.bilibili.com/video/av5540953/?p=9 画面放大缩小： 双击预览视频区 弹幕制作： 使用默认静态字幕弹幕效果：使用关键帧 -- 运动 设置关键帧的开始和结束位置（&lt;span style=&quot;color: red&quot;&gt;记得打点&lt;/span&gt;） 视频速度：右键更改速度比例(鬼畜) 视频的衔接：左侧工具栏找到 - 视频过度 视频结尾：使用关键帧 – 运动 设置关键帧的开始和结束位置（记得打点） 导出：h.264 视频转场： 1.全选素材 2.Ctrl+d 3.转场素材可去设置默认 批量缩放素材： 找到首选项中的默认媒体缩放设置为 帧大小 批量调色： 1.效果控件将颜色复制在删掉 2.找到只要进行粘贴]]></content>
       <categories>
         <category>剪辑软件</category>
       </categories>
