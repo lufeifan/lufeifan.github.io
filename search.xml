@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[java文件输入输出流]]></title>
+    <url>%2F2019%2F08%2F23%2F%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E5%86%99%2F</url>
+    <content type="text"><![CDATA[字节流 输入：InputStreamread()方法：-1表示无 输出: OutputStreamwrite()方法 字符流 输入: Reader 输出: Writer 节点流 输入FileInputStream 输出:FileOutputStream 缓冲流输入：BufferdReader输出：BufferdWriter 常用]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[网站推荐]]></title>
     <url>%2F2019%2F08%2F23%2F%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90%2F</url>
     <content type="text"><![CDATA[图片素材 1.在线平面设计 https://www.fotor.com.cn 2.https://pixabay.com/zh/ 3.https://www.pexels.com/zh-cn/]]></content>
