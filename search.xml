@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Windows安装MySQL]]></title>
+    <url>%2F2019%2F08%2F23%2FWindows%20%E4%B8%8A%E5%AE%89%E8%A3%85%20MySQL%2F</url>
+    <content type="text"><![CDATA[1.下载最新版本2.3.4.安装MySQL 更改地址 然后一点击下一步就可以5.运行MySQL]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[七牛云截屏上传返回图片地址]]></title>
     <url>%2F2019%2F08%2F22%2F%E4%B8%83%E7%89%9B%E4%BA%91%E6%88%AA%E5%B1%8F%E4%B8%8A%E4%BC%A0%2F</url>
     <content type="text"><![CDATA[1.到github下载release版本 2.打开release中的 settings.ini 文件 3.去七牛云找到密匙填写 4.BUCKET_NAME：储存空间的名称 5BUCKET_DOMAIN：你自己的域名 6.UP_HOST = http://up-z2.qiniup.com 7.DEBUG_MODE：调试开关，截屏上传失败可以把false改为true]]></content>
