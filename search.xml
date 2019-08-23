@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[java文件输入输出流]]></title>
     <url>%2F2019%2F08%2F23%2F%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E5%86%99%2F</url>
-    <content type="text"><![CDATA[字节流 输入：InputStreamread()方法：-1表示无 输出: OutputStreamwrite()方法 字符流 输入: Reader 输出: Writer 节点流 输入FileInputStream 输出:FileOutputStream 缓冲流输入：BufferdReader输出：BufferdWriter 常用]]></content>
+    <content type="text"><![CDATA[字节流 输入：InputStreamread()方法：-1表示无 输出: OutputStreamwrite()方法 字符流 输入: Reader 输出: Writer 节点流 输入FileInputStream 输出:FileOutputStream 缓冲流 输入：BufferdReader 输出：BufferdWriter 对象流 序列化：ObjectInputStream 反序列化：ObjectOutputStream 要求对象实现Serializable接口 常用 注意文件的操作要进行错误处理]]></content>
       <categories>
         <category>java</category>
       </categories>
@@ -40,7 +40,7 @@
   <entry>
     <title><![CDATA[JAVA面向对象（2)]]></title>
     <url>%2F2019%2F08%2F21%2Fjava2%2F</url>
-    <content type="text"><![CDATA[类 类的组成：变量，方法，构造方法 构造方法：与类同名，不返回数字类型 方法 实例方法 静态方法 方法重载：该方法有多个名字但参数的个数和类型不同，可以用来实现多态 变量： 实例变量 静态变量 类的对象：可以访问类中的方法 继承： 声明 子类 extends 父类 继承父类的变量和方法 可以修改父类的变量和方法，还可以添加自己的变量和方法，名字相同就会进行覆盖和修改 关键字：this表示该类的对象 super：必须放在第一句用于访问父类的变量和方法（一般用于同名），可用来调用父类的构造方法 父类对象和子类对象的转换（好像是上转型对象） 包： import用于导入其他类，放在文件的首位 同包类可以相互访问,反之不得 控制符 static final abstract 接口：定义接口：interface实现接口：implements调用接口则接口中的所有方法必须重写可以实现多继承接口定义的常量具有final，static，public属性]]></content>
+    <content type="text"><![CDATA[类 类的组成：变量，方法，构造方法 构造方法：与类同名，不返回数字类型 方法 实例方法 静态方法 方法重载：该方法有多个名字但参数的个数和类型不同，可以用来实现多态 变量： 实例变量 静态变量 类的对象：可以访问类中的方法 继承： 声明 子类 extends 父类 继承父类的变量和方法 可以修改父类的变量和方法，还可以添加自己的变量和方法，名字相同就会进行覆盖和修改 关键字：this表示该类的对象 super：必须放在第一句用于访问父类的变量和方法（一般用于同名），可用来调用父类的构造方法 父类对象和子类对象的转换（好像是上转型对象） 包： import用于导入其他类，放在文件的首位 同包类可以相互访问,反之不得 控制符 static final abstract 接口： 定义接口：interface 实现接口：implements 调用接口则接口中的所有方法必须重写 可以实现多继承 接口定义的常量具有final，static，public属性]]></content>
       <categories>
         <category>java</category>
       </categories>
