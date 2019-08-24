@@ -123,6 +123,12 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <link rel="stylesheet" href="/dist/APlayer.min.css">
+  <div id="aplayer"></div>
+  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+  <script type="text/javascript" src="/dist/music.js"></script>
+  
   
    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
@@ -358,30 +364,30 @@
         <p>链接</p>
 <a id="more"></a>
 <hr>
-<p><a href="https://www.baidu.com/" target="_blank" rel="noopener">百度</a><br> 图片<br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566191281845&di=ee60fafd53208630597b75c2707954fa&imgtype=0&src=http%3A%2F%2Fww1.sinaimg.cn%2Fwap720%2F005T8ELAgw1f9u8wqhesnj310x0kuwhc.jpg" alt="欧阳娜娜"></p>
+<p><a href="https://www.baidu.com/" target="_blank" rel="noopener">百度</a><br> 图片<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1566191281845&amp;di=ee60fafd53208630597b75c2707954fa&amp;imgtype=0&amp;src=http%3A%2F%2Fww1.sinaimg.cn%2Fwap720%2F005T8ELAgw1f9u8wqhesnj310x0kuwhc.jpg" alt="欧阳娜娜"></p>
 <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
+&lt;html lang="en"&gt;
 
 &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;index.css&quot;&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;link rel="stylesheet" href="index.css"&gt;
     &lt;title&gt;Document&lt;/title&gt;
 &lt;/head&gt;
 
 &lt;body&gt;
-    &lt;div id=&quot;top&quot;&gt;
-        &lt;div class=&quot;container&quot;&gt;
+    &lt;div id="top"&gt;
+        &lt;div class="container"&gt;
 
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div id=&quot;vlog&quot;&gt;
-        &lt;div class=&quot;container&quot;&gt;
-            &lt;div class=&quot;vlog-left&quot;&gt;
+    &lt;div id="vlog"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="vlog-left"&gt;
 
             &lt;/div&gt;
-            &lt;div class=&quot;vlog-right&quot;&gt;
+            &lt;div class="vlog-right"&gt;
 
             &lt;/div&gt;
         &lt;/div&gt;
@@ -421,7 +427,25 @@
     height: 100%;
     float: right;
     border: 1px solid red;
-}</code></pre>
+}</code></pre><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     </div>
 
     
@@ -546,7 +570,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
