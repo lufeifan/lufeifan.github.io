@@ -2,8 +2,8 @@
 const ap = new APlayer({
     container: document.getElementById('aplayer'),
     fixed: true,
-    // autoplay: true,
-    mini: true,
+    autoplay: true,
+    // mini: true,
     audio: [
       {
         name: "PDD洪荒之力",
