@@ -1028,6 +1028,13 @@ pre .javascript .function {
   margin-top: 0;
   padding-top: 0;
 }
+body {
+  background-image: url("http://pwmvr65mz.bkt.clouddn.com/201908302221_900.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-position: 50% 50%;
+}
 .back-to-top {
   background: #eee;
   cursor: pointer;
@@ -1751,7 +1758,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #5e8190;
+  background: #9f45d6;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1988,7 +1995,7 @@ pre .javascript .function {
   font-size: 0.8125em;
 }
 .footer {
-  color: #999;
+  color: #b4ee0d;
   font-size: 0.875em;
 }
 .footer img {
