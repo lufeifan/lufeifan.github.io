@@ -1029,7 +1029,7 @@ pre .javascript .function {
   padding-top: 0;
 }
 body {
-  background-image: url("http://pwmvr65mz.bkt.clouddn.com/201908302221_900.jpg");
+  background-image: url("http://pwmvr65mz.bkt.clouddn.com/201908312056_815.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -1069,7 +1069,7 @@ body {
   z-index: 9999;
 }
 .header {
-  background-color: #f00;
+  background-color: #000;
 }
 .header-inner {
   position: relative;
@@ -1758,7 +1758,7 @@ body {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffff87;
+  background: #79ffff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
