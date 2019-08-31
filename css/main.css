@@ -1069,7 +1069,7 @@ body {
   z-index: 9999;
 }
 .header {
-  background-color: #00f;
+  background-color: #60b4e6;
 }
 .header-inner {
   position: relative;
@@ -1758,7 +1758,7 @@ body {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #50c8ff;
+  background: #93acff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
