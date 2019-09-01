@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[windows安装虚拟机]]></title>
+    <url>%2F2019%2F09%2F01%2F%E8%99%9A%E6%8B%9F%E6%9C%BA%2F</url>
+    <content type="text"><![CDATA[下载VMware Workstation，CentOS在VMware Workstation中安装CentOS镜像配置跟着里面安装就行 在CentOS中还可以安装图形化界面 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[行列式]]></title>
+    <url>%2F2019%2F09%2F01%2F%E8%A1%8C%E5%88%97%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[排列n个数就是n阶排列顺序前面的数比后面的小逆序前面的数比后面的大逆序数两种判断方法： 1.一个排列中前面的数比他大的有几个，总和 2.一个排列中前面的数比他小的有几个，总和 总和为奇数就是奇排列，为偶数就是偶排列 行列式的计算：其实可以观察矩阵用连线来记住，多少阶就一次连多少个数字，都具有一定的规律，\这样连线数据是想加，/再减去这样连线的数据就得到结果。 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[豆瓣插件]]></title>
+    <url>%2F2019%2F09%2F01%2F%E8%B1%86%E7%93%A3%20%E6%8F%92%E4%BB%B6%E7%88%AC%E5%8F%96%E5%A4%B1%E8%B4%A5%2F</url>
+    <content type="text"><![CDATA[使用user 在登录豆瓣个人中心网址上面的那串数字 title 突入你想填的就行 quote 用来浏览器F12取消一小段爬取那部分的html豆瓣插件爬取失败使用： hexo douban -updata hexo g hexo s就可以看到爬取效果 注意 上传的时候不能用hexo d 只能用hexo deploy document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[二级（Java语言程序设计）考试大纲]]></title>
     <url>%2F2019%2F08%2F26%2FJava%E4%BA%8C%E7%BA%A7%E8%80%83%E8%AF%95%E5%A4%A7%E7%BA%B2%2F</url>
     <content type="text"><![CDATA[公共基础知识 基本要求 \1. 掌握算法的基本概念。 \2. 掌握基本数据结构及其操作。 \3. 掌握基本排序和查找算法。 \4. 掌握逐步求精的结构化程序设计方法。 \5. 掌握软件工程的基本方法，具有初步应用相关技术进行软件开发的能力。 \6. 掌握数据库的基本知识，了解关系数据库的设计。 考试内容 一、基本数据结构与算法 \1. 算法的基本概念；算法复杂度的概念和意义（时间复杂度与空间复杂度）。 \2. 数据结构的定义；数据的逻辑结构与存储结构；数据结构的图形表示；线性结构与非线性结构的概念。 \3. 线性表的定义；线性表的顺序存储结构及其插入与删除运算。 \4. 栈和队列的定义；栈和队列的顺序存储结构及其基本运算。 \5. 线性单链表、双向链表与循环链表的结构及其基本运算。 \6. 树的基本概念；二叉树的定义及其存储结构；二叉树的前序、中序和后序遍历。 \7. 顺序查找与二分法查找算法；基本排序算法（交换类排序，选择类排序，插入类排序）。 二、程序设计基础 \1. 程序设计方法与风格。 \2. 结构化程序设计。 \3. 面向对象的程序设计方法，对象，方法，属性及继承与多态性。 三、软件工程基础 \1. 软件工程基本概念，软件生命周期概念，软件工具与软件开发环境。 \2. 结构化分析方法，数据流图，数据字典，软件需求规格说明书。 \3. 结构化设计方法，总体设计与详细设计。 \4. 软件测试的方法，白盒测试与黑盒测试，测试用例设计，软件测试的实施，单元测试、集成测试和系统测试。 \5. 程序的调试，静态调试与动态调试。 四、数据库设计基础 \1. 数据库的基本概念：数据库，数据库管理系统，数据库系统。 \2. 数据模型，实体联系模型及E-R图，从E-R图导出关系数据模型。 \3. 关系代数运算，包括集合运算及选择、投影、连接运算，数据库规范化理论。 \4. 数据库设计方法和步骤：需求分析、概念设计、逻辑设计和物理设计的相关策略。 考试方式 \1. 公共基础知识不单独考试，与其他二级科目组合在一起，作为二级科目考核内容的一部分。 \2. 上机考试，10道单项选择题，占10分。 JAVA**语言程序设计** 基本要求 \1. 掌握Java语言的特点，实现机制和体系结构。 \2. 掌握Java语言中面向对象的特性。 \3. 掌握Java语言提供的数据类型和结构。 \4. 掌握Java语言编程的基本技术。 \5. 会编写Java用户界面程序。 \6. 会编写Java简单应用程序。 \7. 会编写Java小应用程序（Applet）。 \8. 了解Java语言的广泛应用。 考试内容 一、Java语言的特点和实现机制 二、Java体系结构 \1. Java程序结构。 \2. Java类库结构。 \3. Java程序开发环境结构。 三、Java语言中面向对象的特性 \1. 面向对象编程的基本概念和特征。 \2. 类的基本组成和使用。 \3. 对象的生成、使用和删除。 \4. 包与接口。 \5. Java类库的常用类和接口。 四、Java简单数据类型及运算 \1. 变量和常量。 \2. 基本数据类型及转换。 \3. Java类库中对基本数据类型的类包装。 \4. 运算符和表达式运算。 \5. 字符串和数组。 五、Java语言的基本语句 \1. 条件语句。 \2. 循环语句。 \3. 注释语句。 \4. 异常处理语句。 \5. 表达式语句。 六、Java编程技术基础 \1. 输入输出流及文件操作。 \2. 线程的概念和使用。 \3. 程序的同步与共享。 \4. Java语言的继承、多态和高级特性。 \5. 异常处理和断言概念。 \6. Java语言的集合（Collections）框架和泛型概念。 七、编写用户界面程序基础 \1. 用AWT编写图形用户界面的基本技术。 \2. 用Swing编写图形用户界面的特点。 \3. Swing的事件处理机制。 八、编写小应用程序（Applet）基础 \1. Applet类的API基本知识。 \2. Applet编写步骤及特点。 \3. 基于AWT和Swing编写用户界面。 \4. Applet的多媒体支持和通信。 九、Java SDK 6.0的下载和安装 考试方式 上机考试，考试时长120分钟，满分100分。 \1. 题型及分值 单项选择题40分（含公共基础知识部分10分）、操作题60分（包括基本操作题、简单应用题及综合应用题）。 \2. 考试环境 NetBeans。 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
@@ -27,7 +48,7 @@
   <entry>
     <title><![CDATA[人物模型]]></title>
     <url>%2F2019%2F08%2F24%2Flive2d%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%2F</url>
-    <content type="text"><![CDATA[1.站点配置文件下Git运行:npm install –save hexo-helper-live2d2.主题配置文件写下： 123456789101112# 添加萌妹子效果live2d: enable: true scriptFrom: local model: use: live2d-widget-model-wanko //模型名字 display: position: right //位置 width: 150 //妹子宽度 height: 300 //妹子高度 mobile: show: true 更多模型：https://github.com/xiazeyu/live2d-widget-models document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+    <content type="text"><![CDATA[1.站点配置文件下Git运行:npm install –save hexo-helper-live2d2.站点配置文件写下（主题配置文件下不生效）： 123456789101112# 添加萌妹子效果live2d: enable: true scriptFrom: local model: use: live2d-widget-model-wanko //模型名字 display: position: right //位置 width: 150 //妹子宽度 height: 300 //妹子高度 mobile: show: true 更多模型：https://github.com/xiazeyu/live2d-widget-models更换模型 npm install 模型名称 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>博客搭建</category>
       </categories>

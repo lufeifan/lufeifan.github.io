@@ -65,15 +65,15 @@
 </script>
 
   <meta property="og:type" content="article">
-<meta property="og:title" content="JAVA面向对象（1)">
-<meta property="og:url" content="http://yoursite.com/2019/08/21/java1/index.html">
+<meta property="og:title" content="行列式">
+<meta property="og:url" content="http://yoursite.com/2019/09/01/行列式/index.html">
 <meta property="og:site_name" content="陆陆陆啊">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-23T06:14:45.112Z">
+<meta property="og:updated_time" content="2019-09-01T11:59:45.145Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JAVA面向对象（1)">
+<meta name="twitter:title" content="行列式">
   <link rel="alternate" href="/atom.xml" title="陆陆陆啊" type="application/atom+xml">
-  <link rel="canonical" href="http://yoursite.com/2019/08/21/java1/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/01/行列式/">
 
 
 <script id="page-configurations">
@@ -87,7 +87,7 @@
   };
 </script>
 
-  <title>JAVA面向对象（1) | 陆陆陆啊</title>
+  <title>行列式 | 陆陆陆啊</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -288,7 +288,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/21/java1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/01/行列式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="陆陆陆啊">
@@ -300,7 +300,7 @@
       <meta itemprop="name" content="陆陆陆啊">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">JAVA面向对象（1)
+        <h1 class="post-title" itemprop="name headline">行列式
 
           
         </h1>
@@ -318,19 +318,11 @@
                 
               
 
-              <time title="创建时间：2019-08-21 15:34:17" itemprop="dateCreated datePublished" datetime="2019-08-21T15:34:17+08:00">2019-08-21</time>
+              <time title="创建时间：2019-09-01 19:18:04 / 修改时间：19:59:45" itemprop="dateCreated datePublished" datetime="2019-09-01T19:18:04+08:00">2019-09-01</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-23 14:14:45" itemprop="dateModified" datetime="2019-08-23T14:14:45+08:00">2019-08-23</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -339,7 +331,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/线性代数/" itemprop="url" rel="index"><span itemprop="name">线性代数</span></a></span>
 
                 
                 
@@ -364,7 +356,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>293</span>
+              <span>157</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -389,43 +381,14 @@
       
         <hr>
 <a id="more"></a>
-<h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><ul>
-<li>整数型<ul>
-<li>进制的表示</li>
-</ul>
-</li>
-<li>浮点数型<ul>
-<li>注意单精度的书写要加f</li>
-</ul>
-</li>
-<li>逻辑型—boolean</li>
-<li>字符型—char</li>
-<li>数据类型的转换</li>
-</ul>
-<hr>
-<h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><ul>
-<li>可以由数字，字母，下划线_,美元符号$组成</li>
-<li>不能以数字开头</li>
-<li>通常类名开头要大写（java大小写敏感）</li>
-<li>其余的小写字母开头</li>
-</ul>
-<hr>
-<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><ul>
-<li>数组的创建<ul>
-<li>数组的声明 <code>int []a;</code>(不能声明数组的长度)</li>
-<li>为数组分配内存空间 <code>a=new[5]</code></li>
-<li>数组的定义</li>
-</ul>
-</li>
-<li>数组的引用类型<br><code>int []a=new int[5]</code><br>这里的a就是引用</li>
-<li>数组默认初始化为0或者null</li>
-<li>数组的遍历：</li>
-<li>简单的循环语句</li>
-<li>也可以用for(int age;age){}只读遍历</li>
-<li>数组长度：数组名.length 可以获取</li>
-<li>数组的复制：Array.Copy<br></li>
-</ul>
-<hr>
+<h5 id="排列"><a href="#排列" class="headerlink" title="排列"></a>排列</h5><pre><code>n个数就是n阶排列</code></pre><h5 id="顺序"><a href="#顺序" class="headerlink" title="顺序"></a>顺序</h5><pre><code>前面的数比后面的小</code></pre><h5 id="逆序"><a href="#逆序" class="headerlink" title="逆序"></a>逆序</h5><pre><code>前面的数比后面的大</code></pre><h5 id="逆序数"><a href="#逆序数" class="headerlink" title="逆序数"></a>逆序数</h5><pre><code>两种判断方法：
+    1.一个排列中前面的数比他大的有几个，总和
+    2.一个排列中前面的数比他小的有几个，总和</code></pre><blockquote>
+<p>总和为奇数就是奇排列，为偶数就是偶排列</p>
+</blockquote>
+<blockquote>
+<p>行列式的计算：其实可以观察矩阵用连线来记住，多少阶就一次连多少个数字，都具有一定的规律，<code>\</code>这样连线数据是想加，<code>/</code>再减去这样连线的数据就得到结果。</p>
+</blockquote>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -488,7 +451,7 @@
           </li>
           <li class="post-copyright-link">
             <strong>本文链接：</strong>
-            <a href="/2019/08/21/java1/" title="JAVA面向对象（1)">2019/08/21/java1/</a>
+            <a href="/2019/09/01/行列式/" title="行列式">2019/09/01/行列式/</a>
           </li>
           <li class="post-copyright-license">
             <strong>版权： </strong>
@@ -509,8 +472,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/08/20/视频/" rel="next" title="视频嵌入">
-                  <i class="fa fa-chevron-left"></i> 视频嵌入
+                <a href="/2019/09/01/豆瓣 插件爬取失败/" rel="next" title="豆瓣插件">
+                  <i class="fa fa-chevron-left"></i> 豆瓣插件
                 </a>
               
             </div>
@@ -519,8 +482,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2019/08/21/java2/" rel="prev" title="JAVA面向对象（2)">
-                  JAVA面向对象（2) <i class="fa fa-chevron-right"></i>
+                <a href="/2019/09/01/虚拟机/" rel="prev" title="windows安装虚拟机">
+                  windows安装虚拟机 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -714,7 +677,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本数据类型"><span class="nav-number">1.</span> <span class="nav-text">基本数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标识符"><span class="nav-number">2.</span> <span class="nav-text">标识符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">3.</span> <span class="nav-text">数组</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#排列"><span class="nav-number">1.</span> <span class="nav-text">排列</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#顺序"><span class="nav-number">2.</span> <span class="nav-text">顺序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#逆序"><span class="nav-number">3.</span> <span class="nav-text">逆序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#逆序数"><span class="nav-number">4.</span> <span class="nav-text">逆序数</span></a></li></ol></div>
             
 
           </div>
