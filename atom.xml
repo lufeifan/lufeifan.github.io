@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-06T12:52:51.507Z</updated>
+  <updated>2019-09-06T13:00:08.583Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/09/06/wxml/"/>
     <id>http://yoursite.com/2019/09/06/wxml/</id>
     <published>2019-09-06T12:36:17.421Z</published>
-    <updated>2019-09-06T12:52:51.507Z</updated>
+    <updated>2019-09-06T13:00:08.583Z</updated>
     
     <content type="html"><![CDATA[<hr><a id="more"></a><h4 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h4><pre><code>pages    index        index.js    Pages({})        index.json  可以设置顶部文字和颜色        index.wxml  相当于html        index.wxss  相当于cssapp.jsapp.json    导入页面的文件app.wxss    设置全局样式</code></pre><h4 id="设置顶部"><a href="#设置顶部" class="headerlink" title="设置顶部"></a>设置顶部</h4><pre><code>"navigationBarTitleText": "String" 顶部文字"navigationBarBackgroundColor": "color", 顶部颜色"navigationBarTextStyle": "black" 仅支持白色和黑色"enablePullDownRefresh": false, //是否开启下拉刷新</code></pre><h4 id="幻灯片"><a href="#幻灯片" class="headerlink" title="幻灯片"></a>幻灯片</h4><pre><code>在swiper标签加swiper-item，swiper-item就是每一页的内容幻灯片小圆点:indicator-dots="true"</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
