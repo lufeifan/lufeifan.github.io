@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/2019/09/06/wxml/</loc>
+    <lastmod>2019-09-06</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/2019/09/02/jQuery/</loc>
     <lastmod>2019-09-02</lastmod>
   </url>  <url>
