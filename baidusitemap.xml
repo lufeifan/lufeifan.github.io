@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://yoursite.com/2019/09/06/wxml/</loc>
+    <loc>http://yoursite.com/2019/08/23/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/</loc>
+    <lastmod>2019-09-07</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/09/07/wxml2/</loc>
+    <lastmod>2019-09-07</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/09/06/wxml1/</loc>
     <lastmod>2019-09-06</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2019/09/02/jQuery/</loc>
@@ -30,9 +36,6 @@
   </url>  <url>
     <loc>http://yoursite.com/2019/08/26/java%E4%BA%8C%E7%BA%A7/</loc>
     <lastmod>2019-08-26</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2019/08/23/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/</loc>
-    <lastmod>2019-08-23</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2019/08/21/java2/</loc>
     <lastmod>2019-08-23</lastmod>

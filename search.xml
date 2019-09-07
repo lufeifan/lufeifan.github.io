@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[微信小程序学习第二天]]></title>
+    <url>%2F2019%2F09%2F07%2Fwxml2%2F</url>
+    <content type="text"><![CDATA[scroll-view添加 scroll-x就可看到滑动理解displaydisplay: flex; display: inline-block;问题：white-space: nowrap; justify-content: center; document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[微信小程序学习第一天]]></title>
-    <url>%2F2019%2F09%2F06%2Fwxml%2F</url>
+    <url>%2F2019%2F09%2F06%2Fwxml1%2F</url>
     <content type="text"><![CDATA[目录结构pages index index.js Pages({}) index.json 可以设置顶部文字和颜色 index.wxml 相当于html index.wxss 相当于css app.js app.json 导入页面的文件 app.wxss 设置全局样式设置顶部"navigationBarTitleText": "String" 顶部文字 "navigationBarBackgroundColor": "color", 顶部颜色 "navigationBarTextStyle": "black" 仅支持白色和黑色 "enablePullDownRefresh": false, //是否开启下拉刷新幻灯片在swiper标签加swiper-item，swiper-item就是每一页的内容 幻灯片小圆点:indicator-dots="true" document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>微信小程序</category>
@@ -75,9 +83,9 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[网站推荐]]></title>
+    <title><![CDATA[实用推荐]]></title>
     <url>%2F2019%2F08%2F23%2F%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90%2F</url>
-    <content type="text"><![CDATA[图片素材 1.在线平面设计 https://www.fotor.com.cn 2.https://pixabay.com/zh/ 3.https://www.pexels.com/zh-cn/小图标 https://fontawesome.com/v4.7.0/icons/ document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+    <content type="text"><![CDATA[图片素材 1.在线平面设计 https://www.fotor.com.cn 2.https://pixabay.com/zh/ 3.https://www.pexels.com/zh-cn/小图标 https://fontawesome.com/v4.7.0/icons/截图推荐 snipaste:能将图片贴在屏幕，很好地观察，快捷键：快速截屏F1,快速贴图F3,退出贴图shift+Esc。 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
   </entry>
   <entry>
     <title><![CDATA[Windows安装MySQL]]></title>

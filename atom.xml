@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-06T13:00:08.583Z</updated>
+  <updated>2019-09-07T05:13:25.061Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,9 +17,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>微信小程序学习第二天</title>
+    <link href="http://yoursite.com/2019/09/07/wxml2/"/>
+    <id>http://yoursite.com/2019/09/07/wxml2/</id>
+    <published>2019-09-07T05:09:24.590Z</published>
+    <updated>2019-09-07T05:13:25.061Z</updated>
+    
+    <content type="html"><![CDATA[<hr><a id="more"></a><h6 id="scroll-view"><a href="#scroll-view" class="headerlink" title="scroll-view"></a>scroll-view</h6><pre><code>添加 scroll-x就可看到滑动</code></pre><h2 id="理解display"><a href="#理解display" class="headerlink" title="理解display"></a>理解display</h2><pre><code>display: flex;display: inline-block;</code></pre><p>问题：<br>white-space: nowrap;<br> justify-content: center;</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+    
+    </summary>
+    
+      <category term="微信小程序" scheme="http://yoursite.com/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>微信小程序学习第一天</title>
-    <link href="http://yoursite.com/2019/09/06/wxml/"/>
-    <id>http://yoursite.com/2019/09/06/wxml/</id>
+    <link href="http://yoursite.com/2019/09/06/wxml1/"/>
+    <id>http://yoursite.com/2019/09/06/wxml1/</id>
     <published>2019-09-06T12:36:17.421Z</published>
     <updated>2019-09-06T13:00:08.583Z</updated>
     
@@ -213,13 +233,13 @@
   </entry>
   
   <entry>
-    <title>网站推荐</title>
+    <title>实用推荐</title>
     <link href="http://yoursite.com/2019/08/23/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/"/>
     <id>http://yoursite.com/2019/08/23/网站推荐/</id>
     <published>2019-08-23T03:34:07.080Z</published>
-    <updated>2019-08-23T14:14:26.374Z</updated>
+    <updated>2019-09-07T05:17:58.959Z</updated>
     
-    <content type="html"><![CDATA[<hr><a id="more"></a><h3 id="图片素材"><a href="#图片素材" class="headerlink" title="图片素材"></a>图片素材</h3><ul><li>1.在线平面设计 <a href="https://www.fotor.com.cn" target="_blank" rel="noopener">https://www.fotor.com.cn</a></li><li>2.<a href="https://pixabay.com/zh/" target="_blank" rel="noopener">https://pixabay.com/zh/</a></li><li>3.<a href="https://www.pexels.com/zh-cn/" target="_blank" rel="noopener">https://www.pexels.com/zh-cn/</a><h3 id="小图标"><a href="#小图标" class="headerlink" title="小图标"></a>小图标</h3> <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank" rel="noopener">https://fontawesome.com/v4.7.0/icons/</a></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    <content type="html"><![CDATA[<hr><a id="more"></a><h3 id="图片素材"><a href="#图片素材" class="headerlink" title="图片素材"></a>图片素材</h3><ul><li>1.在线平面设计 <a href="https://www.fotor.com.cn" target="_blank" rel="noopener">https://www.fotor.com.cn</a></li><li>2.<a href="https://pixabay.com/zh/" target="_blank" rel="noopener">https://pixabay.com/zh/</a></li><li>3.<a href="https://www.pexels.com/zh-cn/" target="_blank" rel="noopener">https://www.pexels.com/zh-cn/</a><h3 id="小图标"><a href="#小图标" class="headerlink" title="小图标"></a>小图标</h3> <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank" rel="noopener">https://fontawesome.com/v4.7.0/icons/</a><h3 id="截图推荐"><a href="#截图推荐" class="headerlink" title="截图推荐"></a>截图推荐</h3> snipaste:能将图片贴在屏幕，很好地观察，快捷键：快速截屏F1,快速贴图F3,退出贴图shift+Esc。</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
     <summary type="html">
     
@@ -387,26 +407,6 @@
     </summary>
     
       <category term="外接嵌入" scheme="http://yoursite.com/categories/%E5%A4%96%E6%8E%A5%E5%B5%8C%E5%85%A5/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>博客搭建</title>
-    <link href="http://yoursite.com/2019/08/19/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yoursite.com/2019/08/19/hexo搭建博客/</id>
-    <published>2019-08-19T11:48:47.484Z</published>
-    <updated>2019-09-02T13:05:35.489Z</updated>
-    
-    <content type="html"><![CDATA[<hr><a id="more"></a><ul><li><p>1.下载node.js<br> <a href="https://nodejs.org/en/" target="_blank" rel="noopener">下载地址</a></p></li><li><p>2.下载Git<br> <a href="https://git-scm.com/" target="_blank" rel="noopener">下载地址</a></p></li><li><p>3.安装Hexo</p><ul><li><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">官方Api</a></li><li>在新的文件夹右键  Git Bash Here</li><li>在Git中输入 npm install -g hexo-cli</li><li>hexo init</li><li>npm install</li></ul></li><li><p>4.更换主题(本人使用NexT主题,<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">NexT</a>)</p><ul><li><a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题下载</a></li><li>更换主题：到根目录 _config.yml 找到 theme </li></ul></li><li><p>5.更改语言</p><ul><li>到根目录 _config.yml 将 language: 改为 zh-CN</li></ul></li><li><p>6.增加标签和分类页<br> 在主题配置文件找到 Menu Settings 将要打开的功能去掉#</p></li><li><p>7.更换头像<br> 在主题配置文件找到 avatar 将url更改</p></li><li><p>8.更改标题和作者<br> 站点配置文件Ctrl+F 搜索title，author将其更改</p></li><li><p>9.启用社交链接<br> 在主题配置文件找到 social 将需要的功能打开，也可以自行添加</p></li><li><p>10.打开打赏功能<br> 在主题配置文件找到 reward_settings 将false 改为true<br> 找到 reward 更改图片地址</p></li><li><p>11.打开订阅公众号<br> 在主题配置文件找到 wechat_subscriber 将false 改为true</p></li><li><p>12.添加动态背景<br> 在主题配置文件找到 canvas_nest 将 enable: false更改为 true<br> 可能需要下载库<a href="https://github.com/theme-next/theme-next-canvas-ribbon" target="_blank" rel="noopener">链接</a></p></li><li><p>13.设置阅读全文</p><ul><li>1.打开source 在文章中加入&lt; !–more–&gt;(无空格)</li><li>2.在主题配置文件找到 auto_excerpt 将false 改为true ，length自行调节</li></ul></li><li><p>14.添加评论,搜索，统计，分享，字数统计，阅读市场功能(可参照NexT使用文档)<br> <a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT使用文档</a></p></li><li><p>15.部署到Github(可参照NexT使用文档)</p></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-    
-    </summary>
-    
-      <category term="博客搭建" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
   </entry>
