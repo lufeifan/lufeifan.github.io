@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "48b04edc"
+    });
+  daovoice('update');
+  </script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    save_scroll: false,
+    copycode: {"enable":true,"show_result":true,"style":null},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="原                链表基础知识总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="陆陆陆啊">
+<meta property="og:url" content="https://lufeifan.github.io/2019/09/07/链表基础知识总结/index.html">
+<meta property="og:site_name" content="陆陆陆啊">
+<meta property="og:description" content="原                链表基础知识总结">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://img-blog.csdn.net/20180502195346635">
+<meta property="og:image" content="https://img-blog.csdn.net/20180502195718402">
+<meta property="og:image" content="https://img-blog.csdn.net/20180502195849229">
+<meta property="og:image" content="https://img-blog.csdn.net/20180502195918818">
+<meta property="og:updated_time" content="2019-09-07T15:47:23.074Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="陆陆陆啊">
+<meta name="twitter:description" content="原                链表基础知识总结">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20180502195346635">
+  <link rel="alternate" href="/atom.xml" title="陆陆陆啊" type="application/atom+xml">
+  <link rel="canonical" href="https://lufeifan.github.io/2019/09/07/链表基础知识总结/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title> | 陆陆陆啊</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <script type="text/javascript" src="http://tajs.qq.com/stats?sId=66465782" charset="UTF-8"></script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <link rel="stylesheet" href="/dist/APlayer.min.css">
+  <div id="aplayer"></div>
+  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+  <script type="text/javascript" src="/dist/music.js"></script>
+  
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+    <a href="https://github.com/lufeifan/lufeifan.github.io" class="github-corner" aria-label="View source on GitHub">
+    <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">陆陆陆啊</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-读书">
+      
+    
+
+    <a href="/books" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>读书</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-电影">
+      
+    
+
+    <a href="/movies" rel="section"><i class="menu-item-icon fa fa-fw fa-film"></i> <br>电影</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-相册">
+      
+    
+
+    <a href="/photos" rel="section"><i class="menu-item-icon fa fa-fw fa-camera"></i> <br>相册</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    
+  <div class="popup search-popup">
+  <div class="search-header">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <div class="search-input-wrapper">
+      <input autocomplete="off" autocorrect="off" autocapitalize="none"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="search-input">
+    </div>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+  <div id="search-result"></div>
+</div>
+
+
+  </div>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content page-post-detail">
+            
+  
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lufeifan.github.io/2019/09/07/链表基础知识总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陆陆陆啊">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://pwmvr65mz.bkt.clouddn.com/201908231102_902.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陆陆陆啊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+
+          
+        </h1>
+
+        <div class="post-meta">
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-07 23:44:37 / 修改时间：23:47:23" itemprop="dateCreated datePublished" datetime="2019-09-07T23:44:37+08:00">2019-09-07</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>14k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>12 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <div class="blog-content-box">
+    <div class="article-header-box">
+        <div class="article-header">
+            <div class="article-title-box">
+                <span class="article-type type-1 float-left">原</span>                <h1 class="title-article">链表基础知识总结</h1>
+            </div>
+            <div class="article-info-box">
+                <div class="article-bar-top" style="height: 24px;">
+                                                                                                                                            <span class="time">2018年05月02日 19:47:49</span>
+                    <a class="follow-nickName" href="https://me.csdn.net/u012531536" target="_blank" rel="noopener">zql_3393089</a>
+                    <span class="read-count">阅读数 62396</span><span class="article_info_click" style="position: static;">更多</span>
+                                                                    <div class="tags-box space">
+                                <span class="label">分类专栏：</span>
+                                                                                                            <a class="tag-link" target="_blank" rel="noopener" href="https://blog.csdn.net/u012531536/article/category/7635058">
+                                            On the way                                        </a>
+                                                                                                </div>
+                                        </div>
+                <div class="operating">
+                                    </div>
+            </div>
+        </div>
+    </div>
+    <article class="baidu_pl">
+                <div id="article_content" class="article_content clearfix">
+                                                <div class="article-copyright">
+                <span class="creativecommons">
+                <a rel="noopener" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+                    </a>
+            <span>版权声明：本文为博主原创文章，遵循<a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"> CC 4.0 BY-SA </a>版权协议，转载请附上原文出处链接和本声明。 </span>
+               <div class="article-source-link2222">
+                    本文链接：<a href="https://blog.csdn.net/u012531536/article/details/80170893" target="_blank" rel="noopener">https://blog.csdn.net/u012531536/article/details/80170893</a>
+                </div>
+            </span>
+                    </div>
+                                                    <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-3019150162.css">
+                                        <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-3019150162.css">
+                <div class="htmledit_views" id="content_views">
+                                            <p>链表和数组作为算法中的两个基本数据结构，在程序设计过程中经常用到。尽管两种结构都可以用来存储一系列的数据，但又各有各的特点。</p><p>数组的优势，在于可以方便的遍历查找需要的数据。在查询数组指定位置（如查询数组中的第4个数据）的操作中，只需要进行1次操作即可，时间复杂度为O(1)。但是，这种时间上的便利性，是因为数组在内存中占用了连续的空间，在进行类似的查找或者遍历时，本质是指针在内存中的定向偏移。然而，当需要对数组成员进行添加和删除的操作时，数组内完成这类操作的时间复杂度则变成了O(n)。</p><p>链表的特性，使其在某些操作上比数组更加高效。例如当进行插入和删除操作时，链表操作的时间复杂度仅为O(1)。另外，因为链表在内存中不是连续存储的，所以可以充分利用内存中的碎片空间。除此之外，链表还是很多算法的基础，最常见的哈希表就是基于链表来实现的。基于以上原因，我们可以看到，链表在程序设计过程中是非常重要的。本文总结了我们在学习链表的过程中碰到的问题和体会。</p><p>接下来，我们将对链表进行介绍，用C语言分别实现：链表的初始化、创建、元素的插入和删除、链表的遍历、元素的查询、链表的删除、链表的逆序以及判断链表是否有环等这些常用操作。并附上在Visual Studio 2010 中可以运行的代码供学习者参考。</p><p>说到链表，可能有些人还对其概念不是很了解。我们可以将一条链表想象成环环相扣的结点，就如平常所见到的锁链一样。链表内包含很多结点（当然也可以包含零个结点）。其中每个结点的数据空间一般会包含一个数据结构（用于存放各种类型的数据）以及一个指针，该指针一般称为next，用来指向下一个结点的位置。由于下一个结点也是链表类型，所以next的指针也要定义为链表类型。例如以下语句即定义了链表的结构类型。</p><p><span style="font-family:'Times New Roman';">typedef struct LinkList&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p><p><span style="font-family:'Times New Roman';">{</span></p><p><span style="font-family:'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int Element;</span></p><p><span style="font-family:'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LinkList * next;</span></p><p><span style="font-family:'Times New Roman';">}LinkList;</span></p><h3><a name="t0"></a><span style="font-size:18px;">链表初始化</span></h3><p>在对链表进行操作之前，需要先新建一个链表。此处讲解一种常见的场景下新建链表：在任何输入都没有的情况下对链表进行初始化。</p><p>链表初始化的作用就是生成一个链表的头指针，以便后续的函数调用操作。在没有任何输入的情况下，我们首先需要定义一个头指针用来保存即将创建的链表。所以函数实现过程中需要在函数内定义并且申请一个结点的空间，并且在函数的结尾将这个结点作为新建链表的头指针返回给主调函数。本文给出的例程是生成一个头结点的指针，具体的代码实现如下：</p><p align="left"><span style="color:#0000FF;">linklist</span> *&nbsp; <span style="color:#880000;">List_init</span>()</p><p align="left">{</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">linklist</span> *<span style="color:#000080;">HeadNode</span>= (<span style="color:#0000FF;">linklist</span>*)<span style="color:#A000A0;">malloc</span>(<span style="color:#0000FF;">sizeof</span>(<span style="color:#0000FF;">linklist</span>));</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">if</span>(<span style="color:#000080;">HeadNode</span> == <span style="color:#A000A0;">NULL</span>)</p><p align="left">&nbsp;&nbsp;&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#880000;">printf</span>(<span style="color:#A31515;">"</span><span style="color:#A31515;">空间缓存不足</span><span style="color:#A31515;">"</span>);</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">return</span> <span style="color:#000080;">HeadNode</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp; HeadNode-&gt;<span style="color:#000080;">Element</span>= 0;</p><p align="left">&nbsp;&nbsp;&nbsp; HeadNode-&gt;<span style="color:#000080;">next</span>= <span style="color:#000080;">NULL</span>;</p><p align="left">&nbsp;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">return</span>HeadNode;</p><p align="left">}</p><p>当然,初始化的过程或者方法不只这一种，其中也包含头指针存在的情况下对链表进行初始化，此处不再一一罗列。</p><p>这里引申一下，此处例程中返回的链表指针为该链表的头结点，相对应的还有一个头指针的概念。头指针内只有指针的元素，并没有数据元素，但头结点除了指针还有数据。</p><p>头指针就是链表的名字，仅仅是个指针而已。头结点是为了操作的统一与方便而设立的，放在第一个有效元素结点（首元结点）之前，其数据域一般无意义（当然有些情况下也可存放链表的长度、用做监视哨等等）。一般情况下见到的链表的指针多为头指针，但最近在一个程序员编程网站leetcode中发现，题目中所给的链表一般是首元结点作为第一个元素，而不是头指针。</p><p>下图为头指针与头结点以及首元结点的关系。</p><p style="text-align:center;"><img src="https://img-blog.csdn.net/20180502195346635" alt=""><br></p><h3><a name="t1"></a><span style="font-size:18px;">链表创建</span></h3><p>创建链表需要将既定数据按照链表的结构进行存储，本文以一种最简单的方式来演示：使用数组对链表赋值。将原来在连续空间存放的数组数据，放置在不连续的链表空间中，使用指针进行链接。</p><p>链表创建的步骤一般使用给定的头指针以及需要初始化的数据序列作为输入参数，本文使用数组作为输入数据序列。在下面的例程中，先将首元结点使用数组第一个元素初始化，再在首元结点之后创建新的链表结点赋值数组内余下的数据。具体实现如下：</p><p align="left"><span style="color:#0000FF;">void</span> <span style="color:#880000;">CreatList</span>(<span style="color:#0000FF;">linklist</span> *<span style="color:#000080;">HeadNode</span>,<span style="color:#0000FF;">int</span> *<span style="color:#000080;">InData</span>,<span style="color:#0000FF;">int</span> <span style="color:#000080;">DataNum</span>)</p><p align="left">{</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">int</span> <span style="color:#000080;">i</span> = 0;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">linklist</span> *<span style="color:#000080;">CurrentNode = (</span><span style="color:#0000FF;">linklist</span>*<span style="color:#000080;">) HeadNode</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">for</span>(<span style="color:#000080;">i</span> = 0;<span style="color:#000080;">i</span>&lt;<span style="color:#000080;">DataNum</span>;<span style="color:#000080;">i</span>++)</p><p align="left">&nbsp;&nbsp;&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#000080;">CurrentNode</span>-&gt;<span style="color:#000080;">Element</span> = <span style="color:#000080;">InData</span>[<span style="color:#000080;">i</span>];</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">if</span>(<span style="color:#000080;">i</span>&lt; DataNum-1)<span style="color:#008000;">//</span> <span style="color:#008000;">由于每次赋值后需要新建结点，为了保证没有多余的废结点</span></p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CurrentNode-&gt;next =(linklist *)<span style="color:#000080;">malloc</span>(<span style="color:#0000FF;">sizeof</span>(linklist));</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#A000A0;">CurrentNode</span>= <span style="color:#0000FF;">CurrentNode</span>-&gt;<span style="color:#000080;">next</span>;</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#000080;">CurrentNode</span>-&gt;next= NULL;</p><p align="left">}</p><p>程序内先新建了一个指针变量CurrentNode用来表示当前的结点指针。最初，我们让CurrentNode指向了首元结点HeadNode的位置。然后根据输入数组的大小进行循环赋值，赋值完成之后再重新申请一个结点空间用来存放下一个结点的内容，并且将当前结点指针CurrentNode指向新生成的结点。由于链表创建函数调用时已经存在一个首元结点，按照这个逻辑最终在使用最后一个数组数据赋值之后还会多生成一个结点。因此，为了保证没有冗余的结点，循环内需要用DataNum-1来控制结点数量。</p><p>另外，C语言的初学者需要注意：无论被调子函数内含在几个参数，虽然子函数内的形参使用的是主函数内实参的指针，但在子函数内是不会改变主函数里实参的地址的。也就是说，只要子函数不返回指针，子函数的内容就不会影响主函数内的参数指针。正如程序中CurrentNode的指针最初是主函数内的头指针传递进来的，虽然创建链表的函数内CurrentNode的指针一直在往后移动，但并不会改变主调函数内的首元结点的指针。本文链表的学习过程中会大量使用指针，建议各位学习者在打牢基础后再进行学习。</p><h3><a name="t2"></a><span style="font-size:18px;">插入链表结点</span></h3><p>链表创建完之后，下面我们将介绍如何向链表内插入结点。一般添加结点可以分为两类：一类是在链表尾部插入；另一类为在中间插入。</p><p>链表结尾添加结点的步骤就是新建一个链表结点，将其链接到当前链表尾指针。</p><p>在中间结点插入结点的步骤稍微复杂一些，其中也包含两种情况，分别是在指定结点前插入和指定结点后插入。其操作原理一样，本文只对指定位置后插入结点进行介绍。指定结点前插入结点留给大家尝试。</p><p>假设一个链表内存在几个几点A1，A2,A3,A4….，当根据要求需要在指定位置之后（比如A2结点）插入一个新结点时。首先我们需要新建立一个结点NodeToInsert，然后将新结点的next指向A3，并且将A2的next指针指向新建立的结点NodeToInsert，切记操作顺序不要改变。如果操作顺序变换一下，先将A2的next指向了新建立的结点，那么我们就丢失了A3的寻址方式。因此，在将A2的next指向其他任何地方之前，请务必将A3的地址存在NodeToInsert或者某个新建节点内。</p><p>插入结点的具体操作如下：</p><p align="left"><span style="color:#0000FF;">bool</span> <span style="color:#880000;">InsertList</span>(<span style="color:#0000FF;">linklist</span> *<span style="color:#000080;">HeadNode</span>,<span style="color:#0000FF;">int</span> <span style="color:#000080;">LocateIndex</span>,<span style="color:#0000FF;">int</span> <span style="color:#000080;">InData</span>)</p><p align="left">{</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">int</span> <span style="color:#000080;">i</span>=1;<span style="color:#008000;">//</span> <span style="color:#008000;">由于起始结点</span><span style="color:#000080;">HeadNode</span><span style="color:#008000;">是头结点，所以计数从</span><span style="color:#008000;">1</span><span style="color:#008000;">开始</span></p><p align="left">&nbsp;&nbsp;&nbsp; linklist *CurrentNode= (<span style="color:#0000FF;">linklist</span> *) HeadNode;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#008000;">//</span><span style="color:#008000;">将</span><span style="color:#008000;">CurrentNode</span><span style="color:#008000;">指向待插入位置的前一个结点（</span><span style="color:#008000;">index -1</span><span style="color:#008000;">）</span></p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">while</span>(CurrentNode&amp;&amp; i&lt;LocateIndex-1)</p><p align="left">&nbsp;&nbsp;&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#000080;">CurrentNode</span>= <span style="color:#000080;">CurrentNode</span>-&gt;next;</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#000080;">i</span>++;</p><p align="left">&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp; linklist *<span style="color:#000080;">NodeToInsert</span>=(linklist*)<span style="color:#0000FF;">malloc</span>(<span style="color:#0000FF;">sizeof</span>(<span style="color:#000080;">linklist</span>));</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">if</span>(<span style="color:#000080;">NodeToInsert</span> == <span style="color:#A000A0;">NULL</span>)</p><p align="left">&nbsp;&nbsp;&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#880000;">printf</span>(<span style="color:#A31515;">"</span><span style="color:#A31515;">空间缓存不足</span><span style="color:#A31515;">"</span>);</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">return</span> <span style="color:#000080;">ERROR</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">NodeToInsert</span>-&gt;Element= <span style="color:#0000FF;">InData</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#000080;">NodeToInsert</span>-&gt;<span style="color:#000080;">next</span> = CurrentNode-&gt;<span style="color:#000080;">next</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#000080;">CurrentNode</span>-&gt;<span style="color:#000080;">next</span> = <span style="color:#000080;">NodeToInsert</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">return</span> <span style="color:#000080;">OK</span>;</p><p align="left">}</p><h3><a name="t3"></a><span style="font-size:18px;">删除链表结点</span></h3><p>对应于插入链表结点，链表的基本操作中同样也有删除链表结点。删除结点包括删除指定位置的结点和指定元素的结点。其基本原理都是先锁定待删除的结点的位置，然后将该结点的后置结点链接到前置结点的next指针处。这样中间这个结点即我们要删除的结点就从原来的链表中脱离开来。相对于原来的链表，即删除了该结点。</p><p align="left"><span style="color:#0000FF;">bool</span> <span style="color:#880000;">DeleteList</span>(<span style="color:#0000FF;">linklist</span> * <span style="color:#000080;">HeadNode</span>,<span style="color:#0000FF;">int</span> <span style="color:#000080;">index</span>, <span style="color:#0000FF;">int</span> * <span style="color:#000080;">DataToDel</span>)</p><p align="left">{</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">int</span> <span style="color:#000080;">i</span> = 1;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">linklist</span> *<span style="color:#000080;">CurrentNode</span> &nbsp;= <span style="color:#000080;">HeadNode</span>;&nbsp; </p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">linklist</span> *<span style="color:#000080;">NodeToDelete</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#008000;">//</span><span style="color:#008000;">将</span><span style="color:#008000;">CurrentNode</span><span style="color:#008000;">指向待删除位置的前一个结点（</span><span style="color:#008000;">index -1</span><span style="color:#008000;">）</span></p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">while</span>(CurrentNode&amp;&amp; i&lt;<span style="color:#000080;">index</span>-1)</p><p align="left">&nbsp;&nbsp;&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#000080;">CurrentNode</span>= CurrentNode-&gt;next;</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#000080;">i</span>++;</p><p align="left">&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp; NodeToDelete = CurrentNode-&gt;next;</p><p align="left">&nbsp;&nbsp;&nbsp; *<span style="color:#000080;">DataToDel</span> =NodeToDelete-&gt;Element;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#000080;">CurrentNode</span>-&gt;next= <span style="color:#000080;">NodeToDelete</span>-&gt;next;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#000080;">free</span>(<span style="color:#000080;">NodeToDelete</span>);</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">return</span> <span style="color:#000080;">OK</span>;</p><p align="left">}</p><p>此处为什么还要重新建立一个指针来记录或者保存待删除的结点呢？明明一个简单的步骤CurrentNode -&gt;next = CurrentNode -&gt;next-&gt;next;就可以将这个结点CurrentNode-&gt;next删除了，为什么要多此一举呢？</p><p>此处新建的链表类型的指针NodeToDelete是为了释放CurrentNode-&gt;next。直接使用CurrentNode -&gt;next = CurrentNode -&gt;next-&gt;next只是将该节点从链表中剔除，但是没有将其空间从内存中释放。而且,经过了CurrentNode -&gt;next = CurrentNode -&gt;next-&gt;next这个赋值语句之后，我们已经丢失了原本需要删除的结点的地址。所以，在删除之前新建了个结点用来保存待删除的结点地址，以便后面对内存空间的释放。</p><h3><a name="t4"></a><span style="font-size:18px;">获取链表长度&amp;链表遍历</span></h3><p>获取链表的长度实际上和遍历链表具有相同的操作。遍历的过程将链表内的结点都访问了一边。获取链表长度的具体步骤是遍历链表之后能够记录并返回链表结点个数。</p><p>本文给出获取链表长的函数代码。</p><p align="left"><span style="color:#0000FF;">int</span> <span style="color:#880000;">GetListLength</span>(<span style="color:#0000FF;">linklist</span> *<span style="color:#000080;">HeadNode</span>)</p><p align="left">{</p><p align="left">&nbsp;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">int</span> <span style="color:#000080;">ListLength</span> = 0;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">linklist</span> *<span style="color:#000080;">CurrentNode</span>= (<span style="color:#0000FF;">linklist</span>*)<span style="color:#000080;"> HeadNode</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">while</span>(<span style="color:#000080;">CurrentNode</span>)<span style="color:#008000;">//</span> <span style="color:#008000;">当前指针不为空时可以计数累加</span></p><p align="left">&nbsp;&nbsp;&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ListLength++;</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#000080;">CurrentNode</span>= <span style="color:#000080;">CurrentNode</span>-&gt;next;&nbsp;&nbsp;&nbsp; <span style="color:#008000;">//</span><span style="color:#008000;">指针移到下一结点</span></p><p align="left">&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">return</span>ListLength;</p><p align="left">}</p><p>在该函数中，出现了CurrentNode = CurrentNode -&gt;next的表示方法，这是将CurrentNode -&gt;next这个结点的指针移动到了当前这个结点CurrentNode，下一次使用CurrentNode指针的时候CurrentNode实际已经指向了下一个结点CurrentNode -&gt;next。所以这也是常说到的结点后移。</p><p>对于链表内的赋值操作我们总结出几种情况：</p><h3><a name="t5"></a><span style="font-size:18px;">获取链表元素</span></h3><p>接下来我们将“给定链表中的某一个位置，返回该位置的数据值”和“返回链表内某一个元素的位置”这两个问题放在一起介绍。</p><p>这两种情况的思路都是需要遍历链表。在给定元素值的情况下，定义一个元素序号随着遍历的过程累加，遍历的过程校验链表的结点是否与给定的元素匹配，如果匹配则返回元素位置的序号；在给定位置的情况下就更简单一些，元素序号累加到对应位置，返回对应结点的元素即可。</p><p>本文只列出给定元素值的例子：</p><p align="left"><span style="color:#0000FF;">int</span> <span style="color:#880000;">LocateElement</span>(<span style="color:#0000FF;">linklist</span> * <span style="color:#000080;">HeadNode</span>,<span style="color:#0000FF;">int</span> <span style="color:#000080;">DataToLocate</span>)</p><p align="left">{</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">int</span> <span style="color:#000080;">LocateIndex</span> = 1;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">linklist</span> *<span style="color:#000080;">CurrentNode</span>= (<span style="color:#0000FF;">linklist</span>*)<span style="color:#000080;"> HeadNode</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">while</span>(<span style="color:#000080;">CurrentNode</span>)</p><p align="left">&nbsp;&nbsp;&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">if</span>(<span style="color:#000080;">CurrentNode</span>-&gt;<span style="color:#000080;">Element</span>== <span style="color:#000080;">DataToLocate</span>)</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">return</span><span style="color:#000080;">LocateIndex</span>;<span style="color:#008000;"> //</span><span style="color:#008000;">找到位置返回</span></p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#000080;">CurrentNode</span>= <span style="color:#000080;">CurrentNode</span>-&gt;<span style="color:#880000;">next</span>;</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#000080;">LocateIndex</span>++;</p><p align="left">&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">return</span> -1;<span style="color:#008000;"> //</span><span style="color:#008000;">如果没有这个值，返回</span><span style="color:#008000;">-1</span></p><p align="left">&nbsp;</p><p align="left">}</p><p>本函数的逻辑是如果遍历链表之后能够找到与所给元素匹配的结点，则将该结点的位置返回。但如果没有匹配的结点的话，则返回一个-1，表示获取元素位置失败。</p><h3><a name="t6"></a><span style="font-size:18px;">链表置空</span></h3><p>链表置空又可以称为销毁链表。同样是在遍历的前提下，一直到链表结尾结束，所有遍历到的链表结点均释放掉空间，具体代码如下：</p><p align="left"><span style="color:#0000FF;">bool</span> <span style="color:#880000;">DestroyList</span>(<span style="color:#0000FF;">linklist</span> * <span style="color:#000080;">HeadNode</span>)</p><p align="left">{</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">linklist</span> *<span style="color:#000080;">pNext</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">linklist</span> *<span style="color:#000080;">CurrentNode</span>= (<span style="color:#0000FF;">linklist</span>*)<span style="color:#000080;"> HeadNode</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">while</span>(<span style="color:#000080;">CurrentNode</span>)</p><p align="left">&nbsp;&nbsp;&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#000080;">pNext</span> = <span style="color:#000080;">CurrentNode</span>-&gt;<span style="color:#880000;">next</span>;</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#A000A0;">free</span>(<span style="color:#000080;">CurrentNode</span>);</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#000080;">CurrentNode</span>= <span style="color:#000080;">pNext</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#000080;">HeadNode</span>-&gt;<span style="color:#880000;">next</span> = <span style="color:#A000A0;">NULL</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">return</span> <span style="color:#A000A0;">OK</span>;</p><p align="left">}</p><h3><a name="t7"></a><span style="font-size:18px;">链表逆序</span></h3><p>链表的逆序有很多种思路，本文介绍一种将当前结点的下一结点一直往头指针之后移动的思路。</p><p>假设当前有5个结点，head、a1、a2、a3、a4、a5，他们的头指针是head。我们的思路便是将a1作为当前元素一直往后遍历，并且将a1后面的数据依次挪到head之后。 &nbsp;&nbsp;</p><p style="text-align:center;"><img src="https://img-blog.csdn.net/20180502195718402" alt=""><br></p><p>在第一次搬移的过程中，需要将a1的下一个元素a2放在head之后。如图所示，当前结点选定为a1，起一个变量名为current，当前结点的下一个结点为pNext，则a2便成了pNext = current-&gt;next。如果想要将pNext移到head之后，我们按照图中第1步先将a3连接到a1的后面，然后第2步再将head后面的整体链表放到要移动的a2的后面，也就是pNext-&gt;next= head-&gt;next，第3步将a2移到head之后。这三个步骤下来，我们的第一次反转工作就算完成了。此时的链表链表就变成了head、a2、a1、a3、a4、a5，如图所示：</p><p style="text-align:center;">                              <img src="https://img-blog.csdn.net/20180502195849229" alt=""><br></p><p>如果上面移动的步骤不按图中进行会出现什么情况呢？假设现在按照3-2-1的步骤来实现a2移动到head后面。当先进行第三步之后，即head-&gt;next = pNext;这一步直接将a2挪到了head之后。然后我们接下来应该再将原来head后面的一串数据链接到刚刚移动到head后面的a2后面，此处由于head后面的数据已经被pNext更新了，此时head后面是a2结点，所以在执行第二步以后，链表就变成了无限循环的链表，而且循环的元素值是a2。</p><p>按照上图正确的顺序实现第一次反转以后，可以判定当前的current指针是否已经是尾指针，如果不是就可以继续执行。第二次反转后链表就变成了head、a3、a2、a1、a4、a5。因此当把链表内的最后一个元素也移动到head之后时，链表逆序的工作就算完成了。</p><p style="text-align:center;"><img src="https://img-blog.csdn.net/20180502195918818" alt=""><br></p><p>具体的代码实现如下。</p><p align="left"><span style="color:#0000FF;">linklist</span> * <span style="color:#880000;">ListRotate</span>(<span style="color:#0000FF;">linklist</span> * <span style="color:#000080;">HeadNode</span>)</p><p align="left">{</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">linklist</span>* <span style="color:#000080;">current</span>,*<span style="color:#000080;">pNext</span>,*<span style="color:#000080;">pPrev</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#000080;">pPrev</span> = (<span style="color:#0000FF;">linklist</span>*)<span style="color:#A000A0;">malloc</span>(<span style="color:#0000FF;">sizeof</span>(<span style="color:#0000FF;">linklist</span>));</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">if</span>(<span style="color:#000080;">pPrev</span> == <span style="color:#A000A0;">NULL</span>)</p><p align="left">&nbsp;&nbsp;&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#880000;">printf</span>(<span style="color:#A31515;">"</span><span style="color:#A31515;">空间缓存不足</span><span style="color:#A31515;">"</span>);</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">return</span> <span style="color:#000080;">ERROR</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#000080;">pPrev</span>-&gt;<span style="color:#000080;">next</span> = <span style="color:#000080;">HeadNode</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#000080;">current</span> = <span style="color:#000080;">HeadNode</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">while</span>(<span style="color:#000080;">current</span>-&gt;<span style="color:#000080;">next</span>)</p><p align="left">&nbsp;&nbsp;&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#000080;">pNext</span> = <span style="color:#000080;">current</span>-&gt;<span style="color:#000080;">next</span>;</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#000080;">current</span>-&gt;<span style="color:#000080;">next</span> = <span style="color:#000080;">pNext</span>-&gt;<span style="color:#000080;">next</span>;</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#000080;">pNext</span>-&gt;<span style="color:#000080;">next</span> = <span style="color:#000080;">pPrev</span>-&gt;<span style="color:#000080;">next</span>;</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#000080;">pPrev</span>-&gt;<span style="color:#000080;">next</span> = <span style="color:#000080;">pNext</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">return</span> <span style="color:#000080;">pPrev</span>-&gt;<span style="color:#000080;">next</span>;</p><p align="left">}</p><h3><a name="t8"></a>链表判断是否有环</h3><p>判断链表是否存在环的过程中，通常最先想到的方法就是从定义下手，有环的话就没有尾结点，也就是说不存在一个结点的next指针是null。通过这种思路可以对有环无环进行判定，但需要判定到何时呢？</p><p>当遍历了4000个结点都没有遇到null结点，难道就可以断定这就是一个有环的链表吗？如果它的第4001个结点就是尾结点呢？很多情况下，我们是不知道链表的长度的，所以我们很难确定需要判定到哪一个结点才能确定链表是否为环形链表。因此我们需要借助快指针、慢指针的概念，这是目前用来判断链表内有环无环的最通用有效的方法。</p><p>假设有这样一种情况，有两辆车，一辆车每秒钟可以跑n米，另外一辆速度要快一些，每秒能跑2n米，这两辆车都匀速运行。如果在一个没有交叉点的跑道上，这时跑道上有一个终点，快车和慢车同时在起始点相遇出发之后，一直到终点，快车和慢车的距离只会越拉越大，等到快车到达终点的时候，两者之间的距离差最大。假想一种情况，如果跑道的终点与起始点连接了起来，虽然说从慢车的角度看，快车在前方越来越远。但快车的角度看，慢车在后面越来越远，但在前面看的话确实越来越近。所以在一个环形的跑道上，快车终究会有第二次与慢车相遇，此时正好超车一圈。</p><p>函数的执行过程如下：</p><p align="left"><span style="color:#0000FF;">bool</span> <span style="color:#880000;">IsListLoop</span>(<span style="color:#0000FF;">linklist</span> *<span style="color:#000080;">HeadNode</span>)</p><p align="left">{</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">linklist</span> *<span style="color:#000080;">pFast</span>,*<span style="color:#000080;">pSlow</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#000080;">pFast</span> = <span style="color:#000080;">pSlow</span> = <span style="color:#000080;">HeadNode</span>;</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">while</span>(<span style="color:#000080;">pFast</span> &amp;&amp; <span style="color:#000080;">pSlow</span>)</p><p align="left">&nbsp;&nbsp;&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#000080;">pSlow</span> = <span style="color:#000080;">pSlow</span>-&gt;<span style="color:#000080;">next</span>;</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">if</span>(<span style="color:#000080;">pFast</span>-&gt;<span style="color:#000080;">next</span>)</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#000080;">pFast</span>= <span style="color:#000080;">pFast</span>-&gt;<span style="color:#000080;">next</span>-&gt;<span style="color:#000080;">next</span>;</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">else</span></p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#000080;">pFast</span>= <span style="color:#000080;">pFast</span>-&gt;<span style="color:#000080;">next</span>;</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">if</span>(<span style="color:#000080;">pFast</span> == <span style="color:#000080;">pSlow</span>)</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">return</span><span style="color:#A000A0;">TRUE</span>;</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp; <span style="color:#0000FF;">return</span> <span style="color:#A000A0;">FALSE</span>;</p><p align="left">}</p><p>&nbsp;</p><p>以上介绍了链表的部分基本操作，这些操作是实现很多算法的基础。希望大家共同学习进步，不足之处望指出。</p><p><span style="color:#FF0000;">&nbsp;</span></p>                                    </div>
+                    </div>
+    </article>
+</div><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+    </div>
+
+    
+    
+    
+        
+      
+        <div id="reward-container">
+  <div>坚持技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+        
+      
+      <div style="display: inline-block">
+        <img src="http://pwmvr65mz.bkt.clouddn.com/201908231107_83.png" alt="陆陆陆啊 微信支付">
+        <p>微信支付</p>
+      </div>
+        
+      
+      <div style="display: inline-block">
+        <img src="http://pwmvr65mz.bkt.clouddn.com/201908231107_853.jpg" alt="陆陆陆啊 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+      
+
+      <footer class="post-footer">
+
+        <footer class="post-footer"> 原有内容
+        <div>    
+        
+        
+        <ul class="post-copyright">
+          <li class="post-copyright-author">
+              <strong>本文作者：</strong>陆陆陆啊
+          </li>
+          <li class="post-copyright-link">
+            <strong>本文链接：</strong>
+            <a href="/2019/09/07/链表基础知识总结/" title="">2019/09/07/链表基础知识总结/</a>
+          </li>
+          <li class="post-copyright-license">
+            <strong>版权： </strong>
+            本站文章均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议，请勿用于商业，转载注明出处！
+          </li>
+        </ul>
+        
+        </div>
+
+        
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
+    </div>
+  
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/09/07/指针/" rel="next" title="C语言指针">
+                  <i class="fa fa-chevron-left"></i> C语言指针
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+  <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #A4DD00;font-size:16px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+       
+</div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80NjI1MS8yMjc2Mg=="></div>
+  </div>
+  
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="http://pwmvr65mz.bkt.clouddn.com/201908231102_902.jpg"
+      alt="陆陆陆啊">
+  <p class="site-author-name" itemprop="name">陆陆陆啊</p>
+  <div class="site-description motion-element" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/lufeifan" title="GitHub &rarr; https://github.com/lufeifan" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://weibo.com/6577344578/profile?topnav=1&wvr=6&is_all=1" title="微博 &rarr; https://weibo.com/6577344578/profile?topnav=1&wvr=6&is_all=1" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>微博</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://www.douban.com/people/187734609/" title="豆瓣 &rarr; https://www.douban.com/people/187734609/" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>豆瓣</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://www.zhihu.com/people/lu-lu-lu-a-83/" title="知乎 &rarr; https://www.zhihu.com/people/lu-lu-lu-a-83/" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>知乎</a>
+      </span>
+    
+  </div>
+
+
+  <div class="links-of-blogroll motion-element links-of-blogroll-block">
+    <div class="links-of-blogroll-title">
+      <i class="fa  fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://wpa.qq.com/msgrd?v=3&uin=1714004230&site=qq&menu=yes" title="http://wpa.qq.com/msgrd?v=3&uin=1714004230&site=qq&menu=yes" rel="noopener" target="_blank">联系QQ</a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">链表基础知识总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#content_views"><span class="nav-number">1.0.1.</span> <span class="nav-text">链表初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#content_views"><span class="nav-number">1.0.2.</span> <span class="nav-text">链表创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#content_views"><span class="nav-number">1.0.3.</span> <span class="nav-text">插入链表结点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#content_views"><span class="nav-number">1.0.4.</span> <span class="nav-text">删除链表结点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#content_views"><span class="nav-number">1.0.5.</span> <span class="nav-text">获取链表长度&amp;链表遍历</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#content_views"><span class="nav-number">1.0.6.</span> <span class="nav-text">获取链表元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#content_views"><span class="nav-number">1.0.7.</span> <span class="nav-text">链表置空</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#content_views"><span class="nav-number">1.0.8.</span> <span class="nav-text">链表逆序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#content_views"><span class="nav-number">1.0.9.</span> <span class="nav-text">链表判断是否有环</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">陆陆陆啊</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">28k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">26 分钟</span>
+</div>
+<div>  <span id="sitetime"></span>
+  <script language=javascript>
+    function siteTime(){
+      window.setTimeout("siteTime()", 1000);
+      var seconds = 1000;
+      var minutes = seconds * 60;
+      var hours = minutes * 60;
+      var days = hours * 24;
+      var years = days * 365;
+      var today = new Date();
+      var todayYear = today.getFullYear();
+      var todayMonth = today.getMonth()+1;
+      var todayDate = today.getDate();
+      var todayHour = today.getHours();
+      var todayMinute = today.getMinutes();
+      var todaySecond = today.getSeconds();
+      /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+      year - 作为date对象的年份，为4位年份值
+      month - 0-11之间的整数，做为date对象的月份
+      day - 1-31之间的整数，做为date对象的天数
+      hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+      minutes - 0-59之间的整数，做为date对象的分钟数
+      seconds - 0-59之间的整数，做为date对象的秒数
+      microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+      var t1 = Date.UTC(2019,08,19,21,00,00); //北京时间2018-2-13 00:00:00
+      var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+      var diff = t2-t1;
+      var diffYears = Math.floor(diff/years);
+      var diffDays = Math.floor((diff/days)-diffYears*365);
+      var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+      var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+      var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+      document.getElementById("sitetime").innerHTML="博客已运行"+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    siteTime();
+  </script>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.3.0</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="reading-progress-bar"></div>
+
+    
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d67e14a662ece92" async="async"></script>
+  </div>
+
+  </div>
+
+  
+    
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
+
+<script src="/js/schemes/pisces.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+  if (CONFIG.page.isPost) {
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id: 20533,
+      el: 'wpac-rating',
+      color: 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  }
+  </script>
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script><script src="/js/post-details.js?v=7.3.0"></script>
+
+
+<script>
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.5,"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"superSample":2,"width":100,"height":300,"position":"right","hOffset":30,"vOffset":20},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":0.6,"opacityOnHover":0.2},"log":false});</script></body>
+</html>
