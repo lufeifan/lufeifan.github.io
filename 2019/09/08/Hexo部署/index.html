@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "48b04edc"
+    });
+  daovoice('update');
+  </script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    save_scroll: false,
+    copycode: {"enable":true,"show_result":true,"style":null},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://lufeifan.github.io/2019/09/08/Hexo部署/index.html">
+<meta property="og:site_name" content="陆陆陆啊">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://b-gold-cdn.xitu.io/v3/static/img/lv-2.f597b88.svg">
+<meta property="og:image" content="data:image/svg+xml;utf8,<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="499" height="389"></svg>">
+<meta property="og:image" content="data:image/svg+xml;utf8,<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="658" height="187"></svg>">
+<meta property="og:image" content="data:image/svg+xml;utf8,<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="634" height="576"></svg>">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/8/13/16530cc1c29a6fcb?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/8/13/16530cb782b701df?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="data:image/svg+xml;utf8,<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="573" height="590"></svg>">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/8/13/16530ce6b15475e5?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/8/13/16530cc8c66263e7?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/8/13/16530ccdf7933823?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/8/13/16530cd39d2779df?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/8/13/16530cd8e227988a?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/8/13/16530cdd97741ca6?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://b-gold-cdn.xitu.io/v3/static/img/lv-2.f597b88.svg">
+<meta property="og:updated_time" content="2019-09-08T04:08:06.633Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:image" content="https://b-gold-cdn.xitu.io/v3/static/img/lv-2.f597b88.svg">
+  <link rel="alternate" href="/atom.xml" title="陆陆陆啊" type="application/atom+xml">
+  <link rel="canonical" href="https://lufeifan.github.io/2019/09/08/Hexo部署/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Hexo | 陆陆陆啊</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <script type="text/javascript" src="http://tajs.qq.com/stats?sId=66465782" charset="UTF-8"></script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <link rel="stylesheet" href="/dist/APlayer.min.css">
+  <div id="aplayer"></div>
+  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+  <script type="text/javascript" src="/dist/music.js"></script>
+  
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+    <a href="https://github.com/lufeifan/lufeifan.github.io" class="github-corner" aria-label="View source on GitHub">
+    <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">陆陆陆啊</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-读书">
+      
+    
+
+    <a href="/books" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>读书</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-电影">
+      
+    
+
+    <a href="/movies" rel="section"><i class="menu-item-icon fa fa-fw fa-film"></i> <br>电影</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-相册">
+      
+    
+
+    <a href="/photos" rel="section"><i class="menu-item-icon fa fa-fw fa-camera"></i> <br>相册</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    
+  <div class="popup search-popup">
+  <div class="search-header">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <div class="search-input-wrapper">
+      <input autocomplete="off" autocorrect="off" autocapitalize="none"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="search-input">
+    </div>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+  <div id="search-result"></div>
+</div>
+
+
+  </div>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content page-post-detail">
+            
+  
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lufeifan.github.io/2019/09/08/Hexo部署/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陆陆陆啊">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://pwmvr65mz.bkt.clouddn.com/201908231102_902.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陆陆陆啊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Hexo
+
+          
+        </h1>
+
+        <div class="post-meta">
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-08 12:07:18 / 修改时间：12:08:06" itemprop="dateCreated datePublished" datetime="2019-09-08T12:07:18+08:00">2019-09-08</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>4.5k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>4 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <hr>
+<a id="more"></a>
+<p>转载自：<a href="https://juejin.im/post/5b70d68ae51d45665d383281#heading-8" target="_blank" rel="noopener">https://juejin.im/post/5b70d68ae51d45665d383281#heading-8</a></p>
+<div data-v-3300248a="" data-v-81eba26a="" class="main-area article-area shadow"><article data-v-3300248a="" itemscope="itemscope" itemtype="http://schema.org/Article" class="article" data-v-81eba26a=""><meta itemprop="url" content="https://juejin.im/post/5b70d68ae51d45665d383281"><meta itemprop="headline" content="带你跳过各种坑，一次性把 Hexo 博客部署到自己的服务器"><meta itemprop="keywords" content="Git,前端,Hexo,服务器"><meta itemprop="datePublished" content="2018-08-14T03:56:47.138Z"><meta itemprop="image" content="https://b-gold-cdn.xitu.io/icon/icon-128.png"><div itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><meta itemprop="name" content="lawler61"><meta itemprop="url" content="https://juejin.im/user/585001e12f301e00573d9d0c"></div><div itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization"><meta itemprop="name" content="掘金"><div itemprop="logo" itemscope="itemscope" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://b-gold-cdn.xitu.io/icon/icon-white-180.png"><meta itemprop="width" content="180"><meta itemprop="height" content="180"></div></div><div data-v-3300248a="" class="author-info-block"><a data-v-3300248a="" href="/user/585001e12f301e00573d9d0c" target="_blank" rel="" class="avatar-link"><div data-v-a444215c="" data-v-30f85d34="" data-v-3300248a="" data-src="https://user-gold-cdn.xitu.io/2018/8/13/165327b43b6809be?imageView2/1/w/100/h/100/q/85/format/webp/interlace/1" class="lazy avatar avatar loaded" style="background-image: url(&quot;https://user-gold-cdn.xitu.io/2018/8/13/165327b43b6809be?imageView2/1/w/100/h/100/q/85/format/webp/interlace/1&quot;);"></div></a><div data-v-3300248a="" class="author-info-box"><a data-v-1fbe08ff="" data-v-3300248a="" href="/user/585001e12f301e00573d9d0c" target="_blank" rel="" class="username username ellipsis">lawler61</a><a data-v-7bfacf50="" data-v-1fbe08ff="" href="/book/5c90640c5188252d7941f5bb/section/5c9065385188252da6320022" target="_blank" rel="" class="rank"><img data-v-7bfacf50="" src="https://b-gold-cdn.xitu.io/v3/static/img/lv-2.f597b88.svg" alt="lv-2"></a><div data-v-3300248a="" class="meta-box"><time data-v-3300248a="" datetime="2018-08-14T03:56:47.138Z" title="Tue Aug 14 2018 11:56:47 GMT+0800 (中国标准时间)" class="time">2018年08月14日</time><span data-v-3300248a="" class="views-count">阅读 3134</span><!----></div></div><button data-v-81b0e688="" data-v-3300248a="" class="follow-button follow">关注</button></div><!----><h1 data-v-3300248a="" class="article-title">带你跳过各种坑，一次性把 Hexo 博客部署到自己的服务器</h1><div data-v-3300248a="" data-id="5b70d6f3f265da283038243d" itemprop="articleBody" class="article-content"><h1 class="heading" data-id="heading-0">hexo-to-your-server</h1>
+<h2 class="heading" data-id="heading-1">一、完成效果</h2>
+<p><a target="_blank" href="https://link.juejin.im?target=http%3A%2F%2Fwww.freeze61.me%2F" rel="nofollow noopener noreferrer">点击查看个人网站</a></p>
+<h2 class="heading" data-id="heading-2">二、准备</h2>
+<p>基本上每一步都会给出链接，可以多多参考</p>
+<h3 class="heading" data-id="heading-3">本地配置<code>node</code>环境</h3>
+<ol>
+<li><code>node</code>下载 <a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fnodejs.org%2Fzh-cn%2Fdownload%2F" rel="nofollow noopener noreferrer">官网下载</a></li>
+</ol>
+<p>参考链接：</p>
+<ul>
+<li>
+<p><a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fxuanwo.org%2F2015%2F03%2F26%2Fhexo-intor%2F" rel="nofollow noopener noreferrer">史上最详细的Hexo博客搭建图文教程</a></p>
+</li>
+<li>
+<p><a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fwww.jianshu.com%2Fp%2Fe03e363713f9" rel="nofollow noopener noreferrer">通过Git将Hexo博客部署到服务器</a></p>
+</li>
+</ul>
+<p>可以使用官方的<code>node</code>安装包或者<code>nvm</code>管理 node 版本，但千万<strong>不要混用</strong>，不然会环境和管理上的麻烦</p>
+<ol start="2">
+<li>安装：基本都是下一步，但记得把目录改到其他盘，这里我具体是在 <code>D:\programming\nodejs</code></li>
+</ol>
+<p></p><figure><img alt="node更换路径" class="lazyload inited" data-src="https://user-gold-cdn.xitu.io/2018/8/13/16530c867d69e01d?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" data-width="499" data-height="389" src="data:image/svg+xml;utf8,<?xml version=&quot;1.0&quot;?><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot; width=&quot;499&quot; height=&quot;389&quot;></svg>"><figcaption></figcaption></figure><p></p>
+<p>打开<code>cmd</code>查看<code>node</code>安装情况，执行如下命令</p>
+<pre><code class="hljs bash copyable" lang="bash">node -v
+npm -v
+<span class="copy-code-btn">复制代码</span></code></pre><ol start="3">
+<li>配置全局环境</li>
+</ol>
+<p>参考链接：</p>
+<ul>
+<li><a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fblog.csdn.net%2Fjizhuanfan0742%2Farticle%2Fdetails%2F80910187" rel="nofollow noopener noreferrer">windows npm -g 全局安装的命令找不到</a></li>
+</ul>
+<p>进入安装目录，创建文件夹<code>node_global</code>和<code>node_cache</code>，执行如下命令</p>
+<pre><code class="hljs bash copyable" lang="bash">npm config <span class="hljs-built_in">set</span> prefix <span class="hljs-string">"D:\programming\nodejs\node_global"</span>
+npm config <span class="hljs-built_in">set</span> cache <span class="hljs-string">"D:\programming\nodejs\node_cache"</span>
+<span class="copy-code-btn">复制代码</span></code></pre><p>环境配置：新增环境变量<code>NODE_PATH</code>和添加<code>Path</code>，两个值都为 <code>D:\programming\nodejs\node_global</code></p>
+<p></p><figure><img alt="node更换路径" class="lazyload inited" data-src="https://user-gold-cdn.xitu.io/2018/8/13/16530c8da7d907ab?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" data-width="658" data-height="187" src="data:image/svg+xml;utf8,<?xml version=&quot;1.0&quot;?><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot; width=&quot;658&quot; height=&quot;187&quot;></svg>"><figcaption></figcaption></figure><p></p>
+<p></p><figure><img alt="path更换路" class="lazyload inited" data-src="https://user-gold-cdn.xitu.io/2018/8/13/16530caf6d91929d?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" data-width="634" data-height="576" src="data:image/svg+xml;utf8,<?xml version=&quot;1.0&quot;?><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot; width=&quot;634&quot; height=&quot;576&quot;></svg>"><figcaption></figcaption></figure><p></p>
+<ol start="4">
+<li>测试全局环境</li>
+</ol>
+<p>打开<code>cmd</code>安装<code>hexo-cli</code>，分别执行如下命令</p>
+<pre><code class="hljs bash copyable" lang="bash">npm install hexo-cli -g
+hexo
+<span class="copy-code-btn">复制代码</span></code></pre><p>如果出现下面情况，恭喜你成功<code>全局模块调用</code></p>
+<p></p><figure><img alt="node更换路径" class="lazyload inited loaded" data-src="https://user-gold-cdn.xitu.io/2018/8/13/16530cc1c29a6fcb?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" data-width="651" data-height="429" src="https://user-gold-cdn.xitu.io/2018/8/13/16530cc1c29a6fcb?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"><figcaption></figcaption></figure><p></p>
+<ol start="5">
+<li>
+<p>如果出现<code>命令未找到，或不是可执行程序</code>，别着急！<strong>先仔细重复 3-4 步</strong>，一般是能够给解决的</p>
+</li>
+<li>
+<p>如果实在是不能解决，往后看，如果没错，<strong>直接跳过该步</strong></p>
+</li>
+</ol>
+<p>随便找个地方初始化文件，执行如下命令</p>
+<pre><code class="hljs bash copyable" lang="bash">mkdir hexo-blog
+<span class="hljs-built_in">cd</span> hexo-blog &amp;&amp; npm init
+然后回车键一阵乱敲！
+<span class="copy-code-btn">复制代码</span></code></pre><p>现在有 3 种解决方法，<strong>任选其一</strong></p>
+<ul>
+<li>法 1：检查<code>D:\programming\nodejs\node_global</code>目录是否有<code>hexo</code>模块，执行如下命令</li>
+</ul>
+<pre><code class="hljs bash copyable" lang="bash">D:\programming\nodejs\node_global\hexo // 每次使用全局模块带上前缀即可
+<span class="copy-code-btn">复制代码</span></code></pre><p>如果成功显示步骤 4 的情况，则调用成功。如果觉得每次加前缀麻烦，往后看</p>
+<ul>
+<li>法 2：使用<code>link</code>命令链接，执行如下命令</li>
+</ul>
+<pre><code class="hljs bash copyable" lang="bash">npm link hexo
+<span class="copy-code-btn">复制代码</span></code></pre><p>package.json 中新建脚本如下，执行如下命令</p>
+<pre><code class="hljs bash copyable" lang="bash">npm run hexo
+<span class="copy-code-btn">复制代码</span></code></pre><p></p><figure><img alt="新建npm脚本" class="lazyload inited loaded" data-src="https://user-gold-cdn.xitu.io/2018/8/13/16530cb782b701df?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" data-width="624" data-height="304" src="https://user-gold-cdn.xitu.io/2018/8/13/16530cb782b701df?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"><figcaption></figcaption></figure><p></p>
+<ul>
+<li>法 3：你还可以直接在<code>hexo-blog</code>中下载，执行如下命令</li>
+</ul>
+<pre><code class="hljs bash copyable" lang="bash">npm install hexo-cli -S
+npm run hexo （还是要在package.json中新建脚本）
+<span class="copy-code-btn">复制代码</span></code></pre><h3 class="heading" data-id="heading-4">初始化<code>hexo</code>项目</h3>
+<ol>
+<li>如果是按照上一节步骤 6 过来的，则在<code>hexo-blog</code>文件下初始化，执行如下命令</li>
+</ol>
+<pre><code class="hljs bash copyable" lang="bash">hexo init myblog &amp;&amp; <span class="hljs-built_in">cd</span> myblog
+npm install
+<span class="copy-code-btn">复制代码</span></code></pre><ol start="2">
+<li>下载主题，执行如下命令</li>
+</ol>
+<p>参考链接：</p>
+<ul>
+<li>
+<p><a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fwww.jianshu.com%2Fp%2Fb20fc983005f" rel="nofollow noopener noreferrer">Hexo设置主题以及Next主题个性设置</a></p>
+</li>
+<li>
+<p><a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fhexo.io%2Fthemes%2F" rel="nofollow noopener noreferrer">官网全部主题</a></p>
+</li>
+</ul>
+<pre><code class="hljs bash copyable" lang="bash">git <span class="hljs-built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next
+<span class="copy-code-btn">复制代码</span></code></pre><p>在<strong>本地配置文件</strong>中设置<code>theme</code>属性</p>
+<p></p><figure><img alt="添加next主题" class="lazyload inited" data-src="https://user-gold-cdn.xitu.io/2018/8/13/16530cea2acf6c3b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" data-width="573" data-height="590" src="data:image/svg+xml;utf8,<?xml version=&quot;1.0&quot;?><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot; width=&quot;573&quot; height=&quot;590&quot;></svg>"><figcaption></figcaption></figure><p></p>
+<ol start="3">
+<li>本地执行<code>hexo</code>项目</li>
+</ol>
+<p>统一添加<code>start</code>脚本，并执行如下命令</p>
+<pre><code class="hljs bash copyable" lang="bash">npm start
+<span class="copy-code-btn">复制代码</span></code></pre><p></p><figure><img alt="新" class="lazyload inited loaded" data-src="https://user-gold-cdn.xitu.io/2018/8/13/16530ce6b15475e5?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" data-width="754" data-height="341" src="https://user-gold-cdn.xitu.io/2018/8/13/16530ce6b15475e5?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"><figcaption></figcaption></figure><p></p>
+<p>快可以打开 <a target="_blank" href="https://link.juejin.im?target=http%3A%2F%2Flocalhost%3A4000%2F" rel="nofollow noopener noreferrer">http://localhost:4000/</a> 验证效果吧</p>
+<h3 class="heading" data-id="heading-5"><code>git</code>环境搭建</h3>
+<ol>
+<li><code>git</code>安装</li>
+</ol>
+<p>参考资料：</p>
+<ul>
+<li>
+<p><a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fwww.liaoxuefeng.com%2Fwiki%2F0013739516305929606dd18361248578c67b8067c8c017b000" rel="nofollow noopener noreferrer">廖雪峰老师的 git 教程</a></p>
+</li>
+<li>
+<p><a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fgitforwindows.org%2F" rel="nofollow noopener noreferrer">git 官网下载</a></p>
+</li>
+</ul>
+<ol start="2">
+<li>生成<code>ssh</code>认证，执行如下命令</li>
+</ol>
+<p>参考资料：</p>
+<ul>
+<li><a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fblog.csdn.net%2FYan_Less%2Farticle%2Fdetails%2F72866395" rel="nofollow noopener noreferrer">Git 提交时报错warning: LF will be replaced by CRLF in</a></li>
+</ul>
+<pre><code class="hljs bash copyable" lang="bash">git config --global user.name <span class="hljs-string">"yourname"</span>
+git config --global user.email youremail@example.com
+ssh-keygen -t rsa -C <span class="hljs-string">"youremail@example.com"</span>
+git config --global core.autocrlf <span class="hljs-literal">false</span>  // 禁用自动转换，这个不设置后面上传时会出现警告，如下
+<span class="copy-code-btn">复制代码</span></code></pre><p></p><figure><img alt="git警告" class="lazyload inited loaded" data-src="https://user-gold-cdn.xitu.io/2018/8/13/16530cc8c66263e7?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" data-width="848" data-height="258" src="https://user-gold-cdn.xitu.io/2018/8/13/16530cc8c66263e7?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"><figcaption></figcaption></figure><p></p>
+<p>最后获取到的<code>ssh</code>认证在<code>C:\Users\yourname\.ssh</code>中</p>
+<hr>
+<h2 class="heading" data-id="heading-6">三、服务器配置</h2>
+<h3 class="heading" data-id="heading-7">搭建远程<code>Git</code>私库</h3>
+<ol>
+<li>
+<p>登录到远程服务器，建议使用<code>Xshell 5</code></p>
+</li>
+<li>
+<p>安装 git，执行如下命令</p>
+</li>
+</ol>
+<pre><code class="hljs bash copyable" lang="bash">git --version // 如无，则安装
+yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-devel
+yum install -y git
+<span class="copy-code-btn">复制代码</span></code></pre><ol start="3">
+<li>创建用户并配置其仓库，执行如下命令</li>
+</ol>
+<p>参考资料：</p>
+<ul>
+<li><a target="_blank" href="https://link.juejin.im?target=http%3A%2F%2Fwww.swiftyper.com%2F2016%2F04%2F17%2Fdeploy-hexo-with-git-hook%2F" rel="nofollow noopener noreferrer">使用 Git Hook 自动部署 Hexo 到个人 VPS</a></li>
+</ul>
+<pre><code class="hljs bash copyable" lang="bash">useradd git
+passwd git // 设置密码
+su git // 这步很重要，不切换用户后面会很麻烦
+<span class="hljs-built_in">cd</span> /home/git/
+mkdir -p projects/blog // 项目存在的真实目录
+mkdir repos &amp;&amp; <span class="hljs-built_in">cd</span> repos
+git init --bare blog.git // 创建一个裸露的仓库
+<span class="hljs-built_in">cd</span> blog.git/hooks
+vi post-receive // 创建hook钩子函数，输入了内容如下（原理可以参考上面的链接）
+<span class="copy-code-btn">复制代码</span></code></pre><pre><code class="hljs bash copyable" lang="bash"><span class="hljs-meta">#!/bin/sh</span>
+git --work-tree=/home/git/projects/blog --git-dir=/home/git/repos/blog.git checkout <span class="hljs-_">-f</span>
+<span class="copy-code-btn">复制代码</span></code></pre><p>添加完毕后修改权限，执行如下命令</p>
+<pre><code class="hljs bash copyable" lang="bash">chmod +x post-receive
+<span class="hljs-built_in">exit</span> // 退出到 root 登录
+chown -R git:git /home/git/repos/blog.git // 添加权限
+<span class="copy-code-btn">复制代码</span></code></pre><ol start="4">
+<li>测试<code>git仓库</code>是否可用，另找空白文件夹，执行如下命令</li>
+</ol>
+<pre><code class="hljs bash copyable" lang="bash">git <span class="hljs-built_in">clone</span> git@server_ip:/home/git/repos/blog.git
+<span class="copy-code-btn">复制代码</span></code></pre><p>如果能把空仓库拉下来，就说明 git 仓库搭建成功了</p>
+<p></p><figure><img alt="git仓库测试" class="lazyload inited loaded" data-src="https://user-gold-cdn.xitu.io/2018/8/13/16530ccdf7933823?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" data-width="676" data-height="253" src="https://user-gold-cdn.xitu.io/2018/8/13/16530ccdf7933823?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"><figcaption></figcaption></figure><p></p>
+<ol start="5">
+<li>建立<code>ssh</code>信任关系，在<strong>本地电脑</strong>，执行如下命令</li>
+</ol>
+<p>参考资料：</p>
+<ul>
+<li><a target="_blank" href="https://link.juejin.im?target=http%3A%2F%2Froclinux.cn%2F%3Fp%3D2551" rel="nofollow noopener noreferrer">ssh-copy-id 帮你建立信任</a></li>
+</ul>
+<pre><code class="hljs bash copyable" lang="bash">ssh-copy-id -i C:/Users/yourname/.ssh/id_rsa.pub git@server_ip
+ssh git@server_ip // 测试能否登录
+<span class="copy-code-btn">复制代码</span></code></pre><p><strong>注</strong>：此时的 ssh 登录 git 用户不需要密码！否则就<strong>有错</strong>，请仔细重复步骤 3-4</p>
+<ol start="6">
+<li>如果第 5 步能成功，为了安全起见禁用<code>git用户</code>的 shell 登录权限，从而只能用<code>git clone</code>,<code>git push</code>等登录，执行如下命令</li>
+</ol>
+<p>参考资料：</p>
+<ul>
+<li><a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fblog.csdn.net%2Flgyaxx%2Farticle%2Fdetails%2F72954121" rel="nofollow noopener noreferrer">Git Server - 限制 Git 用户使用 SSH 登陆操作</a></li>
+</ul>
+<pre><code class="hljs bash copyable" lang="bash">cat /etc/shells // 查看`git-shell`是否在登录方式里面，有则跳过
+<span class="hljs-built_in">which</span> git-shell // 查看是否安装
+vi /etc/shells
+添加上2步显示出来的路劲，通常在 /usr/bin/git-shell
+<span class="copy-code-btn">复制代码</span></code></pre><p>修改<code>/etc/passwd</code>中的权限，将原来的</p>
+<pre><code class="hljs bash copyable" lang="bash">git:x:1000:1000::/home/git:/bin/bash
+<span class="copy-code-btn">复制代码</span></code></pre><p>修改为</p>
+<pre><code class="hljs bash copyable" lang="bash">git:x:1000:1000:,,,:/home/git:/usr/bin/git-shell
+<span class="copy-code-btn">复制代码</span></code></pre><h3 class="heading" data-id="heading-8">搭建<code>nginx</code>服务器</h3>
+<ol>
+<li>下载并安装<code>nginx</code>，执行如下命令</li>
+</ol>
+<p>参考资料：</p>
+<ul>
+<li><a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fwww.jianshu.com%2Fp%2F4134a44a09c2" rel="nofollow noopener noreferrer">Nginx 源码安装和简单的配置</a></li>
+<li><a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Faotu.io%2Fnotes%2F2016%2F08%2F16%2Fnginx-https%2Findex.html" rel="nofollow noopener noreferrer">Nginx 配置 HTTPS 服务器</a></li>
+</ul>
+<pre><code class="hljs bash copyable" lang="bash"><span class="hljs-built_in">cd</span> /usr/<span class="hljs-built_in">local</span>/src
+wget http://nginx.org/download/nginx-1.15.2.tar.gz
+tar xzvf nginx-1.15.2.tar.gz
+<span class="hljs-built_in">cd</span> nginx-1.15.2
+./configure // 如果后面还想要配置 SSL 协议，就执行后面一句！
+./configure --prefix=/usr/<span class="hljs-built_in">local</span>/nginx --with-http_stub_status_module --with-http_ssl_module --with-file-aio --with-http_realip_module
+make &amp;&amp; make install
+<span class="hljs-built_in">alias</span> nginx=<span class="hljs-string">'/usr/local/nginx/sbin/nginx'</span> // 为nginx取别名，后面可直接用
+<span class="copy-code-btn">复制代码</span></code></pre><ol start="2">
+<li>配置<code>nginx</code>文件</li>
+</ol>
+<p>参考资料：</p>
+<ul>
+<li><a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fblog.csdn.net%2Fyang_xu_1987%2Farticle%2Fdetails%2F77929658" rel="nofollow noopener noreferrer">Linux 中 nginx 基本操作命令</a></li>
+</ul>
+<p>先启动是否安装成功，执行如下命令</p>
+<pre><code class="hljs bash copyable" lang="bash">nginx // 直接来！浏览器查看 server_ip，默认是80端口
+<span class="copy-code-btn">复制代码</span></code></pre><p>配置文件，执行如下命令</p>
+<pre><code class="hljs bash copyable" lang="bash">nginx <span class="hljs-_">-s</span> stop // 先停止nginx
+<span class="hljs-built_in">cd</span> /usr/<span class="hljs-built_in">local</span>/nginx/conf
+vi nginx.conf
+修改 root 解析路径，如下图
+同时将 user 改为 root 如下图，不然nginx无法访问 /home/git/project/blog
+nginx <span class="hljs-_">-s</span> reload
+<span class="copy-code-btn">复制代码</span></code></pre><p></p><figure><img alt="修改nginx配置" class="lazyload inited loaded" data-src="https://user-gold-cdn.xitu.io/2018/8/13/16530cd39d2779df?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" data-width="565" data-height="481" src="https://user-gold-cdn.xitu.io/2018/8/13/16530cd39d2779df?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"><figcaption></figcaption></figure><p></p>
+<p></p><figure><img alt="修改nginx user" class="lazyload inited loaded" data-src="https://user-gold-cdn.xitu.io/2018/8/13/16530cd8e227988a?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" data-width="541" data-height="306" src="https://user-gold-cdn.xitu.io/2018/8/13/16530cd8e227988a?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"><figcaption></figcaption></figure><p></p>
+<hr>
+<h2 class="heading" data-id="heading-9">四、链接</h2>
+<p>至此我们就把本地和服务器的环境全部搭建完成，现在利用 hexo 配置文件进行链接</p>
+<h3 class="heading" data-id="heading-10">配置<code>_config.yml</code>文件</h3>
+<ol>
+<li>编辑<code>_config.yml</code>的<code>deploy</code>属性</li>
+</ol>
+<p></p><figure><img alt="编辑本地deploy" class="lazyload inited loaded" data-src="https://user-gold-cdn.xitu.io/2018/8/13/16530cdd97741ca6?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" data-width="696" data-height="398" src="https://user-gold-cdn.xitu.io/2018/8/13/16530cdd97741ca6?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"><figcaption></figcaption></figure><p></p>
+<ol start="2">
+<li>在<code>package.json</code>中添加 npm 脚本</li>
+</ol>
+<pre><code class="hljs json copyable" lang="json">"scripts": {
+  "deploy": "hexo clean &amp;&amp; hexo g -d",
+  "start": "hexo clean &amp;&amp; hexo g &amp;&amp; hexo s"
+},
+<span class="copy-code-btn">复制代码</span></code></pre><ol start="3">
+<li>链接！这下在本地调试就用<code>npm start</code>，调试好了就上传到服务器，美滋滋~快通过你的服务器ip访问吧</li>
+</ol>
+<pre><code class="hljs bash copyable" lang="bash">npm run deploy
+<span class="copy-code-btn">复制代码</span></code></pre><hr>
+<h2 class="heading" data-id="heading-11">五、总结</h2>
+<p>本次教程介绍<code>node</code>环境配置，主要强调了全局模块的调用，然后是初始化 hexo 项目，建议多参考官方的配置。然后搭建本地和服务器的<code>git</code>环境，通过<code>ssh通行证</code>交互。接下来是通过<code>nginx.conf</code>文件来配置<code>nginx</code>。最后<code>_config.yml</code>的<code>deploy</code>参数来连接本地和服务器</p>
+<hr>
+<h2 class="heading" data-id="heading-12">六、最后说句</h2>
+<p>本人前端新手一枚，有错误的话欢迎指正</p>
+<p>贴上 <a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fwww.freeze61.me%2F" rel="nofollow noopener noreferrer">个人网站</a>，建站初期，欢迎您的光临~</p>
+<p>喜欢的话麻烦 <a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fgithub.com%2Flawler61%2Fhexo-to-your-server" rel="nofollow noopener noreferrer">Github</a> 给个 ★ 哦</p>
+</div></article><div data-v-3300248a="" data-v-81eba26a="" class="tag-list-box"><div data-v-3300248a="" data-v-81eba26a="" class="tag-list-title">关注下面的标签，发现更多相似文章</div><div data-v-3300248a="" data-v-81eba26a="" st:block="tagList" class="tag-list"><a data-v-3300248a="" href="/tag/Git" target="_blank" rel="" st:name="tag" class="item" data-v-81eba26a=""><div data-v-a444215c="" data-v-41441f3f="" data-v-3300248a="" data-src="https://lc-gold-cdn.xitu.io/3cf1219be35e6fa28229.png?imageView2/2/w/42/h/42/q/85/format/webp/interlace/1" class="lazy thumb tag-icon" style="background-image: none; background-size: contain;"></div><div data-v-3300248a="" class="tag-title">Git</div></a><a data-v-3300248a="" href="/tag/%E5%89%8D%E7%AB%AF" target="_blank" rel="" st:name="tag" class="item" data-v-81eba26a=""><div data-v-a444215c="" data-v-41441f3f="" data-v-3300248a="" data-src="https://lc-gold-cdn.xitu.io/bac28828a49181c34110.png?imageView2/2/w/42/h/42/q/85/format/webp/interlace/1" class="lazy thumb tag-icon" style="background-image: none; background-size: contain;"></div><div data-v-3300248a="" class="tag-title">前端</div></a><a data-v-3300248a="" href="/tag/Hexo" target="_blank" rel="" st:name="tag" class="item" data-v-81eba26a=""><div data-v-a444215c="" data-v-41441f3f="" data-v-3300248a="" data-src="https://lc-gold-cdn.xitu.io/bb655f08310127a75843.png?imageView2/2/w/42/h/42/q/85/format/webp/interlace/1" class="lazy thumb tag-icon" style="background-image: none; background-size: contain;"></div><div data-v-3300248a="" class="tag-title">Hexo</div></a><a data-v-3300248a="" href="/tag/%E6%9C%8D%E5%8A%A1%E5%99%A8" target="_blank" rel="" st:name="tag" class="item" data-v-81eba26a=""><div data-v-a444215c="" data-v-41441f3f="" data-v-3300248a="" data-src="https://lc-gold-cdn.xitu.io/be1879c7e9983dab0049.png?imageView2/2/w/42/h/42/q/85/format/webp/interlace/1" class="lazy thumb tag-icon" style="background-image: none; background-size: contain;"></div><div data-v-3300248a="" class="tag-title">服务器</div></a></div></div><a data-v-3300248a="" href="/user/585001e12f301e00573d9d0c" target="_blank" rel="" data-v-81eba26a=""></a><div data-v-3300248a="" class="footer-author-block"><a data-v-3300248a="" href="/user/585001e12f301e00573d9d0c" target="_blank" rel="" data-v-81eba26a=""></a><div data-v-3eacb830="" data-v-3300248a="" itemscope="itemscope" itemtype="http://schema.org/Person" class="author"><a data-v-3300248a="" href="/user/585001e12f301e00573d9d0c" target="_blank" rel="" data-v-81eba26a=""><meta itemprop="url" content="https://juejin.im/user/585001e12f301e00573d9d0c"><meta itemprop="image" content="https://user-gold-cdn.xitu.io/2018/8/13/165327b43b6809be?w=1004&amp;h=1004&amp;f=jpeg&amp;s=171066"><meta itemprop="name" content="lawler61"><meta itemprop="jobTitle" content="前端搬砖工"><div itemprop="memberOf" itemscope="itemscope" itemtype="http://schema.org/Organization"><meta itemprop="name" content="字节跳动"></div></a><div data-v-3eacb830="" class="author-info-block"><a data-v-3300248a="" href="/user/585001e12f301e00573d9d0c" target="_blank" rel="" data-v-81eba26a=""></a><a data-v-3eacb830="" href="/user/585001e12f301e00573d9d0c" target="_blank" rel="" class="avatar-link"><div data-v-a444215c="" data-v-30f85d34="" data-v-3eacb830="" data-src="https://user-gold-cdn.xitu.io/2018/8/13/165327b43b6809be?imageView2/1/w/100/h/100/q/85/format/webp/interlace/1" class="lazy avatar avatar" style="background-image: none;"></div></a><div data-v-3eacb830="" class="author-info-box"><div data-v-3eacb830="" class="profile-box"><a data-v-1fbe08ff="" data-v-3eacb830="" href="/user/585001e12f301e00573d9d0c" target="_blank" rel="" class="username username ellipsis">lawler61</a><a data-v-7bfacf50="" data-v-1fbe08ff="" href="/book/5c90640c5188252d7941f5bb/section/5c9065385188252da6320022" target="_blank" rel="" class="rank"><img data-v-7bfacf50="" src="https://b-gold-cdn.xitu.io/v3/static/img/lv-2.f597b88.svg" alt="lv-2"></a><span data-v-3eacb830="" class="position ellipsis">前端搬砖工 @ 字节跳动</span></div><div data-v-3eacb830="" class="meta-box"><a data-v-3eacb830="" href="/user/585001e12f301e00573d9d0c/posts" target="_blank" rel="" class="posts"><span data-v-3eacb830="" class="count post-count">发布了 8 篇专栏 · </span></a><span data-v-3eacb830="" class="count">获得点赞 52 · </span><span data-v-3eacb830="" class="count">获得阅读 5,531</span></div></div><button data-v-81b0e688="" data-v-3eacb830="" class="follow-button follow">关注</button></div></div></div><div data-v-3300248a="" data-v-81eba26a="" st:block="banner" class="article-banner"><a data-v-3300248a="" data-v-81eba26a="" st:name="link" st:state="https://juejin.im/extension/?utm_source=juejin.im&amp;utm_medium=post&amp;utm_campaign=extension_promotion" class="banner-title" href="https://juejin.im/extension/?utm_source=juejin.im&amp;utm_medium=post&amp;utm_campaign=extension_promotion" target="_blank">安装掘金浏览器插件</a><div data-v-3300248a="" data-v-81eba26a="" class="banner-content">打开新标签页发现好内容，掘金、GitHub、Dribbble、ProductHunt 等站点内容轻松获取。快来安装掘金浏览器插件获取高质量内容吧！</div></div><!----><!----><div data-v-28283acd="" data-v-3300248a="" class="comment-list-box" id="comment-box" data-v-81eba26a=""><div data-v-28283acd="" class="title">评论</div><div data-v-685300f0="" data-v-28283acd="" class="comment-form comment-form"><div data-v-685300f0="" class="avatar-box"><div data-v-a444215c="" data-v-30f85d34="" data-v-685300f0="" data-src="https://b-gold-cdn.xitu.io/v3/static/img/default-avatar.e30559a.svg" class="lazy avatar avatar" style="background-image: none;"></div></div><div data-v-685300f0="" class="form-box"><div data-v-685300f0="" class="input-box"><div data-v-d96d107c="" data-v-685300f0="" class="auth-card"><!----><div data-v-685300f0="" data-v-d96d107c="" contenteditable="true" spellcheck="false" placeholder="输入评论..." class="rich-input empty"><br data-v-685300f0="" data-v-d96d107c=""></div></div><!----></div><!----></div><input data-v-685300f0="" type="file" class="hidden"></div><!----><!----></div></div>
+
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+    </div>
+
+    
+    
+    
+        
+      
+        <div id="reward-container">
+  <div>坚持技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+        
+      
+      <div style="display: inline-block">
+        <img src="http://pwmvr65mz.bkt.clouddn.com/201908231107_83.png" alt="陆陆陆啊 微信支付">
+        <p>微信支付</p>
+      </div>
+        
+      
+      <div style="display: inline-block">
+        <img src="http://pwmvr65mz.bkt.clouddn.com/201908231107_853.jpg" alt="陆陆陆啊 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>陆陆陆啊</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://lufeifan.github.io/2019/09/08/Hexo部署/" title="Hexo">https://lufeifan.github.io/2019/09/08/Hexo部署/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+</div>
+
+      
+
+      <footer class="post-footer">
+
+        <footer class="post-footer">
+
+        
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
+    </div>
+  
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/09/08/搭建Git服务器/" rel="next" title="Git服务器">
+                  <i class="fa fa-chevron-left"></i> Git服务器
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+  <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #A4DD00;font-size:16px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+       
+</div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80NjI1MS8yMjc2Mg=="></div>
+  </div>
+  
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="http://pwmvr65mz.bkt.clouddn.com/201908231102_902.jpg"
+      alt="陆陆陆啊">
+  <p class="site-author-name" itemprop="name">陆陆陆啊</p>
+  <div class="site-description motion-element" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/lufeifan" title="GitHub &rarr; https://github.com/lufeifan" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://weibo.com/6577344578/profile?topnav=1&wvr=6&is_all=1" title="微博 &rarr; https://weibo.com/6577344578/profile?topnav=1&wvr=6&is_all=1" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>微博</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://www.douban.com/people/187734609/" title="豆瓣 &rarr; https://www.douban.com/people/187734609/" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>豆瓣</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://www.zhihu.com/people/lu-lu-lu-a-83/" title="知乎 &rarr; https://www.zhihu.com/people/lu-lu-lu-a-83/" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>知乎</a>
+      </span>
+    
+  </div>
+
+
+  <div class="links-of-blogroll motion-element links-of-blogroll-block">
+    <div class="links-of-blogroll-title">
+      <i class="fa  fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://wpa.qq.com/msgrd?v=3&uin=1714004230&site=qq&menu=yes" title="http://wpa.qq.com/msgrd?v=3&uin=1714004230&site=qq&menu=yes" rel="noopener" target="_blank">联系QQ</a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">带你跳过各种坑，一次性把 Hexo 博客部署到自己的服务器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">hexo-to-your-server</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.1.</span> <span class="nav-text">一、完成效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.2.</span> <span class="nav-text">二、准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">2.2.1.</span> <span class="nav-text">本地配置node环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">2.2.2.</span> <span class="nav-text">初始化hexo项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">2.2.3.</span> <span class="nav-text">git环境搭建</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.3.</span> <span class="nav-text">三、服务器配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">2.3.1.</span> <span class="nav-text">搭建远程Git私库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">2.3.2.</span> <span class="nav-text">搭建nginx服务器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.4.</span> <span class="nav-text">四、链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">2.4.1.</span> <span class="nav-text">配置_config.yml文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.5.</span> <span class="nav-text">五、总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.6.</span> <span class="nav-text">六、最后说句</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">陆陆陆啊</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">33k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">30 分钟</span>
+</div>
+<div>  <span id="sitetime"></span>
+  <script language=javascript>
+    function siteTime(){
+      window.setTimeout("siteTime()", 1000);
+      var seconds = 1000;
+      var minutes = seconds * 60;
+      var hours = minutes * 60;
+      var days = hours * 24;
+      var years = days * 365;
+      var today = new Date();
+      var todayYear = today.getFullYear();
+      var todayMonth = today.getMonth()+1;
+      var todayDate = today.getDate();
+      var todayHour = today.getHours();
+      var todayMinute = today.getMinutes();
+      var todaySecond = today.getSeconds();
+      /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+      year - 作为date对象的年份，为4位年份值
+      month - 0-11之间的整数，做为date对象的月份
+      day - 1-31之间的整数，做为date对象的天数
+      hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+      minutes - 0-59之间的整数，做为date对象的分钟数
+      seconds - 0-59之间的整数，做为date对象的秒数
+      microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+      var t1 = Date.UTC(2019,08,19,21,00,00); //北京时间2018-2-13 00:00:00
+      var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+      var diff = t2-t1;
+      var diffYears = Math.floor(diff/years);
+      var diffDays = Math.floor((diff/days)-diffYears*365);
+      var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+      var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+      var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+      document.getElementById("sitetime").innerHTML="博客已运行"+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    siteTime();
+  </script>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.3.0</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="reading-progress-bar"></div>
+
+    
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d67e14a662ece92" async="async"></script>
+  </div>
+
+  </div>
+
+  
+    
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
+
+<script src="/js/schemes/pisces.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+  if (CONFIG.page.isPost) {
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id: 20533,
+      el: 'wpac-rating',
+      color: 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  }
+  </script>
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script><script src="/js/post-details.js?v=7.3.0"></script>
+
+
+<script>
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.5,"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"superSample":2,"width":100,"height":300,"position":"right","hOffset":30,"vOffset":20},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":0.6,"opacityOnHover":0.2},"log":false});</script></body>
+</html>

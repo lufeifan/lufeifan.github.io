@@ -71,7 +71,7 @@
 <meta property="og:url" content="https://lufeifan.github.io/2019/09/08/搭建Git服务器/index.html">
 <meta property="og:site_name" content="陆陆陆啊">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-08T03:51:38.558Z">
+<meta property="og:updated_time" content="2019-09-08T04:00:59.669Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git服务器">
   <link rel="alternate" href="/atom.xml" title="陆陆陆啊" type="application/atom+xml">
@@ -330,7 +330,7 @@
                 
               
 
-              <time title="创建时间：2019-09-08 11:38:14 / 修改时间：11:51:38" itemprop="dateCreated datePublished" datetime="2019-09-08T11:38:14+08:00">2019-09-08</time>
+              <time title="创建时间：2019-09-08 11:38:14 / 修改时间：12:00:59" itemprop="dateCreated datePublished" datetime="2019-09-08T11:38:14+08:00">2019-09-08</time>
             </span>
           
             
@@ -368,7 +368,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>219</span>
+              <span>285</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -397,7 +397,8 @@
 my_project:  .git结尾的文件
 my_project.git: 生成的文件</code></pre><h4 id="2-放到远程服务器上"><a href="#2-放到远程服务器上" class="headerlink" title="2.放到远程服务器上"></a>2.放到远程服务器上</h4><pre><code>$ scp -r my_project.git 用户名@服务器ip:/home/放到服务器的文件位置</code></pre><h4 id="3-在服务器上下载上传的文件"><a href="#3-在服务器上下载上传的文件" class="headerlink" title="3.在服务器上下载上传的文件"></a>3.在服务器上下载上传的文件</h4><pre><code>1.创建新的文件夹
 2.在文件夹里 执行 git init --bare，git init --bare --shared
-3.下载 git clone 用户名@服务器ip:/home/放到服务器</code></pre><script>
+3.下载 git clone 用户名@服务器ip:/home/放到服务器</code></pre><p>遇到的问题：<br>    Git无法访问：解决办法找到本地计算机的.ssh文件，找到known_hosts删除你服务器的记录<br>    权限：</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -488,6 +489,10 @@ my_project.git: 生成的文件</code></pre><h4 id="2-放到远程服务器上">
 
             <div class="post-nav-prev post-nav-item">
               
+                <a href="/2019/09/08/Hexo部署/" rel="prev" title="Hexo">
+                  Hexo <i class="fa fa-chevron-right"></i>
+                </a>
+              
             </div>
           </div>
         
@@ -561,7 +566,7 @@ my_project.git: 生成的文件</code></pre><h4 id="2-放到远程服务器上">
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-count">23</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -715,14 +720,14 @@ my_project.git: 生成的文件</code></pre><h4 id="2-放到远程服务器上">
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">29k</span>
+    <span title="站点总字数">33k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">26 分钟</span>
+    <span title="站点阅读时长">30 分钟</span>
 </div>
 <div>  <span id="sitetime"></span>
   <script language=javascript>
