@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lufeifan.github.io/"/>
-  <updated>2019-09-07T23:55:01.843Z</updated>
+  <updated>2019-09-08T03:51:38.558Z</updated>
   <id>https://lufeifan.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git服务器</title>
+    <link href="https://lufeifan.github.io/2019/09/08/%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>https://lufeifan.github.io/2019/09/08/搭建Git服务器/</id>
+    <published>2019-09-08T03:38:14.911Z</published>
+    <updated>2019-09-08T03:51:38.558Z</updated>
+    
+    <content type="html"><![CDATA[<hr><a id="more"></a><h4 id="1-从本地导出-git文件夹"><a href="#1-从本地导出-git文件夹" class="headerlink" title="1.从本地导出.git文件夹"></a>1.从本地导出.git文件夹</h4><pre><code>git clone --bare my_project my_project.gitmy_project:  .git结尾的文件my_project.git: 生成的文件</code></pre><h4 id="2-放到远程服务器上"><a href="#2-放到远程服务器上" class="headerlink" title="2.放到远程服务器上"></a>2.放到远程服务器上</h4><pre><code>$ scp -r my_project.git 用户名@服务器ip:/home/放到服务器的文件位置</code></pre><h4 id="3-在服务器上下载上传的文件"><a href="#3-在服务器上下载上传的文件" class="headerlink" title="3.在服务器上下载上传的文件"></a>3.在服务器上下载上传的文件</h4><pre><code>1.创建新的文件夹2.在文件夹里 执行 git init --bare，git init --bare --shared3.下载 git clone 用户名@服务器ip:/home/放到服务器</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+    
+    </summary>
+    
+      <category term="博客搭建" scheme="https://lufeifan.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>C语言链表</title>
@@ -389,26 +409,6 @@
     </summary>
     
       <category term="博客搭建" scheme="https://lufeifan.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>页面框架</title>
-    <link href="https://lufeifan.github.io/2019/08/18/%E6%A1%86%E6%9E%B6/"/>
-    <id>https://lufeifan.github.io/2019/08/18/框架/</id>
-    <published>2019-08-18T14:24:18.018Z</published>
-    <updated>2019-08-20T04:01:19.355Z</updated>
-    
-    <content type="html"><![CDATA[<p>链接</p><a id="more"></a><hr><p><a href="https://www.baidu.com/" target="_blank" rel="noopener">百度</a><br> 图片<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1566191281845&amp;di=ee60fafd53208630597b75c2707954fa&amp;imgtype=0&amp;src=http%3A%2F%2Fww1.sinaimg.cn%2Fwap720%2F005T8ELAgw1f9u8wqhesnj310x0kuwhc.jpg" alt="欧阳娜娜"></p><pre><code>&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;    &lt;meta charset="UTF-8"&gt;    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;    &lt;link rel="stylesheet" href="index.css"&gt;    &lt;title&gt;Document&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    &lt;div id="top"&gt;        &lt;div class="container"&gt;        &lt;/div&gt;    &lt;/div&gt;    &lt;div id="vlog"&gt;        &lt;div class="container"&gt;            &lt;div class="vlog-left"&gt;            &lt;/div&gt;            &lt;div class="vlog-right"&gt;            &lt;/div&gt;        &lt;/div&gt;    &lt;/div&gt;&lt;/body&gt;&lt;/html&gt;*{    padding: 0;    margin: 0;}#top{    width: 100%;    height: 100px;    border: 1px solid red;}.container{    width: 70%;    height: 100%;;    margin: 0px auto;    border: 1px solid red;}#vlog{    width: 100%;    height: 400px;    border: 1px solid red;}.container .vlog-left{    width: 18%;    height: 100%;    border: 1px solid red;    float: left;}.container .vlog-right{    width: 80%;    height: 100%;    float: right;    border: 1px solid red;}</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;链接&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="页面框架" scheme="https://lufeifan.github.io/categories/%E9%A1%B5%E9%9D%A2%E6%A1%86%E6%9E%B6/"/>
     
     
   </entry>
