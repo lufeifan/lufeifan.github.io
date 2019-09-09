@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lululua.cn/"/>
-  <updated>2019-09-09T02:50:12.325Z</updated>
+  <updated>2019-09-09T12:02:38.325Z</updated>
   <id>https://lululua.cn/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>本地安装worldpress</title>
+    <link href="https://lululua.cn/2019/09/09/worldpress/"/>
+    <id>https://lululua.cn/2019/09/09/worldpress/</id>
+    <published>2019-09-09T11:44:49.591Z</published>
+    <updated>2019-09-09T12:02:38.325Z</updated>
+    
+    <content type="html"><![CDATA[<hr><a id="more"></a><h4 id="下载XAMPP"><a href="#下载XAMPP" class="headerlink" title="下载XAMPP"></a>下载XAMPP</h4><pre><code>http://soft.onlinedown.net/soft/225718.htm</code></pre><h4 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h4><pre><code>Apache可能遇到的问题：无法启动Apache，解决办法：打开Apache中的Confing将listen改为8080,访问的话不能再用http://localhost因为这个默认是80，要改用http://localhost:8080MySql:点击Admin 创建一个自己的数据库,步奏可以参考https://jingyan.baidu.com/article/1e5468f955d65b484961b7bb.html</code></pre><h4 id="下载worldpress"><a href="#下载worldpress" class="headerlink" title="下载worldpress"></a>下载worldpress</h4><pre><code>将下好的worldpress解压到xampp\htdocs</code></pre><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><pre><code>访问：http://localhost/解压的文件包名称根据提示安装</code></pre><h4 id="worldpress设置"><a href="#worldpress设置" class="headerlink" title="worldpress设置"></a>worldpress设置</h4><pre><code>省略。。。。(目前尚未研究)</code></pre><h4 id="wordpress搬家教程-从本地搬到服务器"><a href="#wordpress搬家教程-从本地搬到服务器" class="headerlink" title="wordpress搬家教程(从本地搬到服务器)"></a>wordpress搬家教程(从本地搬到服务器)</h4><pre><code>参考：https://jingyan.baidu.com/article/2a138328e57dba074b134f63.html</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+    
+    </summary>
+    
+      <category term="博客搭建" scheme="https://lululua.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>数据库系统(1)</title>
@@ -389,26 +409,6 @@
     </summary>
     
       <category term="剪辑软件" scheme="https://lululua.cn/categories/%E5%89%AA%E8%BE%91%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>音乐载入</title>
-    <link href="https://lululua.cn/2019/08/19/%E9%9F%B3%E4%B9%90/"/>
-    <id>https://lululua.cn/2019/08/19/音乐/</id>
-    <published>2019-08-19T13:56:09.136Z</published>
-    <updated>2019-08-20T06:56:30.289Z</updated>
-    
-    <content type="html"><![CDATA[<hr><a id="more"></a><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="//music.163.com/outchain/player?type=0&amp;id=2946604834&amp;auto=0&amp;height=430"></iframe><hr><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-    
-    </summary>
-    
-      <category term="外接嵌入" scheme="https://lululua.cn/categories/%E5%A4%96%E6%8E%A5%E5%B5%8C%E5%85%A5/"/>
     
     
   </entry>
