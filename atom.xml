@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lululua.cn/"/>
-  <updated>2019-09-08T13:15:54.383Z</updated>
+  <updated>2019-09-09T02:50:12.325Z</updated>
   <id>https://lululua.cn/</id>
   
   <author>
@@ -17,13 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>数据库系统(1)</title>
+    <link href="https://lululua.cn/2019/09/09/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%AC%E4%B8%80%E8%8A%82/"/>
+    <id>https://lululua.cn/2019/09/09/数据库第一节/</id>
+    <published>2019-09-09T02:26:45.411Z</published>
+    <updated>2019-09-09T02:50:12.325Z</updated>
+    
+    <content type="html"><![CDATA[<hr><a id="more"></a><h6 id="数据库系统"><a href="#数据库系统" class="headerlink" title="数据库系统"></a>数据库系统</h6><ul><li>数据结构化</li><li>数据的共享性高，冗余度低且易扩充</li><li>数据的独立性高<ul><li>物理独立性</li><li>逻辑独立性</li></ul></li><li>数据由数据库管理系统统一管理和控制<ul><li>数据的安全性保护</li><li>数据安全性检查</li><li>并发控制</li><li>数据恢复</li></ul></li></ul><h6 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h6><ul><li><p>第一类：概念模型</p><ul><li>1.信息世界中的基本概念<ul><li>1.实体</li><li>2.属性</li><li>3.码</li><li>4.实体型</li><li>5.实体集</li><li>6.联系</li></ul></li><li>2.概念模型的一种表示方法：实体-联系方法</li></ul></li><li><p>第二类：</p><ul><li>逻辑模型</li><li>物理模型   </li></ul></li><li><p>重要组成要素</p><ul><li>数据结构</li><li>数据操作</li><li>数据的完整性约束条件</li></ul></li><li><p>常用的数据模型</p><ul><li>层次模型<ul><li>层次模型的数据结构<ul><li>有且只有一个结点没有双亲结点，这结点称为根节点</li><li>根以外的其他结点有且只有一个双亲结点</li></ul></li><li>层次模型的数据操纵与完整性约束</li><li>层次模型的优缺点<ul><li>数据结构比较简单清晰</li><li>层次数据库的查询效率高</li><li>层次数据模型提供了良好的完整性支持</li><li>现实世界很多联系都是非层次性</li><li>应用程序的编写比较复杂</li><li>查询子女结点必须通过双亲结点</li><li>层次命令趋于程序化</li></ul></li></ul></li><li>网状模型</li><li>关系模型</li><li>面向对象数据模型</li><li>对象关系数据模型</li><li>半结构化数据模型</li></ul></li><li></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+    
+    </summary>
+    
+      <category term="数据库系统" scheme="https://lululua.cn/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Git服务器</title>
     <link href="https://lululua.cn/2019/09/08/%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     <id>https://lululua.cn/2019/09/08/搭建Git服务器/</id>
     <published>2019-09-08T03:38:14.911Z</published>
-    <updated>2019-09-08T13:15:54.383Z</updated>
+    <updated>2019-09-09T02:24:12.537Z</updated>
     
-    <content type="html"><![CDATA[<hr><a id="more"></a><h4 id="1-从本地导出-git文件夹"><a href="#1-从本地导出-git文件夹" class="headerlink" title="1.从本地导出.git文件夹"></a>1.从本地导出.git文件夹</h4><pre><code>git clone --bare my_project my_project.gitmy_project:  .git结尾的文件my_project.git: 生成的文件</code></pre><h4 id="2-放到远程服务器上"><a href="#2-放到远程服务器上" class="headerlink" title="2.放到远程服务器上"></a>2.放到远程服务器上</h4><pre><code>安装git:  yum install -y git创建用户：useradd 用户名用户密码：useradd 用户密码su 用户名// 这步很重要，不切换用户后面会很麻烦创建新的文件夹在文件夹里 执行 git init --bare，git init --bare --shared$ scp -r my_project.git 用户名@服务器ip:/home/放到服务器的文件位置</code></pre><h4 id="3-在服务器上下载上传的文件"><a href="#3-在服务器上下载上传的文件" class="headerlink" title="3.在服务器上下载上传的文件"></a>3.在服务器上下载上传的文件</h4><pre><code>下载 git clone 用户名@服务器ip:/home/放到服务器</code></pre><p>遇到的问题：<br>    Git无法访问：解决办法找到本地计算机的.ssh文件，找到known_hosts删除你服务器的记录<br>    权限：</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    <content type="html"><![CDATA[<hr><a id="more"></a><h4 id="1-从本地导出-git文件夹"><a href="#1-从本地导出-git文件夹" class="headerlink" title="1.从本地导出.git文件夹"></a>1.从本地导出.git文件夹</h4><pre><code>git clone --bare my_project my_project.gitmy_project:  .git结尾的文件my_project.git: 生成的文件</code></pre><h4 id="2-放到远程服务器上"><a href="#2-放到远程服务器上" class="headerlink" title="2.放到远程服务器上"></a>2.放到远程服务器上</h4><pre><code>$ scp -r my_project.git 用户名@服务器ip:/home/放到服务器的文件位置</code></pre><h4 id="3-在服务器上下载上传的文件"><a href="#3-在服务器上下载上传的文件" class="headerlink" title="3.在服务器上下载上传的文件"></a>3.在服务器上下载上传的文件</h4><pre><code>安装git:  yum install -y git创建用户：useradd 用户名用户密码：useradd 用户密码su 用户名// 这步很重要，不切换用户后面会很麻烦创建新的文件夹在文件夹里 执行 git init --bare，git init --bare --shared下载 git clone 用户名@服务器ip:/home/放到服务器</code></pre><p>遇到的问题：<br>    Git无法访问：解决办法找到本地计算机的.ssh文件，找到known_hosts删除你服务器的记录<br>    权限：</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
     <summary type="html">
     
@@ -237,7 +257,7 @@
     <link href="https://lululua.cn/2019/08/23/Windows%20%E4%B8%8A%E5%AE%89%E8%A3%85%20MySQL/"/>
     <id>https://lululua.cn/2019/08/23/Windows 上安装 MySQL/</id>
     <published>2019-08-23T01:54:15.699Z</published>
-    <updated>2019-08-23T02:38:58.899Z</updated>
+    <updated>2019-09-09T02:26:08.708Z</updated>
     
     <content type="html"><![CDATA[<hr><a id="more"></a><p>1.下载<a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">最新版本</a><br>2.<img src="http://pwmvr65mz.bkt.clouddn.com/201908231000_464.png" alt="如图"><br>3.<img src="http://pwmvr65mz.bkt.clouddn.com/201908231002_844.png" alt="如图"><br>4.安装MySQL<br> <img src="http://pwmvr65mz.bkt.clouddn.com/201908231020_317.png" alt="安装模式"><br> 更改地址<img src="http://pwmvr65mz.bkt.clouddn.com/201908231023_822.png" alt="更改地址"><br> <img src="http://pwmvr65mz.bkt.clouddn.com/201908231024_793.png" alt=""><br> <img src="http://pwmvr65mz.bkt.clouddn.com/201908231032_70.png" alt=""><br> 然后一点击下一步就可以<br>5.运行MySQL<img src="http://pwmvr65mz.bkt.clouddn.com/201908231035_680.png" alt="运行MySQL"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
@@ -247,7 +267,7 @@
     
     </summary>
     
-      <category term="数据库" scheme="https://lululua.cn/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+      <category term="数据库系统" scheme="https://lululua.cn/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/"/>
     
     
   </entry>
@@ -389,26 +409,6 @@
     </summary>
     
       <category term="外接嵌入" scheme="https://lululua.cn/categories/%E5%A4%96%E6%8E%A5%E5%B5%8C%E5%85%A5/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>博客搭建</title>
-    <link href="https://lululua.cn/2019/08/19/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>https://lululua.cn/2019/08/19/hexo搭建博客/</id>
-    <published>2019-08-19T11:48:47.484Z</published>
-    <updated>2019-09-02T13:05:35.489Z</updated>
-    
-    <content type="html"><![CDATA[<hr><a id="more"></a><ul><li><p>1.下载node.js<br> <a href="https://nodejs.org/en/" target="_blank" rel="noopener">下载地址</a></p></li><li><p>2.下载Git<br> <a href="https://git-scm.com/" target="_blank" rel="noopener">下载地址</a></p></li><li><p>3.安装Hexo</p><ul><li><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">官方Api</a></li><li>在新的文件夹右键  Git Bash Here</li><li>在Git中输入 npm install -g hexo-cli</li><li>hexo init</li><li>npm install</li></ul></li><li><p>4.更换主题(本人使用NexT主题,<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">NexT</a>)</p><ul><li><a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题下载</a></li><li>更换主题：到根目录 _config.yml 找到 theme </li></ul></li><li><p>5.更改语言</p><ul><li>到根目录 _config.yml 将 language: 改为 zh-CN</li></ul></li><li><p>6.增加标签和分类页<br> 在主题配置文件找到 Menu Settings 将要打开的功能去掉#</p></li><li><p>7.更换头像<br> 在主题配置文件找到 avatar 将url更改</p></li><li><p>8.更改标题和作者<br> 站点配置文件Ctrl+F 搜索title，author将其更改</p></li><li><p>9.启用社交链接<br> 在主题配置文件找到 social 将需要的功能打开，也可以自行添加</p></li><li><p>10.打开打赏功能<br> 在主题配置文件找到 reward_settings 将false 改为true<br> 找到 reward 更改图片地址</p></li><li><p>11.打开订阅公众号<br> 在主题配置文件找到 wechat_subscriber 将false 改为true</p></li><li><p>12.添加动态背景<br> 在主题配置文件找到 canvas_nest 将 enable: false更改为 true<br> 可能需要下载库<a href="https://github.com/theme-next/theme-next-canvas-ribbon" target="_blank" rel="noopener">链接</a></p></li><li><p>13.设置阅读全文</p><ul><li>1.打开source 在文章中加入&lt; !–more–&gt;(无空格)</li><li>2.在主题配置文件找到 auto_excerpt 将false 改为true ，length自行调节</li></ul></li><li><p>14.添加评论,搜索，统计，分享，字数统计，阅读市场功能(可参照NexT使用文档)<br> <a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT使用文档</a></p></li><li><p>15.部署到Github(可参照NexT使用文档)</p></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-    
-    </summary>
-    
-      <category term="博客搭建" scheme="https://lululua.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
   </entry>
