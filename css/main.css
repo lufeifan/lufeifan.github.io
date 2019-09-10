@@ -1029,11 +1029,7 @@ pre .javascript .function {
   padding-top: 0;
 }
 body {
-  background-image: url("http://pwmvr65mz.bkt.clouddn.com/201908312056_815.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  background-position: 50% 50%;
+  background-color: #ecdde3;
 }
 .back-to-top {
   background: #bbe6eb;
@@ -1777,7 +1773,7 @@ body {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #81b41f;
+  background: #a8ffee;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
