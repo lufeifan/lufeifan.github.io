@@ -357,7 +357,7 @@
     <link href="https://lululua.cn/2019/08/22/%E4%B8%83%E7%89%9B%E4%BA%91%E6%88%AA%E5%B1%8F%E4%B8%8A%E4%BC%A0/"/>
     <id>https://lululua.cn/2019/08/22/七牛云截屏上传/</id>
     <published>2019-08-22T14:09:08.556Z</published>
-    <updated>2019-08-22T14:24:49.691Z</updated>
+    <updated>2019-09-19T10:42:44.195Z</updated>
     
     <content type="html"><![CDATA[<hr><a id="more"></a><ul><li><p>1.到<a href="https://github.com/jiwenxing/qimage-win/releases" target="_blank" rel="noopener">github</a>下载release版本</p></li><li><p>2.打开release中的 <code>settings.ini</code> 文件</p></li><li><p>3.去七牛云找到密匙填写<img src="http://pwmvr65mz.bkt.clouddn.com/201908222218_401.png" alt="密匙"> </p></li><li><p>4.BUCKET_NAME：储存空间的名称</p></li><li><p>5BUCKET_DOMAIN：你自己的域名</p></li><li><p>6.UP_HOST = <a href="http://up-z2.qiniup.com" target="_blank" rel="noopener">http://up-z2.qiniup.com</a></p></li><li><p>7.DEBUG_MODE：调试开关，截屏上传失败可以把false改为true</p></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
@@ -367,7 +367,7 @@
     
     </summary>
     
-      <category term="markdown" scheme="https://lululua.cn/categories/markdown/"/>
+      <category term="博客搭建" scheme="https://lululua.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
   </entry>

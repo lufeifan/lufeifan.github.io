@@ -135,7 +135,7 @@
     <url>%2F2019%2F08%2F22%2F%E4%B8%83%E7%89%9B%E4%BA%91%E6%88%AA%E5%B1%8F%E4%B8%8A%E4%BC%A0%2F</url>
     <content type="text"><![CDATA[1.到github下载release版本 2.打开release中的 settings.ini 文件 3.去七牛云找到密匙填写 4.BUCKET_NAME：储存空间的名称 5BUCKET_DOMAIN：你自己的域名 6.UP_HOST = http://up-z2.qiniup.com 7.DEBUG_MODE：调试开关，截屏上传失败可以把false改为true document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-        <category>markdown</category>
+        <category>博客搭建</category>
       </categories>
   </entry>
   <entry>
