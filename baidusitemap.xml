@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://lululua.cn/2019/08/21/java2/</loc>
+    <lastmod>2019-09-21</lastmod>
+  </url>  <url>
+    <loc>https://lululua.cn/2019/08/23/Windows%20%E4%B8%8A%E5%AE%89%E8%A3%85%20MySQL/</loc>
+    <lastmod>2019-09-21</lastmod>
+  </url>  <url>
     <loc>https://lululua.cn/2019/08/22/%E4%B8%83%E7%89%9B%E4%BA%91%E6%88%AA%E5%B1%8F%E4%B8%8A%E4%BC%A0/</loc>
-    <lastmod>2019-09-19</lastmod>
+    <lastmod>2019-09-21</lastmod>
   </url>  <url>
     <loc>https://lululua.cn/2019/09/09/worldpress/</loc>
     <lastmod>2019-09-09</lastmod>
@@ -11,9 +17,6 @@
     <lastmod>2019-09-09</lastmod>
   </url>  <url>
     <loc>https://lululua.cn/2019/09/09/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%AC%E4%B8%80%E8%8A%82/</loc>
-    <lastmod>2019-09-09</lastmod>
-  </url>  <url>
-    <loc>https://lululua.cn/2019/08/23/Windows%20%E4%B8%8A%E5%AE%89%E8%A3%85%20MySQL/</loc>
     <lastmod>2019-09-09</lastmod>
   </url>  <url>
     <loc>https://lululua.cn/2019/09/07/%E6%8C%87%E9%92%88/</loc>
@@ -54,9 +57,6 @@
   </url>  <url>
     <loc>https://lululua.cn/2019/09/10/java%E4%BA%8C%E7%BA%A7/</loc>
     <lastmod>2019-08-26</lastmod>
-  </url>  <url>
-    <loc>https://lululua.cn/2019/08/21/java2/</loc>
-    <lastmod>2019-08-23</lastmod>
   </url>  <url>
     <loc>https://lululua.cn/2019/08/21/java1/</loc>
     <lastmod>2019-08-23</lastmod>
