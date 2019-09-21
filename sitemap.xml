@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lululua.cn/about/index.html</loc>
+    
+    <lastmod>2019-09-21T04:15:09.832Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lululua.cn/2019/08/21/java2/</loc>
     
     <lastmod>2019-09-21T04:10:53.836Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://lululua.cn/categories/index.html</loc>
     
     <lastmod>2019-09-09T02:56:09.609Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lululua.cn/about/index.html</loc>
-    
-    <lastmod>2019-09-09T02:55:52.434Z</lastmod>
     
   </url>
   
