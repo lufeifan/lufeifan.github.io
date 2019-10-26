@@ -235,26 +235,6 @@
   </entry>
   
   <entry>
-    <title>行列式</title>
-    <link href="https://lululua.cn/2019/09/01/%E8%A1%8C%E5%88%97%E5%BC%8F/"/>
-    <id>https://lululua.cn/2019/09/01/行列式/</id>
-    <published>2019-09-01T11:18:04.350Z</published>
-    <updated>2019-09-01T11:59:45.145Z</updated>
-    
-    <content type="html"><![CDATA[<hr><a id="more"></a><h5 id="排列"><a href="#排列" class="headerlink" title="排列"></a>排列</h5><pre><code>n个数就是n阶排列</code></pre><h5 id="顺序"><a href="#顺序" class="headerlink" title="顺序"></a>顺序</h5><pre><code>前面的数比后面的小</code></pre><h5 id="逆序"><a href="#逆序" class="headerlink" title="逆序"></a>逆序</h5><pre><code>前面的数比后面的大</code></pre><h5 id="逆序数"><a href="#逆序数" class="headerlink" title="逆序数"></a>逆序数</h5><pre><code>两种判断方法：    1.一个排列中前面的数比他大的有几个，总和    2.一个排列中前面的数比他小的有几个，总和</code></pre><blockquote><p>总和为奇数就是奇排列，为偶数就是偶排列</p></blockquote><blockquote><p>行列式的计算：其实可以观察矩阵用连线来记住，多少阶就一次连多少个数字，都具有一定的规律，<code>\</code>这样连线数据是想加，<code>/</code>再减去这样连线的数据就得到结果。</p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-    
-    </summary>
-    
-      <category term="线性代数" scheme="https://lululua.cn/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>豆瓣插件</title>
     <link href="https://lululua.cn/2019/09/01/%E8%B1%86%E7%93%A3%20%E6%8F%92%E4%BB%B6%E7%88%AC%E5%8F%96%E5%A4%B1%E8%B4%A5/"/>
     <id>https://lululua.cn/2019/09/01/豆瓣 插件爬取失败/</id>
@@ -393,21 +373,42 @@
   </entry>
   
   <entry>
-    <title>JAVA面向对象（2)</title>
-    <link href="https://lululua.cn/2019/08/21/java2/"/>
-    <id>https://lululua.cn/2019/08/21/java2/</id>
-    <published>2019-08-21T08:46:43.225Z</published>
-    <updated>2019-09-21T04:10:53.836Z</updated>
+    <title>视频嵌入</title>
+    <link href="https://lululua.cn/2019/08/20/%E8%A7%86%E9%A2%91/"/>
+    <id>https://lululua.cn/2019/08/20/视频/</id>
+    <published>2019-08-20T04:48:57.358Z</published>
+    <updated>2019-08-20T07:00:02.285Z</updated>
     
-    <content type="html"><![CDATA[<hr><a id="more"></a><h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><ul><li>类的组成：变量，方法，构造方法</li><li>构造方法：与类同名，不返回数字类型</li><li>方法<ul><li>实例方法</li><li>静态方法 </li><li>方法重载：该方法有多个名字但参数的个数和类型不同，可以用来实现<span style="color: red">多态</span></li></ul></li><li>变量：<ul><li>实例变量</li><li>静态变量</li></ul></li><li>类的对象：可以访问类中的方法</li><li>继承：<ul><li>声明 子类 extends 父类</li><li>继承父类的变量和方法</li><li>可以修改父类的变量和方法，还可以添加自己的变量和方法，名字相同就会进行覆盖和修改</li><li>关键字：this表示该类的对象</li><li>super：<span style="color: red">必须放在第一句</span>用于访问父类的变量和方法（一般用于同名），可用来调用父类的构造方法</li><li>父类对象和子类对象的转换（好像是上转型对象）</li></ul></li></ul><hr><h3 id="包："><a href="#包：" class="headerlink" title="包："></a>包：</h3><ul><li>import用于导入其他类，放在文件的首位</li><li>同包类可以相互访问,反之不得</li></ul><hr><h3 id="控制符"><a href="#控制符" class="headerlink" title="控制符"></a>控制符</h3><ul><li>static</li><li>final</li><li>abstract</li><li></li><li></li></ul><hr><h3 id="接口："><a href="#接口：" class="headerlink" title="接口："></a>接口：</h3><p>  定义接口：interface<br>  实现接口：implements<br>  调用接口则接口中的所有方法必须重写<br>  可以实现多继承<br>  接口定义的常量具有final，static，public属性</p><hr><p><img src="http://lululua.cn/201908231331_490.png" alt="完整的类定义"><br><img src="http://lululua.cn/201908231333_501.png" alt="完整的接口定义"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    <content type="html"><![CDATA[<iframe width="100%" height="350" src="//player.bilibili.com/player.html?aid=62244859&amp;cid=108194807&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><a id="more"></a><hr><iframe width="100%" height="350" frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=k0029f52ciy" allowfullscreen="true"></iframe><hr><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;iframe width=&quot;100%&quot; height=&quot;350&quot; src=&quot;//player.bilibili.com/player.html?aid=62244859&amp;amp;cid=108194807&amp;amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+    
+    </summary>
+    
+      <category term="外接嵌入" scheme="https://lululua.cn/categories/%E5%A4%96%E6%8E%A5%E5%B5%8C%E5%85%A5/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>pr</title>
+    <link href="https://lululua.cn/2019/08/20/Pr/"/>
+    <id>https://lululua.cn/2019/08/20/Pr/</id>
+    <published>2019-08-20T02:50:43.636Z</published>
+    <updated>2019-08-21T01:25:00.156Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p>教程推荐 :<a href="https://www.bilibili.com/video/av5540953/?p=9" target="_blank" rel="noopener">https://www.bilibili.com/video/av5540953/?p=9</a></p><a id="more"></a><ul><li>画面放大缩小： 双击预览视频区</li><li>弹幕制作： 使用默认静态字幕<pre><code>弹幕效果：使用关键帧 -- 运动 设置关键帧的开始和结束位置（&lt;span style="color: red"&gt;记得打点&lt;/span&gt;）</code></pre></li><li>视频速度：右键更改速度比例(鬼畜)</li><li>视频的衔接：左侧工具栏找到 <span style="color: red">- 视频过度</span></li><li>视频结尾：使用关键帧 – 运动 设置关键帧的开始和结束位置（记得打点）</li><li>导出：<span style="color: red">h.264</span></li></ul><hr><ul><li>视频转场：<br>  1.全选素材<br>  2.Ctrl+d<br>  3.转场素材可去设置默认</li><li>批量缩放素材：<br>  找到首选项中的默认媒体缩放设置为<span style="color: red"> 帧大小</span></li><li>批量调色：<br>  1.效果控件将颜色复制在删掉<br>  2.找到只要进行粘贴</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
     <summary type="html">
     
       &lt;hr&gt;
+&lt;p&gt;教程推荐 :&lt;a href=&quot;https://www.bilibili.com/video/av5540953/?p=9&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.bilibili.com/video/av5540953/?p=9&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
-      <category term="java" scheme="https://lululua.cn/categories/java/"/>
+      <category term="剪辑软件" scheme="https://lululua.cn/categories/%E5%89%AA%E8%BE%91%E8%BD%AF%E4%BB%B6/"/>
     
     
   </entry>
