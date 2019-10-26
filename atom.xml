@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lululua.cn/"/>
-  <updated>2019-10-26T10:49:53.336Z</updated>
+  <updated>2019-10-26T10:52:14.154Z</updated>
   <id>https://lululua.cn/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="https://lululua.cn/2019/10/26/vue/"/>
     <id>https://lululua.cn/2019/10/26/vue/</id>
     <published>2019-10-26T10:24:54.927Z</published>
-    <updated>2019-10-26T10:49:53.336Z</updated>
+    <updated>2019-10-26T10:52:14.154Z</updated>
     
-    <content type="html"><![CDATA[<p>—<a id="more"></a><br>1.绑定属性: v-bind<br>2.绑定事件：v-on<br>3.双向数据：v-mode</p><h4 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h4><pre><code>组件之间的数据传递1.父传子  父:  v-bind:传递的值=" "  子:  props:{      类型，      值    }2.子传父  子: v-on:click="方法"    methods:{        方法(){            this.$emit("事件名","传递的值")        }    }  父: 在父组件中的子标签中监听该自定义事件并添加一个响应该事件的处理方法  v-on:事件名="处理方法"  methods:{      处理方法  }</code></pre><h4 id="局部路由的改变"><a href="#局部路由的改变" class="headerlink" title="局部路由的改变"></a>局部路由的改变</h4><pre><code>在需要改变的地方添加&lt;router-view&gt;&lt;router-view&gt;路由跳转方法：    1.&lt;router-link to="路径"&gt;&lt;router-link&gt;    2.methods:{        方法(){            this.$router.push({ path:'路径'})        }    }</code></pre><h4 id="路由传参"><a href="#路由传参" class="headerlink" title="路由传参"></a>路由传参</h4><pre><code>路由中：{  path: "/路径/:参数",  component: detail,  name: "detail"}在需要匹配参数的组件中:  created(){    this.id=this.$route.params.id;},跳转的方式：&lt;router-link :to="{name:'路径', params:{匹配的参数id:i}}"&gt;12312&lt;/router-link&gt;</code></pre><h4 id="使用element-ui"><a href="#使用element-ui" class="headerlink" title="使用element-ui"></a>使用element-ui</h4><pre><code>https://element.eleme.cn/#/zh-CN</code></pre><h4 id="网络请求"><a href="#网络请求" class="headerlink" title="网络请求"></a>网络请求</h4><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    <content type="html"><![CDATA[<hr><a id="more"></a><p>1.绑定属性: v-bind<br>2.绑定事件：v-on<br>3.双向数据：v-mode</p><h4 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h4><pre><code>组件之间的数据传递1.父传子  父:  v-bind:传递的值=" "  子:  props:{      类型，      值    }2.子传父  子: v-on:click="方法"    methods:{        方法(){            this.$emit("事件名","传递的值")        }    }  父: 在父组件中的子标签中监听该自定义事件并添加一个响应该事件的处理方法  v-on:事件名="处理方法"  methods:{      处理方法  }</code></pre><h4 id="局部路由的改变"><a href="#局部路由的改变" class="headerlink" title="局部路由的改变"></a>局部路由的改变</h4><pre><code>在需要改变的地方添加&lt;router-view&gt;&lt;router-view&gt;路由跳转方法：    1.&lt;router-link to="路径"&gt;&lt;router-link&gt;    2.methods:{        方法(){            this.$router.push({ path:'路径'})        }    }</code></pre><h4 id="路由传参"><a href="#路由传参" class="headerlink" title="路由传参"></a>路由传参</h4><pre><code>路由中：{  path: "/路径/:参数",  component: detail,  name: "detail"}在需要匹配参数的组件中:  created(){    this.id=this.$route.params.id;},跳转的方式：&lt;router-link :to="{name:'路径', params:{匹配的参数id:i}}"&gt;12312&lt;/router-link&gt;</code></pre><h4 id="使用element-ui"><a href="#使用element-ui" class="headerlink" title="使用element-ui"></a>使用element-ui</h4><pre><code>https://element.eleme.cn/#/zh-CN</code></pre><h4 id="网络请求"><a href="#网络请求" class="headerlink" title="网络请求"></a>网络请求</h4><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;—&lt;/p&gt;
+      &lt;hr&gt;
     
     </summary>
     
