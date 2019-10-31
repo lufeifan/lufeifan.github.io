@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lululua.cn/"/>
-  <updated>2019-10-26T10:52:14.154Z</updated>
+  <updated>2019-10-31T09:21:14.225Z</updated>
   <id>https://lululua.cn/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue搭建博客</title>
+    <link href="https://lululua.cn/2019/10/31/vue%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://lululua.cn/2019/10/31/vue搭建博客/</id>
+    <published>2019-10-31T08:51:37.318Z</published>
+    <updated>2019-10-31T09:21:14.225Z</updated>
+    
+    <content type="html"><![CDATA[<hr><a id="more"></a><h4 id="安装vue-cli-脚手架"><a href="#安装vue-cli-脚手架" class="headerlink" title="安装vue-cli 脚手架"></a>安装vue-cli 脚手架</h4><pre><code>1.npm install vue-cli -g全局安装vue-cli脚手架2.vue init webpack boke使用vue-cli搭建一个vue2.0项目安装 集成的功能3.npm run dev启动vue项目</code></pre><h4 id="安装elemen-ui"><a href="#安装elemen-ui" class="headerlink" title="安装elemen-ui"></a>安装elemen-ui</h4><pre><code>npm i element-ui -S在 main.js 中写入以下内容：    import ElementUI from 'element-ui';    import 'element-ui/lib/theme-chalk/index.css';    Vue.use(ElementUI);</code></pre><h4 id="小图标使用"><a href="#小图标使用" class="headerlink" title="小图标使用"></a>小图标使用</h4><pre><code>https://www.iconfont.cn/?spm=a313x.7781069.1998910419.d4d0a486a&lt;i class="iconfont icon-xxx"&gt;&lt;/i&gt;</code></pre><h4 id="前端搭建"><a href="#前端搭建" class="headerlink" title="前端搭建"></a>前端搭建</h4><pre><code>1.确定布局，想好哪里需要全局不变和局部变化，在局部变化中添加&lt;router-view&gt;&lt;/router-view&gt;2.响应式设置：@media only screen and (max-width: 1200px){}3.设置默认首页显示 : 在index 路由中： {  // 默认显示首页  path: "/",  redirect: "/home"},4.路由跳转的方式    1.&lt;router-link :to="/路径"&gt;    2.绑定方法在方法中使用    this.$router.push({ path: "/home" });5.通过路由跳转时传递数据例如：&lt;div class="art" v-for="(blog,index) in showblogs" :key="index"&gt;  &lt;router-link :to="{name:'detail', params:{id:blog}}"&gt;{{blog.title}}&lt;/router-link&gt;&lt;/div&gt;其中params:{id:blog}}就是传递数据给id6.设置返回顶部&lt;link rel="stylesheet" href="//at.alicdn.com/t/font_1467101_j4hdn7rmux.css" /&gt;&lt;div class="rocket"&gt;    &lt;a href="javascript: void(0)" @click="backTop"&gt;        &lt;i class="iconfont icon-fanhuidingbu1"&gt;&lt;/i&gt;    &lt;/a&gt;&lt;/div&gt;样式：    .rocket {        position: fixed;        right: 30px;        bottom: 40px;        box-shadow: 0 0 5px rgb(189, 163, 163);        line-height: normal;    }    .rocket i {        font-size: 30px;        display: inline-block;    }js: backTop: function() {  document.documentElement.scrollTop = 0;  document.body.scrollTop = 0;}7.页面跳转时滚动条的调整设置回到顶部在  created(){    添加        document.documentElement.scrollTop = 0;        document.body.scrollTop = 0;    }8.组件传参数http://www.lululua.cn/2019/10/26/vue/</code></pre><h4 id="后端搭建"><a href="#后端搭建" class="headerlink" title="后端搭建"></a>后端搭建</h4><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+    
+    </summary>
+    
+      <category term="博客搭建" scheme="https://lululua.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>vue</title>
@@ -384,26 +404,6 @@
     </summary>
     
       <category term="数据库系统" scheme="https://lululua.cn/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>七牛云截屏上传返回图片地址</title>
-    <link href="https://lululua.cn/2019/08/22/%E4%B8%83%E7%89%9B%E4%BA%91%E6%88%AA%E5%B1%8F%E4%B8%8A%E4%BC%A0/"/>
-    <id>https://lululua.cn/2019/08/22/七牛云截屏上传/</id>
-    <published>2019-08-22T14:09:08.556Z</published>
-    <updated>2019-09-21T04:07:55.702Z</updated>
-    
-    <content type="html"><![CDATA[<hr><a id="more"></a><ul><li><p>1.到<a href="https://github.com/jiwenxing/qimage-win/releases" target="_blank" rel="noopener">github</a>下载release版本</p></li><li><p>2.打开release中的 <code>settings.ini</code> 文件</p></li><li><p>3.去七牛云找到密匙填写<img src="http://lululua.cn/201908222218_401.png" alt="密匙"> </p></li><li><p>4.BUCKET_NAME：储存空间的名称</p></li><li><p>5BUCKET_DOMAIN：你自己的域名</p></li><li><p>6.UP_HOST = <a href="http://up-z2.qiniup.com" target="_blank" rel="noopener">http://up-z2.qiniup.com</a></p></li><li><p>7.DEBUG_MODE：调试开关，截屏上传失败可以把false改为true</p></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-    
-    </summary>
-    
-      <category term="博客搭建" scheme="https://lululua.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
   </entry>
