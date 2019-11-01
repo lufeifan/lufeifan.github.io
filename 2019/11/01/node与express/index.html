@@ -70,15 +70,15 @@
 </script>
 
   <meta property="og:type" content="article">
-<meta property="og:title" content="本地安装worldpress">
-<meta property="og:url" content="https://lululua.cn/2019/09/09/worldpress/index.html">
+<meta property="og:title" content="node与express在centos的安装">
+<meta property="og:url" content="https://lululua.cn/2019/11/01/node与express/index.html">
 <meta property="og:site_name" content="陆陆陆啊">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-09T12:02:38.325Z">
+<meta property="og:updated_time" content="2019-11-01T05:21:44.103Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="本地安装worldpress">
+<meta name="twitter:title" content="node与express在centos的安装">
   <link rel="alternate" href="/atom.xml" title="陆陆陆啊" type="application/atom+xml">
-  <link rel="canonical" href="https://lululua.cn/2019/09/09/worldpress/">
+  <link rel="canonical" href="https://lululua.cn/2019/11/01/node与express/">
 
 
 <script id="page-configurations">
@@ -92,7 +92,7 @@
   };
 </script>
 
-  <title>本地安装worldpress | 陆陆陆啊</title>
+  <title>node与express在centos的安装 | 陆陆陆啊</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -303,7 +303,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lululua.cn/2019/09/09/worldpress/">
+    <link itemprop="mainEntityOfPage" href="https://lululua.cn/2019/11/01/node与express/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="陆陆陆啊">
@@ -315,7 +315,7 @@
       <meta itemprop="name" content="陆陆陆啊">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">本地安装worldpress
+        <h2 class="post-title" itemprop="name headline">node与express在centos的安装
 
           
         </h2>
@@ -333,7 +333,7 @@
                 
               
 
-              <time title="创建时间：2019-09-09 19:44:49 / 修改时间：20:02:38" itemprop="dateCreated datePublished" datetime="2019-09-09T19:44:49+08:00">2019-09-09</time>
+              <time title="创建时间：2019-11-01 12:32:41 / 修改时间：13:21:44" itemprop="dateCreated datePublished" datetime="2019-11-01T12:32:41+08:00">2019-11-01</time>
             </span>
           
             
@@ -346,7 +346,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/博客搭建/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/后台/" itemprop="url" rel="index"><span itemprop="name">后台</span></a></span>
 
                 
                 
@@ -371,7 +371,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>371</span>
+              <span>761</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -396,11 +396,32 @@
       
         <hr>
 <a id="more"></a>
-<h4 id="下载XAMPP"><a href="#下载XAMPP" class="headerlink" title="下载XAMPP"></a>下载XAMPP</h4><pre><code>http://soft.onlinedown.net/soft/225718.htm</code></pre><h4 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h4><pre><code>Apache
-可能遇到的问题：无法启动Apache，解决办法：打开Apache中的Confing将listen改为8080,访问的话不能再用http://localhost因为这个默认是80，要改用http://localhost:8080
-MySql:点击Admin 创建一个自己的数据库,步奏可以参考https://jingyan.baidu.com/article/1e5468f955d65b484961b7bb.html</code></pre><h4 id="下载worldpress"><a href="#下载worldpress" class="headerlink" title="下载worldpress"></a>下载worldpress</h4><pre><code>将下好的worldpress解压到xampp\htdocs</code></pre><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><pre><code>访问：http://localhost/解压的文件包名称
-根据提示安装</code></pre><h4 id="worldpress设置"><a href="#worldpress设置" class="headerlink" title="worldpress设置"></a>worldpress设置</h4><pre><code>省略。。。。(目前尚未研究)</code></pre><h4 id="wordpress搬家教程-从本地搬到服务器"><a href="#wordpress搬家教程-从本地搬到服务器" class="headerlink" title="wordpress搬家教程(从本地搬到服务器)"></a>wordpress搬家教程(从本地搬到服务器)</h4><pre><code>参考：
-https://jingyan.baidu.com/article/2a138328e57dba074b134f63.html</code></pre><script>
+<h4 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h4><pre><code>下载
+curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
+安装
+yum -y install nodejs
+查看是否安装成功
+node -v
+创建工作目录
+mkdir -p /data/release/hello
+进入工作目录
+cd /data/release/hello
+初始化
+npm init
+安装 Express 并将其保存到依赖列表中：
+npm install express --save</code></pre><h4 id="安装express框架"><a href="#安装express框架" class="headerlink" title="安装express框架"></a>安装express框架</h4><pre><code>npm install express-generator -g
+cd /data/release
+express myapp
+cd myapp
+npm install
+DEBUG=myapp npm start</code></pre><h4 id="开放3000端口"><a href="#开放3000端口" class="headerlink" title="开放3000端口"></a>开放3000端口</h4><p>/sbin/iptables -I INPUT -p tcp –dport 3000 -j ACCEPT</p>
+<h4 id="pm2启动express项目"><a href="#pm2启动express项目" class="headerlink" title="pm2启动express项目"></a>pm2启动express项目</h4><pre><code>安装pm2
+npm install pm2 -g
+start 后面接文件的位置，name名称
+pm2 start app.js --name="xxx"
+pm2 save
+pm2 startup</code></pre><h4 id="pm2指令"><a href="#pm2指令" class="headerlink" title="pm2指令"></a>pm2指令</h4><p>   pm2 restart all               # 重启所有应用<br>   pm2 stop 0                    # 停止 id为 0的指定应用程序<br>   pm2 stop all                  # 停止所有的应用程序<br>   pm2 delete all                # 关闭并删除所有应用<br>   pm2 delete 0                  # 删除指定应用 id 0</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -457,7 +478,7 @@ https://jingyan.baidu.com/article/2a138328e57dba074b134f63.html</code></pre><scr
     <strong>本文作者： </strong>陆陆陆啊</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://lululua.cn/2019/09/09/worldpress/" title="本地安装worldpress">https://lululua.cn/2019/09/09/worldpress/</a>
+    <a href="https://lululua.cn/2019/11/01/node与express/" title="node与express在centos的安装">https://lululua.cn/2019/11/01/node与express/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -481,8 +502,8 @@ https://jingyan.baidu.com/article/2a138328e57dba074b134f63.html</code></pre><scr
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/09/数据库第一节/" rel="next" title="数据库系统(1)">
-                  <i class="fa fa-chevron-left"></i> 数据库系统(1)
+                <a href="/2019/10/31/vue搭建博客/" rel="next" title="vue搭建博客">
+                  <i class="fa fa-chevron-left"></i> vue搭建博客
                 </a>
               
             </div>
@@ -490,10 +511,6 @@ https://jingyan.baidu.com/article/2a138328e57dba074b134f63.html</code></pre><scr
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/10/Java二级公共基础知识资料/" rel="prev" title="java二级公共基础知识资料">
-                  java二级公共基础知识资料 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -690,7 +707,7 @@ https://jingyan.baidu.com/article/2a138328e57dba074b134f63.html</code></pre><scr
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#下载XAMPP"><span class="nav-number">1.</span> <span class="nav-text">下载XAMPP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行"><span class="nav-number">2.</span> <span class="nav-text">运行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下载worldpress"><span class="nav-number">3.</span> <span class="nav-text">下载worldpress</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">4.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#worldpress设置"><span class="nav-number">5.</span> <span class="nav-text">worldpress设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#wordpress搬家教程-从本地搬到服务器"><span class="nav-number">6.</span> <span class="nav-text">wordpress搬家教程(从本地搬到服务器)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装node"><span class="nav-number">1.</span> <span class="nav-text">安装node</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装express框架"><span class="nav-number">2.</span> <span class="nav-text">安装express框架</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开放3000端口"><span class="nav-number">3.</span> <span class="nav-text">开放3000端口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pm2启动express项目"><span class="nav-number">4.</span> <span class="nav-text">pm2启动express项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pm2指令"><span class="nav-number">5.</span> <span class="nav-text">pm2指令</span></a></li></ol></div>
             
 
           </div>

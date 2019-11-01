@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lululua.cn/"/>
-  <updated>2019-10-31T09:21:14.225Z</updated>
+  <updated>2019-11-01T05:21:44.103Z</updated>
   <id>https://lululua.cn/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>node与express在centos的安装</title>
+    <link href="https://lululua.cn/2019/11/01/node%E4%B8%8Eexpress/"/>
+    <id>https://lululua.cn/2019/11/01/node与express/</id>
+    <published>2019-11-01T04:32:41.150Z</published>
+    <updated>2019-11-01T05:21:44.103Z</updated>
+    
+    <content type="html"><![CDATA[<hr><a id="more"></a><h4 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h4><pre><code>下载curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -安装yum -y install nodejs查看是否安装成功node -v创建工作目录mkdir -p /data/release/hello进入工作目录cd /data/release/hello初始化npm init安装 Express 并将其保存到依赖列表中：npm install express --save</code></pre><h4 id="安装express框架"><a href="#安装express框架" class="headerlink" title="安装express框架"></a>安装express框架</h4><pre><code>npm install express-generator -gcd /data/releaseexpress myappcd myappnpm installDEBUG=myapp npm start</code></pre><h4 id="开放3000端口"><a href="#开放3000端口" class="headerlink" title="开放3000端口"></a>开放3000端口</h4><p>/sbin/iptables -I INPUT -p tcp –dport 3000 -j ACCEPT</p><h4 id="pm2启动express项目"><a href="#pm2启动express项目" class="headerlink" title="pm2启动express项目"></a>pm2启动express项目</h4><pre><code>安装pm2npm install pm2 -gstart 后面接文件的位置，name名称pm2 start app.js --name="xxx"pm2 savepm2 startup</code></pre><h4 id="pm2指令"><a href="#pm2指令" class="headerlink" title="pm2指令"></a>pm2指令</h4><p>   pm2 restart all               # 重启所有应用<br>   pm2 stop 0                    # 停止 id为 0的指定应用程序<br>   pm2 stop all                  # 停止所有的应用程序<br>   pm2 delete all                # 关闭并删除所有应用<br>   pm2 delete 0                  # 删除指定应用 id 0</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+    
+    </summary>
+    
+      <category term="后台" scheme="https://lululua.cn/categories/%E5%90%8E%E5%8F%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>vue搭建博客</title>
@@ -384,26 +404,6 @@
       &lt;hr&gt;
     
     </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Windows安装MySQL</title>
-    <link href="https://lululua.cn/2019/08/23/Windows%20%E4%B8%8A%E5%AE%89%E8%A3%85%20MySQL/"/>
-    <id>https://lululua.cn/2019/08/23/Windows 上安装 MySQL/</id>
-    <published>2019-08-23T01:54:15.699Z</published>
-    <updated>2019-09-21T04:09:15.888Z</updated>
-    
-    <content type="html"><![CDATA[<hr><a id="more"></a><p>1.下载<a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">最新版本</a><br>2.<img src="http://lululua.cn/201908231000_464.png" alt="如图"><br>3.<img src="http://lululua.cn/201908231002_844.png" alt="如图"><br>4.安装MySQL<br> <img src="http://lululua.cn/201908231020_317.png" alt="安装模式"><br> 更改地址<img src="http://lululua.cn/201908231023_822.png" alt="更改地址"><br> <img src="http://lululua.cn/201908231024_793.png" alt=""><br> <img src="http://lululua.cn/201908231032_70.png" alt=""><br> 然后一点击下一步就可以<br>5.运行MySQL<img src="http://lululua.cn/201908231035_680.png" alt="运行MySQL"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-    
-    </summary>
-    
-      <category term="数据库系统" scheme="https://lululua.cn/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/"/>
     
     
   </entry>
