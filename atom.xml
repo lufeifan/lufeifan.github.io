@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lululua.cn/"/>
-  <updated>2019-11-03T11:06:40.141Z</updated>
+  <updated>2019-11-10T10:23:05.803Z</updated>
   <id>https://lululua.cn/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小程序</title>
+    <link href="https://lululua.cn/2019/11/10/%E5%B0%8F%E7%A8%8B%E5%BA%8F3/"/>
+    <id>https://lululua.cn/2019/11/10/小程序3/</id>
+    <published>2019-11-10T10:09:14.679Z</published>
+    <updated>2019-11-10T10:23:05.803Z</updated>
+    
+    <content type="html"><![CDATA[<hr><a id="more"></a><h4 id="获取openid"><a href="#获取openid" class="headerlink" title="获取openid"></a>获取openid</h4><blockquote><p>小程序端<br>     // 登录<br>    wx.login({</p></blockquote><pre><code>  success: res =&gt; {    // 发送 res.code 到后台换取 openId, sessionKey, unionId    wx.request({      url: 'http://localhost:3001/api/login/'+res.code,      // url: 'http://139.155.12.117:3000/api/login/' + res.code,      success: (result)=&gt; {        console.log(result.data);        const app = getApp();        app.globalData.openid = result.data.openid;        app.globalData.userInfo = result.data;        app.globalData.session_key = result.data.session_key      }    })  }})</code></pre><blockquote><p>express后台端<br>    // 获取openid<br>    router.get(‘/login/:code’, (req, res) =&gt; {<br>        //到微信小程序后台获取<br>        let appid=”小程序的appid”<br>        let secret=’小程序的secret’<br>        let urlStr = ‘<a href="https://api.weixin.qq.com/sns/jscode2session?appid='" target="_blank" rel="noopener">https://api.weixin.qq.com/sns/jscode2session?appid='</a><br>        +appid+’&amp;secret=’+secret+’&amp;js_code=’<br>        + req.params.code<br>        + ‘&amp;grant_type=authorization_code’<br>        request(urlStr, (error, response, body) =&gt; {<br>            if (!error &amp;&amp; response.statusCode == 200) {<br>                let data = JSON.parse(body)<br>                res.send(data)<br>            }<br>        })<br>    })</p></blockquote><h4 id="向后台传参获取数据"><a href="#向后台传参获取数据" class="headerlink" title="向后台传参获取数据"></a>向后台传参获取数据</h4><pre><code>一个页面向另一个页面传id在onload中获取，然后向后台传id,获取值onLoad: function(options) {let that = thiswx.request({  url: 'http://139.155.12.117:3000/api/getbannerlist/' + options.id,  success: (res) =&gt; {    // console.log(res.data)    that.setData({      model: res.data    })  }})},</code></pre><h4 id="购物车"><a href="#购物车" class="headerlink" title="购物车"></a>购物车</h4><pre><code>添加数据到购物车，通过查找openid找到里面的usercart,再添加物品的id到usercartrouter.post('/usercart/:id', async (req, res) =&gt; {    const model = await User.updateMany({openid:req.body.openid},{$addToSet:{usercart:req.params.id}})    res.send(model)})获取购物车里物品的id,通过openid去匹配用户的购物车信息router.get('/usercart/:id', async (req, res) =&gt; {    const items = await User.find({openid:{$all:req.params.id}})    res.send(items)})</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+    
+    </summary>
+    
+      <category term="微信小程序" scheme="https://lululua.cn/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>php</title>
+    <link href="https://lululua.cn/2019/11/10/php/"/>
+    <id>https://lululua.cn/2019/11/10/php/</id>
+    <published>2019-11-10T10:07:37.281Z</published>
+    <updated>2019-11-10T10:08:50.056Z</updated>
+    
+    <content type="html"><![CDATA[<hr><a id="more"></a><pre><code>&lt;?php //首先采用“fopen”函数打开文件，得到返回值的就是资源类型。$file_handle=fopen("/data/webroot/resource/php/f.txt","r");if ($file_handle){    //接着采用while循环（后面语言结构语句中的循环结构会详细介绍）一行行地读取文件，然后输出每行的文字    while (!feof($file_handle)) { //判断是否到最后一行        $line = fgets($file_handle); //读取一行文本        echo $line; //输出一行文本        echo "&lt;br /&gt;"; //换行    }}fclose($file_handle);//关闭文件?&gt;error_reporting(0); //禁止显示PHP警告提示NULL（NULL）：NULL是空类型，对大小写不敏感，NULL类型只有一个取值，表示一个变量没有值，当被赋值为NULL，或者尚未被赋值，或者被unset()，这三种情况下变量被认为为NULL。定义常量：define("常量名",值);系统常量是PHP已经定义好的常量，我们可以直接拿来使用，常见的系统常量有：（1）__FILE__ :php程序文件名。它可以帮助我们获取当前文件在服务器的物理位置。（2）__LINE__ :PHP程序文件行数。它可以告诉我们，当前代码在第几行。（3）PHP_VERSION:当前解析器的版本号。它可以告诉我们当前PHP解析器的版本号，我们可以提前知道我们的PHP代码是否可被该PHP解析器解析。（4）PHP_OS：执行当前PHP版本的操作系统名称。它可以告诉我们服务器所用的操作系统名称，我们可以根据该操作系统优化我们的代码。constant()函数。它和直接使用常量名输出的效果是一样的，但函数可以动态的输出不同的常量，在使用上要灵活、方便，其语法格式如下：mixed constant(string constant_name)defined()函数可以帮助我们判断一个常量是否已经定义，其语法格式为：bool defined(string constants_name)字符串连接运算符是为了将两个字符串进行连接，PHP中提供的字符串连接运算符有：（1）连接运算符(“.”)：它返回将右参数附加到左参数后面所得的字符串。（2）连接赋值运算符(“.=”)：它将右边参数附加到左边的参数后。PHP中提供了一个错误控制运算符“@”，对于一些可能会在运行过程中出错的表达式时，我们不希望出错的时候给客户显示错误信息，这样对用户不友好。于是，可以将@放置在一个PHP表达式之前，该表达式可能产生的任何错误信息都被忽略掉；如果激活了track_error（这个玩意在php.ini中设置）特性，表达式所产生的任何错误信息都被存放在变量$php_errormsg中，此变量在每次出错时都会被覆盖，所以如果想用它的话必须尽早检查。需要注意的是：错误控制前缀“@”不会屏蔽解析错误的信息，不能把它放在函数或类的定义之前，也不能用于条件结构例如if和foreach等。在PHP中foreach循环语句，常用于遍历数组，一般有两种使用方式:不取下标、取下标。（1）只取值，不取下标&lt;?phpforeach (数组 as 值){//执行的任务}?&gt;（2）同时取下标和值&lt;?phpforeach (数组 as 下标 =&gt; 值){//执行的任务}?&gt;PHP5可以在类中使用__construct()定义一个构造函数，具有构造函数的类，会在每次对象创建的时候调用该函数，因此常用来在对象创建的时候进行一些初始化工作。class Car {function __construct() {    print "构造函数被调用\n";}}$car = new Car(); //实例化的时候 会自动调用构造函数__construct，这里会输出一个字符串在子类中如果定义了__construct则不会调用父类的__construct，如果需要同时调用父类的构造函数，需要使用parent::__construct()显式的调用。class Car {function __construct() {    print "父类构造函数被调用\n";}}class Truck extends Car {function __construct() {    print "子类构造函数被调用\n";    parent::__construct();}}$car = new Truck();同样，PHP5支持析构函数，使用__destruct()进行定义，析构函数指的是当某个对象的所有引用被删除，或者对象被显式的销毁时会执行的函数。class Car {function __construct() {    print "构造函数被调用 \n";}function __destruct() {    print "析构函数被调用 \n";}}$car = new Car(); //实例化时会调用构造函数echo '使用后，准备销毁car对象 \n';unset($car); //销毁时会调用析构函数当PHP代码执行完毕以后，会自动回收与销毁对象，因此一般情况下不需要显式的去销毁对象。静态属性与方法可以在不实例化类的情况下调用，直接使用类名::方法名的方式进行调用。静态属性不允许对象使用-&gt;操作符调用。class Car {    private static $speed = 10;    public static function getSpeed() {        return self::$speed;    }}echo Car::getSpeed();  //调用静态方法静态方法也可以通过变量来进行动态调用$func = 'getSpeed';$className = 'Car';echo $className::$func();  //动态调用静态方法静态方法中，$this伪变量不允许使用。可以使用self，parent，static在内部调用静态方法与属性。class Car {    private static $speed = 10;    public static function getSpeed() {        return self::$speed;    }    public static function speedUp() {        return self::$speed+=10;    }}class BigCar extends Car {    public static function start() {        parent::speedUp();    }}BigCar::start();echo BigCar::getSpeed();</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>使用express,element,vue搭建后台管理</title>
@@ -364,46 +402,6 @@
       &lt;hr&gt;
     
     </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>豆瓣插件</title>
-    <link href="https://lululua.cn/2019/09/01/%E8%B1%86%E7%93%A3%20%E6%8F%92%E4%BB%B6%E7%88%AC%E5%8F%96%E5%A4%B1%E8%B4%A5/"/>
-    <id>https://lululua.cn/2019/09/01/豆瓣 插件爬取失败/</id>
-    <published>2019-09-01T05:56:24.776Z</published>
-    <updated>2019-09-01T11:46:27.440Z</updated>
-    
-    <content type="html"><![CDATA[<hr><a id="more"></a><h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><pre><code>user 在登录豆瓣个人中心网址上面的那串数字title 突入你想填的就行quote 用来浏览器F12取消一小段爬取那部分的html</code></pre><h4 id="豆瓣插件爬取失败"><a href="#豆瓣插件爬取失败" class="headerlink" title="豆瓣插件爬取失败"></a>豆瓣插件爬取失败</h4><p>使用： hexo douban -updata<br>       hexo g<br>       hexo s<br>就可以看到爬取效果</p><h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><blockquote><p>上传的时候不能用hexo d 只能用<code>hexo deploy</code></p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-    
-    </summary>
-    
-      <category term="博客搭建" scheme="https://lululua.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>人物模型</title>
-    <link href="https://lululua.cn/2019/08/24/live2d%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B/"/>
-    <id>https://lululua.cn/2019/08/24/live2d人物模型/</id>
-    <published>2019-08-24T02:07:17.168Z</published>
-    <updated>2019-09-01T11:37:37.871Z</updated>
-    
-    <content type="html"><![CDATA[<hr><a id="more"></a><p>1.站点配置文件下Git运行:npm install –save hexo-helper-live2d<br>2.站点配置文件写下（主题配置文件下不生效）：</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 添加萌妹子效果</span><br><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local  </span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-wanko    //模型名字</span><br><span class="line">  display:    </span><br><span class="line">    position: right   //位置</span><br><span class="line">    width: 150    //妹子宽度</span><br><span class="line">    height: 300    //妹子高度</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br></pre></td></tr></tbody></table></figure><p>更多模型：<a href="https://github.com/xiazeyu/live2d-widget-models" target="_blank" rel="noopener">https://github.com/xiazeyu/live2d-widget-models</a><br>更换模型 npm install 模型名称</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-    
-    </summary>
-    
-      <category term="博客搭建" scheme="https://lululua.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
   </entry>

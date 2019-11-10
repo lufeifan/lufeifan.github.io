@@ -70,15 +70,15 @@
 </script>
 
   <meta property="og:type" content="article">
-<meta property="og:title" content="LAMP">
-<meta property="og:url" content="https://lululua.cn/2019/10/26/LAMP/index.html">
+<meta property="og:title" content="小程序">
+<meta property="og:url" content="https://lululua.cn/2019/11/10/小程序3/index.html">
 <meta property="og:site_name" content="陆陆陆啊">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-26T10:16:53.561Z">
+<meta property="og:updated_time" content="2019-11-10T10:23:05.803Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LAMP">
+<meta name="twitter:title" content="小程序">
   <link rel="alternate" href="/atom.xml" title="陆陆陆啊" type="application/atom+xml">
-  <link rel="canonical" href="https://lululua.cn/2019/10/26/LAMP/">
+  <link rel="canonical" href="https://lululua.cn/2019/11/10/小程序3/">
 
 
 <script id="page-configurations">
@@ -92,7 +92,7 @@
   };
 </script>
 
-  <title>LAMP | 陆陆陆啊</title>
+  <title>小程序 | 陆陆陆啊</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -303,7 +303,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lululua.cn/2019/10/26/LAMP/">
+    <link itemprop="mainEntityOfPage" href="https://lululua.cn/2019/11/10/小程序3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="陆陆陆啊">
@@ -315,7 +315,7 @@
       <meta itemprop="name" content="陆陆陆啊">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">LAMP
+        <h2 class="post-title" itemprop="name headline">小程序
 
           
         </h2>
@@ -333,12 +333,25 @@
                 
               
 
-              <time title="创建时间：2019-10-26 18:11:39 / 修改时间：18:16:53" itemprop="dateCreated datePublished" datetime="2019-10-26T18:11:39+08:00">2019-10-26</time>
+              <time title="创建时间：2019-11-10 18:09:14 / 修改时间：18:23:05" itemprop="dateCreated datePublished" datetime="2019-11-10T18:09:14+08:00">2019-11-10</time>
             </span>
           
             
 
             
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/微信小程序/" itemprop="url" rel="index"><span itemprop="name">微信小程序</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -358,7 +371,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>183</span>
+              <span>1.8k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -368,7 +381,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
           
 
@@ -383,11 +396,48 @@
       
         <hr>
 <a id="more"></a>
-<h4 id="apache-lt-gt-php"><a href="#apache-lt-gt-php" class="headerlink" title="apache<->php"></a>apache&lt;-&gt;php</h4><pre><code>1.yum install httpd -y
-2.service httpd start
-3.yum install php php-mysql -y
-4.service httpd restart</code></pre><h4 id="php-lt-gt-mysql"><a href="#php-lt-gt-mysql" class="headerlink" title="php<->mysql"></a>php&lt;-&gt;mysql</h4><pre><code>1.yum install mysql-server -y
-2.service mysql restart</code></pre><script>
+<h4 id="获取openid"><a href="#获取openid" class="headerlink" title="获取openid"></a>获取openid</h4><blockquote>
+<p>小程序端<br>     // 登录<br>    wx.login({</p>
+</blockquote>
+<pre><code>  success: res =&gt; {
+    // 发送 res.code 到后台换取 openId, sessionKey, unionId
+    wx.request({
+      url: 'http://localhost:3001/api/login/'+res.code,
+      // url: 'http://139.155.12.117:3000/api/login/' + res.code,
+      success: (result)=&gt; {
+        console.log(result.data);
+        const app = getApp();
+        app.globalData.openid = result.data.openid;
+        app.globalData.userInfo = result.data;
+        app.globalData.session_key = result.data.session_key
+      }
+    })
+  }
+})</code></pre><blockquote>
+<p>express后台端<br>    // 获取openid<br>    router.get(‘/login/:code’, (req, res) =&gt; {<br>        //到微信小程序后台获取<br>        let appid=”小程序的appid”<br>        let secret=’小程序的secret’<br>        let urlStr = ‘<a href="https://api.weixin.qq.com/sns/jscode2session?appid='" target="_blank" rel="noopener">https://api.weixin.qq.com/sns/jscode2session?appid='</a><br>        +appid+’&amp;secret=’+secret+’&amp;js_code=’<br>        + req.params.code<br>        + ‘&amp;grant_type=authorization_code’<br>        request(urlStr, (error, response, body) =&gt; {<br>            if (!error &amp;&amp; response.statusCode == 200) {<br>                let data = JSON.parse(body)<br>                res.send(data)<br>            }<br>        })<br>    })</p>
+</blockquote>
+<h4 id="向后台传参获取数据"><a href="#向后台传参获取数据" class="headerlink" title="向后台传参获取数据"></a>向后台传参获取数据</h4><pre><code>一个页面向另一个页面传id在onload中获取，然后向后台传id,获取值
+onLoad: function(options) {
+let that = this
+wx.request({
+  url: 'http://139.155.12.117:3000/api/getbannerlist/' + options.id,
+  success: (res) =&gt; {
+    // console.log(res.data)
+    that.setData({
+      model: res.data
+    })
+  }
+})
+},</code></pre><h4 id="购物车"><a href="#购物车" class="headerlink" title="购物车"></a>购物车</h4><pre><code>添加数据到购物车，通过查找openid找到里面的usercart,再添加物品的id到usercart
+router.post('/usercart/:id', async (req, res) =&gt; {
+    const model = await User.updateMany({openid:req.body.openid},{$addToSet:{usercart:req.params.id}})
+    res.send(model)
+})
+获取购物车里物品的id,通过openid去匹配用户的购物车信息
+router.get('/usercart/:id', async (req, res) =&gt; {
+    const items = await User.find({openid:{$all:req.params.id}})
+    res.send(items)
+})</code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -444,7 +494,7 @@
     <strong>本文作者： </strong>陆陆陆啊</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://lululua.cn/2019/10/26/LAMP/" title="LAMP">https://lululua.cn/2019/10/26/LAMP/</a>
+    <a href="https://lululua.cn/2019/11/10/小程序3/" title="小程序">https://lululua.cn/2019/11/10/小程序3/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -468,8 +518,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/10/10/SQl基础知识/" rel="next" title="SQL基础知识">
-                  <i class="fa fa-chevron-left"></i> SQL基础知识
+                <a href="/2019/11/10/php/" rel="next" title="php">
+                  <i class="fa fa-chevron-left"></i> php
                 </a>
               
             </div>
@@ -477,10 +527,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/10/26/express/" rel="prev" title="express">
-                  express <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -675,7 +721,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#apache-lt-gt-php"><span class="nav-number">1.</span> <span class="nav-text">apache&lt;-&gt;php</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#php-lt-gt-mysql"><span class="nav-number">2.</span> <span class="nav-text">php&lt;-&gt;mysql</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#获取openid"><span class="nav-number">1.</span> <span class="nav-text">获取openid</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向后台传参获取数据"><span class="nav-number">2.</span> <span class="nav-text">向后台传参获取数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#购物车"><span class="nav-number">3.</span> <span class="nav-text">购物车</span></a></li></ol></div>
             
 
           </div>
