@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lululua.cn/"/>
-  <updated>2019-11-10T10:23:05.803Z</updated>
+  <updated>2019-11-10T10:33:24.524Z</updated>
   <id>https://lululua.cn/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>node与七牛云的连接</title>
+    <link href="https://lululua.cn/2019/11/10/node%E8%BF%9E%E6%8E%A5%E4%B8%83%E7%89%9B%E4%BA%91/"/>
+    <id>https://lululua.cn/2019/11/10/node连接七牛云/</id>
+    <published>2019-11-10T10:27:23.612Z</published>
+    <updated>2019-11-10T10:33:24.524Z</updated>
+    
+    <content type="html"><![CDATA[<hr><a id="more"></a><h4 id="node端"><a href="#node端" class="headerlink" title="node端"></a>node端</h4><blockquote><p>新建一个config.js<br>    /*<br>    七牛云配置<br>    */<br>    const qiniu = require(‘qiniu’)</p></blockquote><pre><code>// 创建上传凭证const accessKey = 'JrGUj_2ySuRpwMT6qRFJSJXMzDp3Pa-miCnq7N2_'const secretKey = 'N5lTdJQZHdL8MdYEfkXWjG7NHxXNbE9bEx3LeD-h'const mac = new qiniu.auth.digest.Mac(accessKey, secretKey)const options = {scope: 'lu',expires: 7200}const putPolicy = new qiniu.rs.PutPolicy(options)const uploadToken = putPolicy.uploadToken(mac)module.exports = {uploadToken}</code></pre><blockquote><p>index.js<br>    const express = require(“express”)</p></blockquote><pre><code>const app = express()app.use(express.json())app.use(require('cors')())app.use('uploads',express.static(__dirname+'uploads'))const qnconfig = require('./config.js')require('./api/goods')(app)require('./db/db')(app)require('./api/home')(app)require('./api/test')(app)require('./api/usercart')(app)app.get('/api/token', (req, res, next) =&gt; {    res.status(200).send(qnconfig.uploadToken)})app.listen(3001, () =&gt; {    console.log("http//localhost:3001")})</code></pre><h4 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h4><pre><code>&lt;template&gt;&lt;div class="setgoods"&gt;    &lt;el-main&gt;    &lt;el-form        :model="model"        ref="model"        :rules="rules"        label-width="80px"        @submit.native.prevent="submitForm('model')"    &gt;        &lt;!-- enctype="multipart/form-data" --&gt;        &lt;el-form-item label="商品名" prop="name"&gt;        &lt;el-input v-model="model.name"&gt;&lt;/el-input&gt;        &lt;/el-form-item&gt;        &lt;el-form-item label="商品内容"&gt;        &lt;el-input v-model="model.content"&gt;&lt;/el-input&gt;        &lt;/el-form-item&gt;        &lt;el-form-item label="商品价格"&gt;        &lt;el-input v-model="model.price"&gt;&lt;/el-input&gt;        &lt;/el-form-item&gt;        &lt;el-form-item label="商品分类"&gt;        &lt;el-radio v-model="model.radio" label="1"&gt;海报&lt;/el-radio&gt;        &lt;el-radio v-model="model.radio" label="2"&gt;周边&lt;/el-radio&gt;        &lt;el-radio v-model="model.radio" label="3"&gt;礼品&lt;/el-radio&gt;        &lt;el-radio v-model="model.radio" label="4"&gt;购票&lt;/el-radio&gt;        &lt;/el-form-item&gt;        &lt;el-form-item label="图片" style="margin-top: 0.5rem;"&gt;        &lt;el-upload            class="avatar-uploader"            :action="domain"            :http-request="upqiniu"            :show-file-list="false"        &gt;            &lt;img v-if="model.image" :src="model.image" class="avatar" /&gt;            &lt;i v-else class="el-icon-plus avatar-uploader-icon"&gt;&lt;/i&gt;        &lt;/el-upload&gt;        &lt;/el-form-item&gt;        &lt;el-form-item&gt;        &lt;el-button type="primary" native-type="submit"&gt;保存&lt;/el-button&gt;        &lt;/el-form-item&gt;    &lt;/el-form&gt;    &lt;/el-main&gt;&lt;/div&gt;&lt;/template&gt;&lt;script&gt;export default {name: "setgoods",data() {    return {    radio: '1',    imageUrl: "",    // 七牛云的上传地址，根据自己所在地区选择，我这里是华南区    domain: "https://upload-z2.qiniup.com",    // 这是七牛云空间的外链默认域名    qiniuaddr: "lululua.cn",    model: {},    upload: false,    //输入规则    rules: {        name: [{ required: true, message: "请输入商品名", trigger: "blur" }]    }    };},props: {    id: {    type: String    }},methods: {    //   保存    submitForm(formName) {    this.$refs[formName].validate(valid =&gt; {        if (valid) {        this.save();        } else {        window.console.log("error submit!!");        return false;        }    });    },    // 上传数据到数据库    async save() {    if (this.id) {        //访问后台数据。将数据上传修改        await this.$http.put(`/getbannerlist/${this.id}`, this.model);        // 跳转到商品列表        this.$router.push("/goodslist");        // 提示信息        this.$message({        type: "success",        message: "修改成功!"        });    } else {        await this.$http.post("/getbannerlist", this.model);        this.$router.push("/goodslist");        this.$message({        type: "success",        message: "创建成功!"        });    }    },    async fetch() {    //通过id访问后台获取数据    const res = await this.$http.get(`/getbannerlist/${this.id}`);    this.model = res.data;    },    upqiniu(req) {    const config = {        headers: { "Content-Type": "multipart/form-data" }    };    let filetype = "";    if (req.file.type === "image/png") {        filetype = "png";    } else {        filetype = "jpg";    }    // 重命名要上传的文件    const keyname =        "lu" + new Date() + Math.floor(Math.random() * 100) + "." + filetype;    // 从后端获取上传凭证token    this.$http.get("/token").then(res =&gt; {        // this.axios.get('http://139.155.12.117:3000/api/token').then(res =&gt; {        const formdata = new FormData();        formdata.append("file", req.file);        formdata.append("token", res.data);        formdata.append("key", keyname);        // 获取到凭证之后再将文件上传到七牛云空间        this.$http.post(this.domain, formdata, config).then(res =&gt; {        // this.axios.post(this.domain, formdata, config).then(res =&gt; {        this.imageUrl = "http://" + this.qiniuaddr + "/" + res.data.key;        this.$set(this.model, "image", this.imageUrl);        });    });    }},created() {    this.id &amp;&amp; this.fetch();},components: {    // HelloWorld}};&lt;/script&gt;&lt;style scoped&gt;/* .el-button {position: relative;left: 50%;} */.avatar-uploader .el-upload {border: 5px dashed #ca1717 !important;border-radius: 6px;cursor: pointer;position: relative;overflow: hidden;}.avatar-uploader .el-upload:hover {border-color: #409eff;}.avatar-uploader-icon {font-size: 28px;color: #8c939d;width: 178px;height: 178px;line-height: 178px;text-align: center;}.avatar {width: 178px;height: 178px;display: block;}&lt;/style&gt;&gt;</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+    
+    </summary>
+    
+      <category term="后台" scheme="https://lululua.cn/categories/%E5%90%8E%E5%8F%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>问题</title>
+    <link href="https://lululua.cn/2019/11/10/%E9%97%AE%E9%A2%98/"/>
+    <id>https://lululua.cn/2019/11/10/问题/</id>
+    <published>2019-11-10T10:25:42.950Z</published>
+    <updated>2019-11-10T10:26:54.933Z</updated>
+    
+    <content type="html"><![CDATA[<hr><a id="more"></a><h3 id="mongodb集合之间的怎么进行关联"><a href="#mongodb集合之间的怎么进行关联" class="headerlink" title="mongodb集合之间的怎么进行关联"></a>mongodb集合之间的怎么进行关联</h3><h3 id="小程序的封装"><a href="#小程序的封装" class="headerlink" title="小程序的封装"></a>小程序的封装</h3><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>小程序</title>
@@ -364,44 +402,6 @@
     </summary>
     
       <category term="微信小程序" scheme="https://lululua.cn/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>微信小程序(1)</title>
-    <link href="https://lululua.cn/2019/09/06/wxml1/"/>
-    <id>https://lululua.cn/2019/09/06/wxml1/</id>
-    <published>2019-09-06T12:36:17.421Z</published>
-    <updated>2019-10-26T08:58:38.527Z</updated>
-    
-    <content type="html"><![CDATA[<hr><a id="more"></a><h4 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h4><pre><code>pages    index        index.js    Pages({})        index.json  可以设置顶部文字和颜色        index.wxml  相当于html        index.wxss  相当于cssapp.jsapp.json    导入页面的文件app.wxss    设置全局样式</code></pre><h4 id="设置顶部"><a href="#设置顶部" class="headerlink" title="设置顶部"></a>设置顶部</h4><pre><code>"navigationBarTitleText": "String" 顶部文字"navigationBarBackgroundColor": "color", 顶部颜色"navigationBarTextStyle": "black" 仅支持白色和黑色"enablePullDownRefresh": false, //是否开启下拉刷新</code></pre><h4 id="幻灯片"><a href="#幻灯片" class="headerlink" title="幻灯片"></a>幻灯片</h4><pre><code>在swiper标签加swiper-item，swiper-item就是每一页的内容幻灯片小圆点:indicator-dots="true"current,记录当前页面的index</code></pre><h4 id="scroll-view"><a href="#scroll-view" class="headerlink" title="scroll-view"></a>scroll-view</h4><pre><code>添加 scroll-x就可看到滑动</code></pre><h4 id="理解display"><a href="#理解display" class="headerlink" title="理解display"></a>理解display</h4><pre><code>display: flex;display: inline-block;</code></pre><h4 id="view"><a href="#view" class="headerlink" title="view"></a>view</h4><pre><code>属性：flex-direction:row/column 行或列</code></pre><p>问题：<br>white-space: nowrap;<br> justify-content: center;</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-    
-    </summary>
-    
-      <category term="微信小程序" scheme="https://lululua.cn/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>windows安装虚拟机</title>
-    <link href="https://lululua.cn/2019/09/01/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    <id>https://lululua.cn/2019/09/01/虚拟机/</id>
-    <published>2019-09-01T11:48:14.695Z</published>
-    <updated>2019-09-01T11:55:21.248Z</updated>
-    
-    <content type="html"><![CDATA[<hr><a id="more"></a><p>下载VMware Workstation，CentOS<br>在VMware Workstation中安装CentOS镜像<br>配置跟着里面安装就行</p><blockquote><p>在CentOS中还可以安装图形化界面</p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-    
-    </summary>
     
     
   </entry>
