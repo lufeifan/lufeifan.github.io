@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2019%2F11%2F23%2Ftest%2F</url>
+    <content type="text"><![CDATA[document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[git使用]]></title>
     <url>%2F2019%2F11%2F23%2Fgit%E4%BD%BF%E7%94%A8%2F</url>
     <content type="text"><![CDATA[创建文件夹 1mkdir 文件夹名 创建文件 123touch 文件名``` &gt;添加文件到暂存区 git add 文件名git add . 添加所有文件 1&gt;将文件从缓存区添加到本地仓库，添加描述 git commit -m “描述” 1&gt;查看文件当前状态 git status 1&gt;查看当前文件夹下的内容 ls 1&gt;编辑文件 vi 文件名按 i 进行输入输入 :wq 保存并退出 1&gt;删除文件夹 rm -rf 文件名 1&gt;从暂存区删除需要提交的文件 git rm –cached 文件名 1&gt;查看git配置信息 git config –list 1&gt;设置用户名 git config –global user.name ‘名字’ 1&gt;设置邮箱 git config –global user.email ‘邮箱号’ 1&gt;上传文件到github 在github克隆git仓库git clone 链接在用git push 将本地仓库的文件上传 1&gt;创建新分支 git branch 分支名 1&gt;切换分支 git checkout 分支名 1&gt;上传到新分支 git push –set-upstream origin 新分支的名字 1&gt;删除本地分支 git branch -D 分支名 1&gt;删除远程分支 git push origin :branch_name注意冒号不能少 1&gt;推送到远程tag分支 git push origin :tag名 1&gt;tag标注信息 git tag -a tagName -m “my tag”``` 一个版本打一个tag document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
