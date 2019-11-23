@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lululua.cn/"/>
-  <updated>2019-11-10T10:33:24.524Z</updated>
+  <updated>2019-11-23T12:57:25.004Z</updated>
   <id>https://lululua.cn/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git使用</title>
+    <link href="https://lululua.cn/2019/11/23/git%E4%BD%BF%E7%94%A8/"/>
+    <id>https://lululua.cn/2019/11/23/git使用/</id>
+    <published>2019-11-23T10:29:48.630Z</published>
+    <updated>2019-11-23T12:57:25.004Z</updated>
+    
+    <content type="html"><![CDATA[<hr><a id="more"></a><blockquote><p>创建文件夹</p></blockquote><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir 文件夹名</span><br></pre></td></tr></tbody></table></figure><blockquote><p>创建文件 </p></blockquote><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">touch 文件名</span><br><span class="line">``` </span><br><span class="line">&gt;添加文件到暂存区</span><br></pre></td></tr></tbody></table></figure><p>git add 文件名<br>git add .   添加所有文件</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;将文件从缓存区添加到本地仓库，添加描述</span><br></pre></td></tr></tbody></table></figure><p>git commit -m “描述”</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;查看文件当前状态</span><br></pre></td></tr></tbody></table></figure><p>git status</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;查看当前文件夹下的内容</span><br></pre></td></tr></tbody></table></figure><p>ls</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;编辑文件</span><br></pre></td></tr></tbody></table></figure><p>vi 文件名<br>按 i 进行输入<br>输入 :wq 保存并退出</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;删除文件夹</span><br></pre></td></tr></tbody></table></figure><p>rm -rf 文件名</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;从暂存区删除需要提交的文件</span><br></pre></td></tr></tbody></table></figure><p>git rm –cached 文件名</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;查看git配置信息</span><br></pre></td></tr></tbody></table></figure><p>git config –list</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;设置用户名</span><br></pre></td></tr></tbody></table></figure><p>git config –global user.name ‘名字’</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;设置邮箱</span><br></pre></td></tr></tbody></table></figure><p>git config –global user.email ‘邮箱号’</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;上传文件到github</span><br></pre></td></tr></tbody></table></figure><p>在github克隆git仓库<br>git clone 链接<br>在用git push 将本地仓库的文件上传</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;创建新分支</span><br></pre></td></tr></tbody></table></figure><p>git branch 分支名</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;切换分支</span><br></pre></td></tr></tbody></table></figure><p>git checkout 分支名</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;上传到新分支</span><br></pre></td></tr></tbody></table></figure><p>git push –set-upstream origin 新分支的名字</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;删除本地分支</span><br></pre></td></tr></tbody></table></figure><p>git branch -D 分支名</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;删除远程分支</span><br></pre></td></tr></tbody></table></figure><p>git push origin :branch_name<br>注意冒号不能少</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;推送到远程tag分支</span><br></pre></td></tr></tbody></table></figure><p>git push origin :tag名</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;tag标注信息</span><br></pre></td></tr></tbody></table></figure><p>git tag -a tagName -m “my tag”<br>```</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>node与七牛云的连接</title>
@@ -382,26 +400,6 @@
     </summary>
     
       <category term="C语言" scheme="https://lululua.cn/categories/C%E8%AF%AD%E8%A8%80/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>微信小程序(2)</title>
-    <link href="https://lululua.cn/2019/09/07/wxml2/"/>
-    <id>https://lululua.cn/2019/09/07/wxml2/</id>
-    <published>2019-09-07T05:09:24.590Z</published>
-    <updated>2019-10-31T07:11:59.775Z</updated>
-    
-    <content type="html"><![CDATA[<hr><a id="more"></a><h2 id="自定义组件"><a href="#自定义组件" class="headerlink" title="自定义组件"></a>自定义组件</h2><h4 id="组件的创建：json文件"><a href="#组件的创建：json文件" class="headerlink" title="组件的创建：json文件"></a>组件的创建：json文件</h4><pre><code>{ "component": true    必须有}</code></pre><h4 id="组件的引用"><a href="#组件的引用" class="headerlink" title="组件的引用:"></a>组件的引用:</h4><pre><code>   wxml引入同时记得引入wxss传值：1.传值到组件     传值      例如传 title，          在组件中:          properties:{          title:{                type:类型,               value:"默认值"          }     }     引用组件的时候:     添加title="需要传的值”     样式:          组件使用：               externalClass['titleClass']               在需要改变样式的标签添加 titleClass          外部使用组件时只需要传入: titleClass="样式class"     标签:slot2.组件值的传出(通过自定义组件)     组件内部：          bind:tap="方法名"     methods:{          方法名(){               this.triggerEvent('increment',{需要传出去的值},{})          }     }     组件外部：bind:increment="方法名"     方法名(event){          传出来的的都在event里     }</code></pre><h4 id="怎么使用组件："><a href="#怎么使用组件：" class="headerlink" title="怎么使用组件："></a>怎么使用组件：</h4><pre><code>需要注册组件  "usingComponents": {    "组件标签":"路径"}</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-    
-    </summary>
-    
-      <category term="微信小程序" scheme="https://lululua.cn/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
     
   </entry>
